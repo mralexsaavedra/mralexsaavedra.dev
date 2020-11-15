@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "env": {
+    "BUTTONDOWN_API_KEY": "@buttondown-api-key"
+  },
+  "redirects": [
+    {
+      "source": "/AlexanderSaavedra.pdf",
+      "destination": "/CV.pdf"
+    },
+    {
+      "source": "/projects",
+      "destination": "/about"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/subscribers",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=1200, stale-while-revalidate=600"
+        }
+      ]
+    },
+    {
+      "source": "/api/github",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=120, stale-while-revalidate=60"
+        }
+      ]
+    },
+    {
+      "source": "/api/now-playing",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, stale-while-revalidate=30"
+        }
+      ]
+    }
+  ]
+}
