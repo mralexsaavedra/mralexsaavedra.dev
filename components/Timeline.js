@@ -216,11 +216,10 @@ const Timeline = () => {
             my={4}
             mx='auto'
             fontWeight='medium'
-            rightIcon='chevron-down'
             variant='ghost'
             onClick={() => showFullTimeline(true)}
           >
-            See More
+            Ver más ⬇
           </Button>
           )}
     </Flex>
