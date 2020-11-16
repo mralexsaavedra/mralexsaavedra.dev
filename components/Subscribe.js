@@ -44,7 +44,7 @@ const Subscribe = () => {
 
     if (error) {
       toast({
-        title: '🙇🏽‍ Ha ocurrido un error.',
+        title: '🙇🏽‍ Ha ocurrido un error',
         description: error,
         status: 'error',
         duration: 3000,
