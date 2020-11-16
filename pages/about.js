@@ -63,7 +63,7 @@ const About = () => {
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               Personalmente me considero un culo inquieto, así que intento siempre estar actualizado y seguir formándome, que siendo sincero, no es tarea fácil 😅.
 
-              Hace poco he compenzado a compartir mi conocimiento con los demás. Por eso, te recomiendo que te suscribas a <CustomLink href='/newsletter'>mi newsletter</CustomLink> 💌.
+              Hace poco he comenzado a compartir mi conocimiento con los demás. Por eso, te recomiendo que te suscribas a <CustomLink href='/newsletter'>mi newsletter</CustomLink> 💌.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               En un futuro me gustaría dar todo mi conocimiento a los demás impartiendo mentoría 👨🏽‍🏫, charlas, etc. Tengo la confianza de que algún día me llegará ese momento 🤞🏽.
