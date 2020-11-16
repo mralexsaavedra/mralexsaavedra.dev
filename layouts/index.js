@@ -16,7 +16,7 @@ import Subscribe from '../components/Subscribe'
 import BlogSeo from '../components/BlogSeo'
 
 const editUrl = (slug) =>
-  `https://github.com/mralexsaavedra/mralexsaavedra.dev/edit/master/pages/blog/${slug}.mdx`
+  `https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/master/pages/blog/${slug}.mdx`
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://mralexsaavedra.dev/blog/${slug}`

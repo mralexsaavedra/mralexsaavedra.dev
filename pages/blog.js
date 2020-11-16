@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/core'
 
 import Container from '../components/Container'
-import BlogPost from '../components/BlogPost'
+// import BlogPost from '../components/BlogPost'
 
 import { frontMatter as blogPosts } from './blog/*.mdx'
 
@@ -85,12 +85,14 @@ const Blog = () => {
             justifyContent='flex-start'
             alignItems='flex-start'
             maxWidth='700px'
+            width='100%'
             mt={8}
           >
-            {!filteredBlogPosts.length && 'No se encuentran artículos 🥴'}
+            No se encuentran artículos 🥴
+            {/* {!filteredBlogPosts.length && 'No se encuentran artículos 🥴'}
             {filteredBlogPosts.map((frontMatter) => (
               <BlogPost key={frontMatter.title} {...frontMatter} />
-            ))}
+            ))} */}
           </Flex>
         </Stack>
       </Container>

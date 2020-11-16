@@ -64,11 +64,11 @@ export default function NewsletterLayout ({ children, frontMatter }) {
               <Text fontSize='sm' color={textColor[colorMode]}>
                 {frontMatter.by}
                 {'Alexander Saavedra / '}
-                {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+                📅 {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
               </Text>
             </Flex>
             <Text fontSize='sm' color='gray.500' minWidth='100px' mt={[2, 0]}>
-              {frontMatter.readingTime.text}
+              ⏱ {frontMatter.readingTime.text}
             </Text>
           </Flex>
         </Flex>

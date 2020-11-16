@@ -14,7 +14,7 @@ const SEO = {
     description,
     images: [
       {
-        url: 'https://mralexsaavedra.dev/static/images/me.jfif',
+        url: 'https://mralexsaavedra.dev/static/images/me.jpg',
         alt: title,
         width: 1280,
         height: 720

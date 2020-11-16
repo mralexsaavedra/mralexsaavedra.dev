@@ -10,6 +10,7 @@ import {
 
 import Container from '../components/Container'
 import { CustomLink } from '../components/MDXComponents'
+import Skills from '../components/Skills'
 import Timeline from '../components/Timeline'
 
 const url = 'https://mralexsaavedra.dev/about'
@@ -71,6 +72,19 @@ const About = () => {
               Mi vida no es sólo la programación. También me encanta viajar ✈, descubrir lugares nuevos 🌍, la música 🎧, el deporte 🏃🏽‍♂️, el surf 🏄🏽‍♂️, los videojuegos 👾 y muchas más cosas.
             </Text>
             <Timeline />
+            <Flex
+              flexDirection='column'
+              justifyContent='flex-start'
+              alignItems='flex-start'
+              maxWidth='700px'
+              mt={4}
+              mb={4}
+            >
+              <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
+                🛠 Skill tecnológicos y herramientas
+              </Heading>
+              <Skills />
+            </Flex>
             <iframe
               height='280'
               src='https://www.google.com/maps/d/embed?mid=1guVv_clnlvYFCMEFZDt1DIKlAuMAI5pi'

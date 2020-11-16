@@ -11,7 +11,7 @@ import {
 
 import Container from '../components/Container'
 import Subscribe from '../components/Subscribe'
-import NewsletterLink from '../components/NewsletterLink'
+// import NewsletterLink from '../components/NewsletterLink'
 
 import { frontMatter as newsletters } from './newsletter/**/*.mdx'
 
@@ -72,8 +72,9 @@ const Newsletter = () => {
             <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
               Archivos
             </Heading>
+            No se encuentran artículos 🥴
             <List styleType='disc'>
-              {newsletters
+              {/* {newsletters
                 .sort(
                   (a, b) =>
                     Number(new Date(b.publishedAt)) -
@@ -81,7 +82,7 @@ const Newsletter = () => {
                 )
                 .map((frontMatter) => (
                   <NewsletterLink key={frontMatter.title} {...frontMatter} />
-                ))}
+                ))} */}
             </List>
           </Flex>
         </Stack>

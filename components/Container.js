@@ -50,6 +50,11 @@ const Container = ({ children }) => {
           onClick={toggleColorMode}
         />
         <Box>
+          <NextLink href={colorMode === 'dark' ? '/CV_Dark.pdf' : '/CV.pdf'} passHref>
+            <Button as='a' variant='ghost' p={[1, 4]}>
+              CV
+            </Button>
+          </NextLink>
           <NextLink href='/blog' passHref>
             <Button as='a' variant='ghost' p={[1, 4]}>
               Blog

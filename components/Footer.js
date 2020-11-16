@@ -2,16 +2,22 @@ import React from 'react'
 import NextLink from 'next/link'
 import { Flex, Link, IconButton } from '@chakra-ui/core'
 
-// import NowPlaying from './NowPlaying'
-
 const Footer = () => (
   <Flex align='center' mb={4} direction='column'>
-    {/* <NowPlaying /> */}
     <div>
       <Link href='https://twitter.com/mralexsaavedra' title='Twitter' isExternal>
         <IconButton
           aria-label='Twitter'
           icon='twitter'
+          size='lg'
+          color='gray.500'
+          variant='ghost'
+        />
+      </Link>
+      <Link href='https://instagram.com/mralexsaavedra' title='Instagram' isExternal>
+        <IconButton
+          aria-label='Instagram'
+          icon='instagram'
           size='lg'
           color='gray.500'
           variant='ghost'
@@ -34,6 +40,19 @@ const Footer = () => (
         <IconButton
           aria-label='LinkedIn'
           icon='linkedin'
+          size='lg'
+          color='gray.500'
+          variant='ghost'
+        />
+      </Link>
+      <Link
+        href='https://open.spotify.com/user/mralexsaavedra'
+        title='Spotify'
+        isExternal
+      >
+        <IconButton
+          aria-label='Spotify'
+          icon='spotify'
           size='lg'
           color='gray.500'
           variant='ghost'

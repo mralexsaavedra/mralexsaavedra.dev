@@ -49,8 +49,8 @@ export default function UsesLayout ({ children }) {
             Uses
           </Heading>
           <Flex mt={2} w='100%'>
-            <Text fontSize='sm' color={textColor[colorMode]}>
-              Aquí está toda la tecnología que estoy usando actualmente.
+            <Text fontSize='md' color={textColor[colorMode]}>
+              Aquí te comparto el hardware y algunas herramientas que utilizo en mi día a día.
             </Text>
           </Flex>
         </Flex>

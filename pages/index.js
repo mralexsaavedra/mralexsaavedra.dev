@@ -1,10 +1,11 @@
 import React from 'react'
 import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core'
 
+// import BlogPost from '../components/BlogPost'
 import Container from '../components/Container'
 import Subscribe from '../components/Subscribe'
 
-// import { frontMatter as stackGuide } from './blog/stack.mdx';
+// import { frontMatter as blogPosts } from './blog/*.mdx'
 
 const Index = () => {
   const { colorMode } = useColorMode()
@@ -12,6 +13,8 @@ const Index = () => {
     light: 'gray.700',
     dark: 'gray.400'
   }
+
+  // const latestPosts = blogPosts.slice(Math.max(blogPosts.length - 3, 0))
 
   return (
     <Container>
@@ -41,13 +44,17 @@ const Index = () => {
           justifyContent='flex-start'
           alignItems='flex-start'
           maxWidth='700px'
-          mt={8}
+          width='100%'
+          mt={4}
         >
           <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
             🚀 Últimos artículos
           </Heading>
           Aún no hay artículos publicados, pero llegarán 😬
-          {/* { <BlogPost {...stackGuide} />} */}
+          {/* {!latestPosts.length && 'Aún no hay artículos publicados, pero llegarán 😬'}
+          {latestPosts.map((frontMatter) => (
+            <BlogPost key={frontMatter.title} {...frontMatter} />
+          ))} */}
         </Flex>
         <Subscribe />
       </Stack>
