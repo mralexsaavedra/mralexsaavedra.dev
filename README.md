@@ -33,3 +33,7 @@ Create a `.env.local` file similar to [`.env`](https://github.com/mralexsaavedra
 - [Vercel](https://vercel.com)
 - [MDX](https://github.com/mdx-js/mdx)
 - [Chakra UI](https://chakra-ui.com/)
+
+---
+
+**Special thanks to [Lee Robinson](https://leerob.io/) for the Open Source template.**
