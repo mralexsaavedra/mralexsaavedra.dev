@@ -71,10 +71,10 @@ const Footer = () => (
     <div>
       <NextLink href='/uses' passHref>
         <Link
-          fontSize='sm'
+          fontSize='md'
           color='gray.500'
           minWidth='100px'
-          mr={2}
+          mr={8}
           title='Uses'
         >
           /uses
@@ -82,10 +82,9 @@ const Footer = () => (
       </NextLink>
       <NextLink href='/newsletter' passHref>
         <Link
-          fontSize='sm'
+          fontSize='md'
           color='gray.500'
           minWidth='100px'
-          mr={2}
           title='Newsletter'
         >
           /newsletter

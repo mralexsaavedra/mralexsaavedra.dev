@@ -213,7 +213,7 @@ const Timeline = () => {
         ? <FullTimeline />
         : (
           <Button
-            my={4}
+            mb={20}
             mx='auto'
             fontWeight='medium'
             variant='ghost'

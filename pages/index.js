@@ -3,6 +3,7 @@ import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core'
 
 // import BlogPost from '../components/BlogPost'
 import Container from '../components/Container'
+import Skills from '../components/Skills'
 import Subscribe from '../components/Subscribe'
 
 // import { frontMatter as blogPosts } from './blog/*.mdx'
@@ -55,6 +56,19 @@ const Index = () => {
           {latestPosts.map((frontMatter) => (
             <BlogPost key={frontMatter.title} {...frontMatter} />
           ))} */}
+        </Flex>
+        <Flex
+          flexDirection='column'
+          justifyContent='flex-start'
+          alignItems='flex-start'
+          maxWidth='700px'
+          mt={4}
+          mb={4}
+        >
+          <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
+            🛠 Skill tecnológicos y herramientas
+          </Heading>
+          <Skills />
         </Flex>
         <Subscribe />
       </Stack>

@@ -1,58 +1,30 @@
-import React from 'react'
-import { MDXProvider } from '@mdx-js/react'
-import { Global, css } from '@emotion/core'
+import React, { useState, useEffect } from 'react'
 import { DefaultSeo } from 'next-seo'
-import {
-  ThemeProvider,
-  CSSReset,
-  ColorModeProvider,
-  useColorMode
-} from '@chakra-ui/core'
+import { MDXProvider } from '@mdx-js/react'
+import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
 import Head from 'next/head'
+import useDarkMode from 'use-dark-mode'
 
-import theme from '../styles/theme'
-import { prismLightTheme, prismDarkTheme } from '../styles/prism'
 import MDXComponents from '../components/MDXComponents'
+
+import { GlobalStyle } from '../styles/GlobalStyle'
+import theme from '../styles/theme'
+
 import SEO from '../next-seo.config'
 
-const GlobalStyle = ({ children }) => {
-  const { colorMode } = useColorMode()
-
-  return (
-    <>
-      <CSSReset />
-      <Global
-        styles={css`
-          ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
-
-          ::selection {
-            background-color: #47a3f3;
-            color: #fefefe;
-          }
-
-          html {
-            min-width: 360px;
-            scroll-behavior: smooth;
-          }
-
-          #__next {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: ${colorMode === 'light' ? 'white' : '#171923'};
-          }
-        `}
-      />
-      {children}
-    </>
-  )
-}
-
 const App = ({ Component, pageProps }) => {
+  const [isMounted, setIsMounted] = useState(false)
+  const { value } = useDarkMode(false)
+  const themeColor = value ? 'dark' : 'light'
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
-        <ColorModeProvider value='light'>
+        <ColorModeProvider value={themeColor}>
           <GlobalStyle>
             <Head>
               <meta content='IE=edge' httpEquiv='X-UA-Compatible' />
@@ -73,7 +45,7 @@ const App = ({ Component, pageProps }) => {
               />
             </Head>
             <DefaultSeo {...SEO} />
-            <Component {...pageProps} />
+            {isMounted && <Component {...pageProps} />}
           </GlobalStyle>
         </ColorModeProvider>
       </MDXProvider>
