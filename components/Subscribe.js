@@ -87,7 +87,7 @@ const Subscribe = () => {
           ref={inputEl}
           type='email'
         />
-        <InputRightElement width='6.75rem'>
+        <InputRightElement width='6.75rem' mr={2}>
           <Button
             isLoading={loading}
             fontWeight='bold'
