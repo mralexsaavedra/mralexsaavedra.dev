@@ -37,7 +37,8 @@ const Index = () => {
             Hey 👋🏽, soy Alexander Saavedra
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
-            Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer y espezializado en el ecosistema de JavaScript con experiencia en tecnologías y frameworks cómo Node.js, Vue, React, Firebase, etc.
+            Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer y espezializado en el ecosistema de JavaScript.
+            Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
           </Text>
         </Flex>
         <Flex
