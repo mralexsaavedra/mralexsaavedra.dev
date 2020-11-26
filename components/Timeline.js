@@ -177,6 +177,9 @@ const Timeline = () => {
         2020
       </Heading>
       <List>
+        <TimelineStep title='Comienzo en Kira Health Startup 👨🏽‍⚕️👨🏽‍💻'>
+          Una nueva etapa en Bilbao como Desarrollador Software Frontend.
+        </TimelineStep>
         <TimelineStep title='Entrevistas y + entrevistas 🥱' />
         <TimelineStep title='Acabo el máster 👏🏽'>
           En verano acabo el máster después de muchiiiiisimo esfuerzo.
