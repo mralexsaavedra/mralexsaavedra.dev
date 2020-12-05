@@ -47,14 +47,6 @@ const Skills = () => {
           variant='link'
         />
       </Link>
-      <Link href='https://vuejs.org/' title='Vue' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='Vue'
-          icon='vue'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
       <Link href='https://reactjs.org/' title='React' isExternal mr={8} mb={8}>
         <IconButton
           aria-label='React'
