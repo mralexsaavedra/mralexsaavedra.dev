@@ -1,5 +1,6 @@
-import Timeline from '../components/Timeline';
 import Container from '../components/Container';
+import Skills from '../components/Skills';
+import Timeline from '../components/Timeline';
 
 export default function Home() {
   return (
@@ -13,9 +14,7 @@ export default function Home() {
           y espezializado en el ecosistema de JavaScript.
           Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
         </h2>
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
-          🛠 Skill tecnológicos y herramientas
-        </h3>
+        <Skills />
         <Timeline />
       </div>
     </Container>
