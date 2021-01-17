@@ -19,7 +19,7 @@ export default function About () {
         </h1>
         <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
-            Hey, ¿qué tal? Mi nombre es Alexander. Nací hace 25 años en&nbsp;
+            Hey, ¿qué tal? Mi nombre es Alexander. Nací en el 95 en&nbsp;
             <a
               href='https://goo.gl/maps/LZH8njFKknKsagzF7'
               target='_blank'
@@ -35,15 +35,14 @@ export default function About () {
             >
               UPV
             </a>
-            &nbsp;y actualmente trabajo como desarrollador web 👨🏽‍💻.
+            &nbsp;y actualmente trabajo como desarrollador software frontend 👨🏽‍💻.
           </p>
           <p>
-            Tengo 3+ años de esperiencia trabajando en empresas privadas.
-            En todas ellas he trabajado como desarrollador Full Stack aunque
-            siempre acababa ejerciendo el rol de frontender.
+            Tengo 3+ años de experiencia trabajando como desarrollador Full Stack aunque
+            siempre más orientado al Front-end.
           </p>
           <p>
-            Además, durante un año fui uno de lo co-organizadores de&nbsp;
+            Además, durante un año fuí uno de lo co-organizadores de&nbsp;
             <a
               href='https://developers.google.com/community/gdg'
               target='_blank'
@@ -54,15 +53,28 @@ export default function About () {
             &nbsp;donde nos dedicábamos a realizar eventos, organizar charlas y compartir conociminentos.
           </p>
           <p>
-            Personalmente me considero un culo inquieto, así que intento siempre estar actualizado y seguir formándome, que siendo sincero, no es tarea fácil 😅.
+            Siempre intento estar actualizado y seguir formándome, aunque siendo sincero, no es tarea fácil con todas las novedades que salen 😅.
           </p>
           <p>
-            En un futuro me gustaría dar todo mi conocimiento a los demás impartiendo mentoría 👨🏽‍🏫, charlas, etc.
+            👉🏽&nbsp; Si quieres saber más sobre mí, aquí te dejo mi&nbsp;
+            <a
+              href='https://developers.google.com/community/gdg'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              CV.
+            </a>
+          </p>
+          <p>
+            En un futuro me gustaría compatir todo mi conocimiento impartiendo mentoría 👨🏽‍🏫, charlas, etc.
           </p>
           <p>
             Mi vida no es sólo la programación. También me encanta viajar ✈, descubrir lugares nuevos 🌍, la música 🎧, el deporte 🏃🏽‍♂️, el surf 🏄🏽‍♂️, los videojuegos 👾 y mucho más.
           </p>
         </div>
+        <h3 className='mb-4 text-gray-600 dark:text-gray-400'>
+          Aquí os dejo un mapa de todos los lugares en los que he estado 👇🏽
+        </h3>
         <iframe
           height='280'
           src='https://www.google.com/maps/d/embed?mid=1guVv_clnlvYFCMEFZDt1DIKlAuMAI5pi'
