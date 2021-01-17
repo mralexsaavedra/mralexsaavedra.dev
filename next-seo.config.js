@@ -1,6 +1,6 @@
-const title = 'Alexander Saavedra – Software Frontend Engineer.';
+const title = 'Alexander Saavedra – Software Frontend Engineer.'
 const description =
-  'Front-end developer, JavaScript lover.';
+  'Front-end developer, JavaScript lover.'
 
 const SEO = {
   title,
@@ -27,6 +27,6 @@ const SEO = {
     site: '@mralexsaavedra',
     cardType: 'summary_large_image'
   }
-};
+}
 
-export default SEO;
+export default SEO
