@@ -1,7 +1,7 @@
 {
   "name": "Alexander Saavedra",
   "short_name": "mralexsaavedra.dev",
-  "description": "Developer and crazy.",
+  "description": "Curious mind, developer, and writer.",
   "icons": [
     {
       "src": "/static/favicons/android-chrome-192x192.png",
@@ -18,7 +18,7 @@
   "theme_color": "#ffffff",
   "display": "standalone",
   "dir": "ltr",
-  "lang": "es-ES",
+  "lang": "en-US",
   "orientation": "portrait-primary",
   "start_url": "../../index.html"
 }

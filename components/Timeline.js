@@ -1,232 +1,192 @@
-import React, { useState } from 'react'
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Button,
-  List,
-  ListItem,
-  Icon,
-  Stack,
-  Divider
-} from '@chakra-ui/core'
+import { useState } from 'react';
 
-const YearDivider = () => {
-  const { colorMode } = useColorMode()
-  const borderColor = {
-    light: 'gray.200',
-    dark: 'gray.600'
-  }
-
-  return <Divider borderColor={borderColor[colorMode]} my={8} w='100%' />
-}
-
-const TimelineStep = ({ title, children }) => {
-  const { colorMode } = useColorMode()
-  const color = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  }
-
+const Divider = () => {
   return (
-    <ListItem>
-      <Stack ml={2} mb={4}>
-        <Flex align='center'>
-          <Icon name='check-circle' mr={2} color='whatsapp.500' />
-          <Text fontWeight='medium'>{title}</Text>
-        </Flex>
-        <Text color={color[colorMode]} ml={6}>
-          {children}
-        </Text>
-      </Stack>
-    </ListItem>
-  )
-}
+    <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
+  );
+};
+
+const Year = ({ children }) => {
+  return (
+    <h3 className="text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
+      {children}
+    </h3>
+  );
+};
+
+const Step = ({ title, children }) => {
+  return (
+    <li className="mb-4 ml-2">
+      <div className="flex items-center mb-2 text-green-700 dark:text-green-300">
+        <span className="sr-only">Check</span>
+        <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+            <path d="M22 4L12 14.01l-3-3" />
+          </g>
+        </svg>
+        <p className="font-medium text-gray-900 dark:text-gray-100">{title}</p>
+      </div>
+      <p className="text-gray-700 dark:text-gray-400 ml-6">{children}</p>
+    </li>
+  );
+};
 
 const FullTimeline = () => (
   <>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2018
-    </Heading>
-    <List>
-      <TimelineStep title='Me muevo de empresa 🤝🏽'>
+    <Divider />
+    <Year>2018</Year>
+    <ul>
+      <Step title='Me muevo de empresa 🤝🏽'>
         A finales de año decido cambiar de empresa (S&M Services). Mismo puesto que la anterior, distinta localidad, centro de Bilbao.
-      </TimelineStep>
-      <TimelineStep title='Me graduo 👨🏽‍🎓'>
+      </Step>
+      <Step title='Me graduo 👨🏽‍🎓'>
         Siempre echaré de menos la época en la que estuve en la universidad.
-      </TimelineStep>
-      <TimelineStep title='Presento el TFG 💯'>
+      </Step>
+      <Step title='Presento el TFG 💯'>
         Después de muchos meses y duro trabajo presento mi Trabajo de Fin de Grado. Mereció la pena todo el esfuerzo y cariño puesto en él.
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2017
-    </Heading>
-    <List>
-      <TimelineStep title='Primera entrevista + primer trabajo 🔥'>
+      </Step>
+    </ul>
+    <Divider />
+    <Year>2017</Year>
+    <ul>
+      <Step title='Primera entrevista + primer trabajo 🔥'>
         Por fín hago la primera entrevista de mi vida, y consigo el trabajo. Me contratan como desarrollador Full Stack en Inycom, ubicada en el parque tecnológico de Zamudio y con sede en Zaragoza.
-      </TimelineStep>
-      <TimelineStep title='Me operaran de los meniscos 👩🏽‍🏭' />
-      <TimelineStep title='Las prácticas del grado 🌟'>
+      </Step>
+      <Step title='Me operaran de los meniscos 👩🏽‍🏭' />
+      <Step title='Las prácticas del grado 🌟'>
         Cumplo un periodo de 6 meses en prácticas en una consultoría (SHKWays) ubicada en el vibero de empresas de la Universidad de Deusto. Aquí comienza mi camino haciendo el mundo del desarrollo web.
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2013
-    </Heading>
-    <List>
-      <TimelineStep title='Bienvenida a la familia 🐶'>
+      </Step>
+    </ul>
+    <Divider />
+    <Year>2013</Year>
+    <ul>
+      <Step title='Bienvenida a la familia 🐶'>
         Adoptamos a Lua, una pequeña Yorkshire Terrier.
-      </TimelineStep>
-      <TimelineStep title='Comienza mi carrera universitaria 👨🏽‍🏫'>
+      </Step>
+      <Step title='Comienza mi carrera universitaria 👨🏽‍🏫'>
         Empiezo el Grado de Ingeniería Informática de Gestión y Sistemas de la Información en la Escuela de Ingenieros de Bilbao cerca del estadio de San Mames 🔴⚪.
-      </TimelineStep>
-      <TimelineStep title='Termino Bachillerato 🚸'>
+      </Step>
+      <Step title='Termino Bachillerato 🚸'>
         Desde el instituto hasta el bachillerato estuve en la ikastola de Beurko.
-      </TimelineStep>
-      <TimelineStep title='Apruebo el carnet de conducir 🚗' />
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2011
-    </Heading>
-    <List>
-      <TimelineStep title='Viaje de estudios a Andorra + 🏂🏽'>
+      </Step>
+      <Step title='Apruebo el carnet de conducir 🚗' />
+    </ul>
+    <Divider />
+    <Year>2011</Year>
+    <ul>
+      <Step title='Viaje de estudios a Andorra + 🏂🏽'>
         Para finalizar la ESO nos vamos de viaje de estudios a Andorra, donde por primera vez hago snowboard y el deporte el cual reptiré todos los años.
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2010
-    </Heading>
-    <List>
-      <TimelineStep title='La época 👦🏽'>
-        Empiezo la pubertad poniendome pendientes.
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2008
-    </Heading>
-    <List>
-      <TimelineStep title='Primer ordenador 💻'>
+      </Step>
+    </ul>
+    <Divider />
+    <Year>2008</Year>
+    <ul>
+      <Step title='Primer ordenador 💻'>
         Hasta entonces no paraba de jugar en los ciber de mi localidad con mi cuadrilla. 😂
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2005
-    </Heading>
-    <List>
-      <TimelineStep title='Comunión + Port Aventura 🎢' />
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2003
-    </Heading>
-    <List>
-      <TimelineStep title='Primera tabla 🛹'>
+      </Step>
+    </ul>
+    <Divider />
+    <Year>2005</Year>
+    <ul>
+      <Step title='Comunión + Port Aventura 🎢' />
+    </ul>
+    <Divider />
+    <Year>2003</Year>
+    <ul>
+      <Step title='Primera tabla 🛹'>
         Me compran mi primera tabla de skate. Una aficción que me durará toda la vida.
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      2000
-    </Heading>
-    <List>
-      <TimelineStep title='Primeros pasos como gamer 🎮'>
+      </Step>
+    </ul>
+    <Divider />
+    <Year>2000</Year>
+    <ul>
+      <Step title='Primeros pasos como gamer 🎮'>
         Comencé mi carrera de entrenador Pokemon en GameBoy.
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-      1995
-    </Heading>
-    <List>
-      <TimelineStep title='Nací 👶🏼🍼' />
-    </List>
-    <YearDivider />
+      </Step>
+    </ul>
+    <Divider />
+    <Year>1995</Year>
+    <ul>
+      <Step title='Nací 👶🏼🍼' />
+    </ul>
   </>
-)
+);
 
-const Timeline = () => {
-  const [isShowingFullTimeline, showFullTimeline] = useState(false)
+export default function Timeline() {
+  const [isShowingFullTimeline, showFullTimeline] = useState(false);
 
   return (
-    <Flex
-      flexDirection='column'
-      justifyContent='flex-start'
-      alignItems='flex-start'
-      maxWidth='700px'
-      mt={8}
-    >
-      <Heading letterSpacing='tight' mb={4} size='xl' fontWeight='bold'>
+    <>
+      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
         ⏳ Timeline
-      </Heading>
-      <Heading
-        as='h3'
-        size='lg'
-        fontWeight='bold'
-        mb={4}
-        letterSpacing='tighter'
-      >
-        2020
-      </Heading>
-      <List>
-        <TimelineStep title='Comienzo en Kira Health Startup 👨🏽‍⚕️👨🏽‍💻'>
+      </h3>
+      <Year>2020</Year>
+      <ul>
+        <Step title='Comienzo en Kira Health Startup 👨🏽‍⚕️👨🏽‍💻'>
           Una nueva etapa en Bilbao como Desarrollador Software Frontend.
-        </TimelineStep>
-        <TimelineStep title='Entrevistas y + entrevistas 🥱' />
-        <TimelineStep title='Acabo el máster 👏🏽'>
+        </Step>
+        <Step title='Entrevistas y + entrevistas 🥱' />
+        <Step title='Acabo el máster 👏🏽'>
           En verano acabo el máster después de muchiiiiisimo esfuerzo.
-        </TimelineStep>
-        <TimelineStep title='Otro deporte más 🏄🏽‍♂️' />
-        <TimelineStep title='Covid attack 😷' />
-      </List>
-      <YearDivider />
-      <Heading as='h3' size='lg' fontWeight='bold' mb={4} letterSpacing='tighter'>
-        2019
-      </Heading>
-      <List>
-        <TimelineStep title='Bye bye trabajo 👋🏽'>
+        </Step>
+        <Step title='Otro deporte más 🏄🏽‍♂️' />
+        <Step title='Covid attack 😷' />
+      </ul>
+      <Divider />
+      <Year>2019</Year>
+      <ul>
+        <Step title='Bye bye trabajo 👋🏽'>
           Decido dedicar todo mi tiempo y esfuerzo al máster.
-        </TimelineStep>
-        <TimelineStep title='Regreso a casa 🏠'>
+        </Step>
+        <Step title='Regreso a casa 🏠'>
           Me vuelvo con la familia.
-        </TimelineStep>
-        <TimelineStep title='Empiezo un máster ⚡'>
+        </Step>
+        <Step title='Empiezo un máster ⚡'>
           Decido hacer un máster de Animación 3D de personajes de la mano de Lightbox Academy.
-        </TimelineStep>
-        <TimelineStep title='Primer PC a piezas 🛠'>
+        </Step>
+        <Step title='Primer PC a piezas 🛠'>
           Invierto dinero y tiempo en mi primer ordenador montado a piezas por mí. 😍
-        </TimelineStep>
-        <TimelineStep title='Me mudo unos meses 💼'>
+        </Step>
+        <Step title='Me mudo unos meses 💼'>
           Voy a vivir a Salamanca unos meses y dedico mis días a trabajar en remoto y estudiar el máster.
-        </TimelineStep>
-        <TimelineStep title='Google Developer Group Bilbao 🕺🏽'>
+        </Step>
+        <Step title='Google Developer Group Bilbao 🕺🏽'>
           Consigo ser uno de los co-organizadores de GDG Bilbao.
-        </TimelineStep>
-        <TimelineStep title='Me apunto a Crossfit 🏋🏽‍♂️' />
-      </List>
-      {isShowingFullTimeline
-        ? <FullTimeline />
-        : (
-          <Button
-            mb={20}
-            mx='auto'
-            fontWeight='medium'
-            variant='ghost'
-            onClick={() => showFullTimeline(true)}
+        </Step>
+        <Step title='Me apunto a Crossfit 🏋🏽‍♂️' />
+      </ul>
+      {isShowingFullTimeline ? (
+        <FullTimeline />
+      ) : (
+        <button
+          type="button"
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-gray-900 dark:text-gray-100"
+          onClick={() => showFullTimeline(true)}
+        >
+          Ver más
+          <svg
+            className="h-4 w-4 ml-1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            Ver más ⬇
-          </Button>
-          )}
-    </Flex>
-  )
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+      )}
+    </>
+  );
 }
-
-export default Timeline

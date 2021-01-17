@@ -1,18 +1,16 @@
-# mralexsaavedra.dev-
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fmralexsaavedra%2Fmralexsaavedra.dev)
 
-https://mralexsaavedra.dev website
+# mralexsaavedra.dev
 
 **Find me around the web:**
 
-- Twitter 🐦: https://twitter.com/mralexsaavedra
-- Instagram 📸: https://instagram.com/mralexsaavedra
-- LinkedIn 📝: https://linkedin.com/in/mralexsaavedra
-- GitHub 😸 ➕ 🐙: https://github.com/mralexsaavedra
-
+- Website 🗺️ : https://mralexsaavedra.dev
+- GitHub 🐙 : https://github.com/mralexsaavedra
+- LinkedIn 📝 : https://linkedin.com/in/mralexsaavedra
+- Twitter 🐦 : https://twitter.com/mralexsaavedra
 
 ## Overview
 
-- `pages/api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) newsletter subscription, and post views.
 - `pages/blog/*` - Static pre-rendered blog pages using [MDX](https://github.com/mdx-js/mdx).
 - `pages/*` - All other static pages.
 
@@ -21,18 +19,18 @@ https://mralexsaavedra.dev website
 ```bash
 $ git clone https://github.com/mralexsaavedra/mralexsaavedra.dev.git
 $ cd mralexsaavedra.dev
-$ npm install
-$ npm run dev
+$ yarn
+$ yarn dev
 ```
 
-Create a `.env.local` file similar to [`.env`](https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/master/.env).
+Create a `.env.local` file similar to [`.env.example`](https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/master/.env.example).
 
 ## Built Using
 
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com)
 - [MDX](https://github.com/mdx-js/mdx)
-- [Chakra UI](https://chakra-ui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ---
 

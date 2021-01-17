@@ -1,121 +1,34 @@
-import React from 'react'
-import { Flex, Link, IconButton } from '@chakra-ui/core'
-import useDarkMode from 'use-dark-mode'
+import Link from 'next/link';
 
-const Skills = () => {
-  const { value } = useDarkMode()
+const ExternalLink = ({ href, children }) => (
+  <a
+    className="text-sm text-gray-500 hover:text-gray-600 transition"
+    target="_blank"
+    rel="noopener noreferrer"
+    href={href}
+  >
+    {children}
+  </a>
+);
 
+export default function Skills() {
   return (
-    <Flex align='center' mt={4} mb={4} wrap='wrap' direction='row'>
-      <Link href='https://developer.mozilla.org/es/docs/Web/HTML' title='HTML' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='HTML'
-          icon='html'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://developer.mozilla.org/es/docs/Web/CSS' title='CSS' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='CSS'
-          icon='css'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://developer.mozilla.org/es/docs/Web/JavaScript' title='JavaScript' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='JavaScript'
-          icon='javascript'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://git-scm.com/' title='Git' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='Git'
-          icon='git'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://firebase.google.com/' title='Firebase' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='Firebase'
-          icon='firebase'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://reactjs.org/' title='React' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='React'
-          icon='react'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://nextjs.org/' title='NextJS' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='NextJS'
-          icon='nextjs'
-          fontSize='90px'
-          variant='link'
-          color={value ? '#fff' : '#000'}
-        />
-      </Link>
-      <Link href='https://graphql.org/' title='GraphQL' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='GraphQL'
-          icon='graphql'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://jestjs.io/' title='Jest' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='Jest'
-          icon='jest'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://webpack.js.org/' title='Webpack' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='Webpack'
-          icon='webpack'
-          fontSize='60px'
-          variant='link'
-        />
-      </Link>
-      <Link href='https://nodejs.org/' title='NodeJS' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='NodeJS'
-          icon='nodejs'
-          fontSize='100px'
-          variant='link'
-          color={value ? '#fff' : '#404137'}
-        />
-      </Link>
-      <Link href='https://github.com/' title='GitHub' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='GitHub'
-          icon='githubLogo'
-          fontSize='50px'
-          variant='link'
-          color={value ? '#fff' : '#000'}
-        />
-      </Link>
-      <Link href='https://code.visualstudio.com/' title='VSCode' isExternal mr={8} mb={8}>
-        <IconButton
-          aria-label='VSCode'
-          icon='vscode'
-          fontSize='50px'
-          variant='link'
-        />
-      </Link>
-    </Flex>
-  )
+    <div className="flex space-x-4 mb-4">
+      <ExternalLink href="https://developer.mozilla.org/es/docs/Web/HTML">
+        <svg className="h-5 w-5" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </g>
+        </svg>
+      </ExternalLink>
+    </div>
+  );
 }
-
-export default Skills

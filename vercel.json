@@ -1,26 +1,37 @@
 {
-  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/fonts/inter-var-latin.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
-      "source": "/AlexanderSaavedra.pdf",
-      "destination": "/CV.pdf"
+      "source": "/LeeRobinson.pdf",
+      "destination": "/robinson-resume-2019.pdf"
     },
     {
       "source": "/projects",
       "destination": "/about"
-    }
-  ],
-  "headers": [
+    },
     {
-      "source": "/api/subscribers",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=1200, stale-while-revalidate=600"
-        }
-      ]
+      "source": "/twitter",
+      "destination": "https://twitter.com/mralexsaavedra"
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://linkedin.com/in/mralexsaavedra"
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/mralexsaavedra"
     }
   ]
 }

@@ -1,60 +1,33 @@
-import React from 'react'
-import NextLink from 'next/link'
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Button
-} from '@chakra-ui/core'
+import Link from 'next/link';
+import { NextSeo } from 'next-seo';
 
-import Container from '../components/Container'
+import Container from '@/components/Container';
 
-const Error = () => {
-  const { colorMode } = useColorMode()
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  }
-
+export default function NotFound() {
   return (
     <Container>
-      <Stack
-        as='main'
-        spacing={8}
-        justifyContent='center'
-        alignItems='flex-start'
-        m='0 auto 4rem auto'
-        maxWidth='700px'
-      >
-        <Flex
-          flexDirection='column'
-          justifyContent='flex-start'
-          alignItems='flex-start'
-          maxWidth='700px'
-        >
-          <Heading letterSpacing='tight' mb={2} as='h1' size='2xl'>
-            404 - Tachaaaan, ha desaparecido 🃏
-          </Heading>
-          <Text color={secondaryTextColor[colorMode]} my={4}>
-            Esta página no existe. Por cierto, espero que hayas adivinado la referencia 😂
-          </Text>
-          <NextLink href='/' passHref>
-            <Button
-              as='a'
-              p={[1, 4]}
-              w='250px'
-              fontWeight='bold'
-              m='3rem auto 0'
-            >
-              Volver a Inicio
-            </Button>
-          </NextLink>
-        </Flex>
-      </Stack>
+      <NextSeo
+        title="404 – Alexander Saavedra"
+        canonical="https://mralexsaavedra.dev/404"
+        openGraph={{
+          url: 'https://mralexsaavedra.dev/404',
+          title: '404 – Alexander Saavedra'
+        }}
+      />
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+          451 – No disponible
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
+          Parece que has escontrado algo que solía existir o escribiste algo incorrecto.
+          Puede que hayas escrito algo mal. ¿Puedes comprobar la URL?
+        </p>
+        <Link href="/">
+          <a className="p-1 sm:p-4 w-64 font-bold mx-auto bg-gray-100 dark:bg-gray-900 text-center rounded-md text-black dark:text-white">
+            Volver a Inicio
+          </a>
+        </Link>
+      </div>
     </Container>
-  )
+  );
 }
-
-export default Error

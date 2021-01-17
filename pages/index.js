@@ -1,80 +1,23 @@
-import React from 'react'
-import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core'
+import Timeline from '../components/Timeline';
+import Container from '../components/Container';
 
-// import BlogPost from '../components/BlogPost'
-import Container from '../components/Container'
-import Skills from '../components/Skills'
-import Subscribe from '../components/Subscribe'
-
-// import { frontMatter as blogPosts } from './blog/*.mdx'
-
-const Index = () => {
-  const { colorMode } = useColorMode()
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
-  }
-
-  // const latestPosts = blogPosts.slice(Math.max(blogPosts.length - 3, 0))
-
+export default function Home() {
   return (
     <Container>
-      <Stack
-        as='main'
-        spacing={8}
-        justifyContent='center'
-        alignItems='flex-start'
-        m='0 auto 4rem auto'
-        maxWidth='700px'
-      >
-        <Flex
-          flexDirection='column'
-          justifyContent='flex-start'
-          alignItems='flex-start'
-          maxWidth='700px'
-        >
-          <Heading letterSpacing='tight' mb={2} as='h1' size='2xl'>
-            Hey 👋🏽, soy Alexander Saavedra
-          </Heading>
-          <Text color={secondaryTextColor[colorMode]}>
-            Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer y espezializado en el ecosistema de JavaScript.
-            Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
-          </Text>
-        </Flex>
-        <Flex
-          flexDirection='column'
-          justifyContent='flex-start'
-          alignItems='flex-start'
-          maxWidth='700px'
-          width='100%'
-          mt={4}
-        >
-          <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
-            🚀 Últimos artículos
-          </Heading>
-          Aún no hay artículos publicados, pero llegarán 😬
-          {/* {!latestPosts.length && 'Aún no hay artículos publicados, pero llegarán 😬'}
-          {latestPosts.map((frontMatter) => (
-            <BlogPost key={frontMatter.title} {...frontMatter} />
-          ))} */}
-        </Flex>
-        <Flex
-          flexDirection='column'
-          justifyContent='flex-start'
-          alignItems='flex-start'
-          maxWidth='700px'
-          mt={4}
-          mb={4}
-        >
-          <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
-            🛠 Skill tecnológicos y herramientas
-          </Heading>
-          <Skills />
-        </Flex>
-        <Subscribe />
-      </Stack>
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+          Hey 👋🏽, soy Alexander Saavedra
+        </h1>
+        <h2 className="text-gray-600 dark:text-gray-400 mb-16">
+          Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer
+          y espezializado en el ecosistema de JavaScript.
+          Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
+        </h2>
+        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
+          🛠 Skill tecnológicos y herramientas
+        </h3>
+        <Timeline />
+      </div>
     </Container>
-  )
+  );
 }
-
-export default Index
