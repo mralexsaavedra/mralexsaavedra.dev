@@ -58,7 +58,7 @@ export default function About () {
           <p>
             👉🏽&nbsp; Si quieres saber más sobre mí, aquí te dejo mi&nbsp;
             <a
-              href='https://developers.google.com/community/gdg'
+              href='/alexander-resume-2020.pdf'
               target='_blank'
               rel='noopener noreferrer'
             >
