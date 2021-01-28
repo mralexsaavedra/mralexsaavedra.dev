@@ -1,8 +1,72 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import NextLink from 'next/link'
+import styled from 'styled-components'
 
 import Footer from '@/components/Footer'
+
+const Div = styled.div`
+  background-color: rgba(255, 255, 255, 1);
+  /* dark:bg-black */
+`
+
+const Nav = styled.nav`
+  /* sticky-nav */
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  max-width: 56rem;
+  padding: 2rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  /* dark:bg-black --tw-bg-opacity: 0.6; */
+`
+
+const Button = styled.button`
+  /* dark:bg-gray-800 */
+  background-color: rgba(229, 231, 235, 1);
+  border-radius: 0.25rem;
+  height: 2.5rem;
+  padding: 0.75rem;
+  width: 2.5rem;
+`
+
+const Svg = styled.svg`
+  /* dark:text-gray-200 */
+  color: rgba(31, 41, 55, 1);
+  height: 1rem;
+  width: 1rem;
+`
+
+const StyledLink = styled.a`
+  /* dark:text-gray-100 */
+  color: rgba(17, 24, 39, 1);
+  padding: 0.25rem;
+
+  @media (min-width: 640px) {
+    padding: 1rem;
+  }
+`
+
+const Main = styled.main`
+  /* dark:bg-black */
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+`
 
 export default function Container ({ children }) {
   const [mounted, setMounted] = useState(false)
@@ -12,21 +76,19 @@ export default function Container ({ children }) {
   useEffect(() => setMounted(true), [])
 
   return (
-    <div className='bg-white dark:bg-black'>
-      <nav className='sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60'>
-        <button
+    <Div>
+      <Nav>
+        <Button
           aria-label='Toggle Dark Mode'
           type='button'
-          className='bg-gray-200 dark:bg-gray-800 rounded p-3 h-10 w-10'
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
           {mounted && (
-            <svg
+            <Svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
               fill='currentColor'
               stroke='currentColor'
-              className='h-4 w-4 text-gray-800 dark:text-gray-200'
             >
               {theme === 'dark'
                 ? <path
@@ -41,25 +103,25 @@ export default function Container ({ children }) {
                     strokeWidth={2}
                     d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
                   />}
-            </svg>
+            </Svg>
           )}
-        </button>
+        </Button>
         <div>
           {/* <NextLink href="/blog">
             <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">Blog</a>
           </NextLink> */}
           <NextLink href='/about'>
-            <a className='p-1 sm:p-4 text-gray-900 dark:text-gray-100'>Sobre mí</a>
+            <StyledLink>Sobre mí</StyledLink>
           </NextLink>
           <NextLink href='/'>
-            <a className='p-1 sm:p-4 text-gray-900 dark:text-gray-100'>Inicio</a>
+            <StyledLink>Inicio</StyledLink>
           </NextLink>
         </div>
-      </nav>
-      <main className='flex flex-col justify-center bg-white dark:bg-black px-8'>
+      </Nav>
+      <Main>
         {children}
         <Footer />
-      </main>
-    </div>
+      </Main>
+    </Div>
   )
 }

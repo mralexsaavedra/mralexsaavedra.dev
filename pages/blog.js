@@ -1,9 +1,82 @@
 import { useState } from 'react'
 import { NextSeo } from 'next-seo'
+import styled from 'styled-components'
 
 import Container from '@/components/Container'
 import BlogPost from '@/components/BlogPost'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+
+const Wrapper = styled.div`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+`
+
+const H1 = styled.h1`
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  /* dark:text-white */
+`
+
+const Paragraph = styled.p`
+  color: rgba(75, 85, 99, 1);
+  margin-bottom: 1rem;
+
+  /*
+    dark:text-gray-400
+    prose
+  */
+`
+
+const Div = styled.div`
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+`
+
+const Input = styled.input`
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(209, 213, 219, 1);
+  border-radius: 0.375rem;
+  border-width: 1px;
+  color: rgba(17, 24, 39, 1);
+  display: block;
+  padding: 1rem 0.5rem;
+  width: 100%;
+
+  &:focus {
+    --tw-ring-color: rgba(59, 130, 246, 1);
+    border-color: rgba(59, 130, 246, 1);
+  }
+
+  /* dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100 */
+`
+
+const Svg = styled.svg`
+  color: rgba(156, 163, 175, 1);
+  height: 1.25rem;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  width: 1.25rem;
+
+  /* dark:text-gray-300 */
+`
 
 const url = 'https://mralexsaavedra.dev/blog'
 const title = 'Blog – Alexander Saavedra'

@@ -1,6 +1,54 @@
 import { NextSeo } from 'next-seo'
+import styled from 'styled-components'
 
 import Container from '@/components/Container'
+
+const Wrapper = styled.div`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+`
+
+const H1 = styled.h1`
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  /* dark:text-white */
+`
+
+const Div = styled.div`
+  color: rgba(75, 85, 99, 1);
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+
+  /*
+    dark:text-gray-400
+    prose
+  */
+`
+const H3 = styled.H3`
+  color: rgba(75, 85, 99, 1);
+  margin-bottom: 1rem;
+
+  /*
+    dark:text-gray-400
+    prose
+  */
+`
 
 export default function About () {
   return (

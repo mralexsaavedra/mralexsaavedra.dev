@@ -1,8 +1,89 @@
 import Image from 'next/image'
 import { parseISO, format } from 'date-fns'
+import styled from 'styled-components'
 
 import Container from '@/components/Container'
 import BlogSeo from '@/components/BlogSeo'
+
+const Article = styled.article`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+  width: 100%;
+`
+
+const H1 = styled.h1`
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.875rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  /* dark:text-white */
+`
+
+const Div = styled.div`
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  margin-top: 0.5rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+  }
+`
+
+const CenterDiv = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Paragraph = styled.p`
+  /* dark:text-gray-300 */
+  color: rgba(55, 65, 81, 1);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-left: 0.5rem;
+`
+
+const ReadingTime = styled.p`
+  /* min-w-32 */
+  color: rgba(107, 114, 128, 1);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+
+   @media (min-width: 768px) {
+    margin-top: 0;
+  }
+`
+
+const DivChildren = styled.div`
+  /* prose dark:prose-dark */
+  max-width: none;
+  width: 100%;
+`
+
+const DivDiscussTwitter = styled.div`
+  color: rgba(55, 65, 81, 1);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+`
 
 const editUrl = (slug) =>
   `https://github.com/mralexsaavedra/mralexsaavedra.dev/edit/master/data/blog/${slug}.mdx`

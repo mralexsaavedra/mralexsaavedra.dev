@@ -1,26 +1,135 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import { useState } from 'react'
+import styled from 'styled-components'
+
+const StyledDivider = styled.div`
+  /* dark:border-gray-600 */
+  border-color: rgba(229, 231, 235, 1);
+  border-width: 1px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+`
+
+const YearTitle = styled.h3`
+  /* dark:text-gray-100 */
+  color: rgba(17, 24, 39, 1);
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+`
+
+const Li = styled.li`
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+`
+
+const Div = styled.div`
+  /* dark:text-green-300 */
+  align-items: center;
+  color: rgba(4, 120, 87, 1);
+  display: flex;
+  margin-bottom: 0.5rem;
+`
+
+const Span = styled.span`
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+`
+
+const SvgCheck = styled.svg`
+  height: 1rem;
+  margin-right: 0.5rem;
+  width: 1rem;
+`
+
+const SvgArrow = styled.svg`
+  height: 1rem;
+  margin-left: 0.25rem;
+  width: 1rem;
+`
+
+const Title = styled.p`
+  /* dark:text-gray-100 */
+  color: rgba(17, 24, 39, 1);
+  font-weight: 500;
+`
+
+const Paragraph = styled.p`
+  /* dark:text-gray-400 */
+  color: rgba(55, 65, 81, 1);
+  margin-left: 1.5rem;
+`
+
+const H3 = styled.h3`
+  /* dark:text-white */
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+`
+
+const Button = styled.button`
+  /* dark:text-gray-100 */
+  display: flex;
+  align-items: center;
+  color: rgba(17, 24, 39, 1);
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.375rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`
 
 const Divider = () => {
   return (
-    <div className='border border-gray-200 dark:border-gray-600 w-full my-8' />
+    <StyledDivider />
   )
 }
 
 const Year = ({ children }) => {
   return (
-    <h3 className='text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100'>
+    <YearTitle>
       {children}
-    </h3>
+    </YearTitle>
   )
 }
 
 const Step = ({ title, children }) => {
   return (
-    <li className='mb-4 ml-2'>
-      <div className='flex items-center mb-2 text-green-700 dark:text-green-300'>
-        <span className='sr-only'>Check</span>
-        <svg className='h-4 w-4 mr-2' viewBox='0 0 24 24'>
+    <Li>
+      <Div>
+        <Span>Check</Span>
+        <SvgCheck viewBox='0 0 24 24'>
           <g
             fill='none'
             stroke='currentColor'
@@ -31,11 +140,11 @@ const Step = ({ title, children }) => {
             <path d='M22 11.08V12a10 10 0 11-5.93-9.14' />
             <path d='M22 4L12 14.01l-3-3' />
           </g>
-        </svg>
-        <p className='font-medium text-gray-900 dark:text-gray-100'>{title}</p>
-      </div>
-      <p className='text-gray-700 dark:text-gray-400 ml-6'>{children}</p>
-    </li>
+        </SvgCheck>
+        <Title>{title}</Title>
+      </Div>
+      <Paragraph>{children}</Paragraph>
+    </Li>
   )
 }
 
@@ -125,9 +234,9 @@ export default function Timeline () {
 
   return (
     <>
-      <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white'>
+      <H3>
         ⏳ Timeline
-      </h3>
+      </H3>
       <Year>2020</Year>
       <ul>
         <Step title='Comienzo en Kira Health Startup 👨🏽‍⚕️👨🏽‍💻'>
@@ -165,14 +274,12 @@ export default function Timeline () {
       </ul>
       {isShowingFullTimeline
         ? <FullTimeline />
-        : <button
+        : <Button
             type='button'
-            className='flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-gray-900 dark:text-gray-100'
             onClick={() => showFullTimeline(true)}
           >
           Ver más
-          <svg
-            className='h-4 w-4 ml-1'
+          <SvgArrow
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -184,8 +291,8 @@ export default function Timeline () {
               strokeWidth={2}
               d='M19 9l-7 7-7-7'
             />
-          </svg>
-        </button>}
+          </SvgArrow>
+        </Button>}
     </>
   )
 }

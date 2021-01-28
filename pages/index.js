@@ -1,25 +1,67 @@
-import Container from '../components/Container'
-import Skills from '../components/Skills'
-import Timeline from '../components/Timeline'
+import styled from 'styled-components'
+
+import Container from '@/components/Container'
+import Skills from '@/components/Skills'
+import Timeline from '@/components/Timeline'
+
+import { H1, Wrapper } from '@/styles/global'
+
+const H2 = styled.h2`
+  color: rgba(75, 85, 99, 1)
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    padding-right: 1rem;
+  }
+
+  /* dark:text-gray-400 */
+`
+
+const Image = styled.img`
+  border-radius: 9999px;
+  height: 12rem;
+  margin-top: 2rem;
+  object-fit: cover;
+  width: 12rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+`
+
+const Div = styled.div`
+  align-items: center;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`
 
 export default function Home () {
   return (
     <Container>
-      <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
-        <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
+      <Wrapper>
+        <H1>
           Hey 👋🏽,&nbsp;soy Alexander Saavedra
-        </h1>
-        <div className='flex flex-col md:flex-row items-center rounded-xl mt-4 mb-16'>
-          <h2 className='text-gray-600 dark:text-gray-400 text-lg p-0 md:pr-4'>
+        </H1>
+        <Div>
+          <H2>
             Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer
             y espezializado en el ecosistema de JavaScript.
             Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
-          </h2>
-          <img class='h-48 w-48 rounded-full object-cover mt-8 md:mt-0' src='/avatar.jpg' alt='Avatar image' />
-        </div>
+          </H2>
+          <Image src='/avatar.jpg' alt='Avatar image' />
+        </Div>
         <Skills />
         <Timeline />
-      </div>
+      </Wrapper>
     </Container>
   )
 }
