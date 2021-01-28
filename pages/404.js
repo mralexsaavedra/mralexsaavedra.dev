@@ -1,19 +1,10 @@
 import Link from 'next/link'
-import { NextSeo } from 'next-seo'
 
 import Container from '@/components/Container'
 
 export default function NotFound () {
   return (
-    <Container>
-      <NextSeo
-        title='404 – Alexander Saavedra'
-        canonical='https://mralexsaavedra.dev/404'
-        openGraph={{
-          url: 'https://mralexsaavedra.dev/404',
-          title: '404 – Alexander Saavedra'
-        }}
-      />
+    <Container title='404 – Alexander Saavedra'>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
         <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
           451 – No disponible

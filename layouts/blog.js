@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { parseISO, format } from 'date-fns'
 
 import Container from '@/components/Container'
-import BlogSeo from '@/components/BlogSeo'
 
 const editUrl = (slug) =>
   `https://github.com/mralexsaavedra/mralexsaavedra.dev/edit/master/data/blog/${slug}.mdx`
@@ -13,11 +12,13 @@ const discussUrl = (slug) =>
 
 export default function BlogLayout ({ children, frontMatter }) {
   return (
-    <Container>
-      <BlogSeo
-        url={`https://mralexsaavedra.dev/blog/${frontMatter.slug}`}
-        {...frontMatter}
-      />
+    <Container
+      title={`${frontMatter.title} – Lee Robinson`}
+      description={frontMatter.summary}
+      image={`https://mralexsaavedra.dev${frontMatter.image}`}
+      date={new Date(frontMatter.publishedAt).toISOString()}
+      type='article'
+    >
       <article className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full'>
         <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
           {frontMatter.title}
