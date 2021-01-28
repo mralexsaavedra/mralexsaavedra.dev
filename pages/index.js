@@ -1,6 +1,8 @@
-import Container from '../components/Container'
-import Skills from '../components/Skills'
-import Timeline from '../components/Timeline'
+import Image from 'next/image'
+
+import Container from '@/components/Container'
+import Skills from '@/components/Skills'
+import Timeline from '@/components/Timeline'
 
 export default function Home () {
   return (
@@ -15,7 +17,13 @@ export default function Home () {
             y espezializado en el ecosistema de JavaScript.
             Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
           </h2>
-          <img class='h-48 w-48 rounded-full object-cover mt-8 md:mt-0' src='/avatar.jpg' alt='Avatar image' />
+          <Image
+            alt='Alexander Saavedra'
+            height={700}
+            width={700}
+            src='/avatar.jpg'
+            className='rounded-full object-cover mt-8 md:mt-0'
+          />
         </div>
         <Skills />
         <Timeline />
