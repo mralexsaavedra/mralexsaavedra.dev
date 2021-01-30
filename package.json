@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "author": {
     "name": "Alexander Saavedra",
-    "email": "me@mralexsaavedra.dev",
+    "email": "mralexsaavedra@gmail.com",
     "url": "https://mralexsaavedra.dev"
   },
   "license": "MIT",
@@ -24,7 +24,6 @@
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.2.1",
     "babel-plugin-import-glob-array": "^0.2.0",
-    "comma-number": "2.0.1",
     "date-fns": "2.16.1",
     "gray-matter": "4.0.2",
     "mdx-prism": "0.3.1",
