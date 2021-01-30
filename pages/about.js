@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo'
 import styled from 'styled-components'
 
 import Container from '@/components/Container'
@@ -52,15 +51,7 @@ const H3 = styled.H3`
 
 export default function About () {
   return (
-    <Container>
-      <NextSeo
-        title='Sobre mí – Alexander Saavedra'
-        canonical='https://mralexsaavedra.dev/about'
-        openGraph={{
-          url: 'https://mralexsaavedra.dev/about',
-          title: 'Sobre mí – Alexander Saavedra'
-        }}
-      />
+    <Container title='Sobre mí - Alexander Saavedra'>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
         <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
           🙋🏽‍♂️ Sobre mí

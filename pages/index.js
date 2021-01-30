@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 import Container from '@/components/Container'
@@ -57,7 +58,13 @@ export default function Home () {
             y espezializado en el ecosistema de JavaScript.
             Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
           </H2>
-          <Image src='/avatar.jpg' alt='Avatar image' />
+          <Image
+            alt='Alexander Saavedra'
+            height={700}
+            width={700}
+            src='/avatar.jpg'
+            className='rounded-full object-cover mt-8 md:mt-0'
+          />
         </Div>
         <Skills />
         <Timeline />

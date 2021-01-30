@@ -29,7 +29,6 @@
     "mdx-prism": "0.3.1",
     "next": "10.0.5",
     "next-mdx-remote": "^2.1.1",
-    "next-seo": "4.17.0",
     "next-themes": "^0.0.10",
     "postcss": "^8.2.4",
     "preact": "^10.5.9",
@@ -54,6 +53,7 @@
     "remark-frontmatter": "3.0.0",
     "remark-parse": "9.0.0",
     "remark-stringify": "9.0.1",
+    "rss": "^1.2.2",
     "standard": "^16.0.3",
     "unified": "9.2.0",
     "unist-util-visit": "2.0.3"

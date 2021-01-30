@@ -41,7 +41,6 @@ class MyDocument extends Document {
             href='/static/favicons/safari-pinned-tab.svg'
             rel='mask-icon'
           />
-          <meta content='IE=edge' httpEquiv='X-UA-Compatible' />
           <meta content='#ffffff' name='theme-color' />
           <meta content='#ffffff' name='msapplication-TileColor' />
           <meta
@@ -52,6 +51,22 @@ class MyDocument extends Document {
           <meta
             content='eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw'
             name='google-site-verification'
+          />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `
+            }}
           />
         </Head>
         <body className='bg-white dark:bg-black text-white dark:text-black'>
