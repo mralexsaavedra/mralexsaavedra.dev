@@ -12,17 +12,17 @@ export default function Home () {
           Hey 👋🏽,&nbsp;soy Alexander Saavedra
         </h1>
         <div className='flex flex-col md:flex-row items-center rounded-xl mt-4 mb-16'>
-          <h2 className='text-gray-600 dark:text-gray-400 text-lg p-0 md:pr-4'>
+          <h2 className='text-gray-600 dark:text-gray-400 text-lg p-0 md:pr-4 mb-11 md:mb-0'>
             Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer
             y espezializado en el ecosistema de JavaScript.
-            Amante de las buenas practicas y del continuo aprendizaje de este mundillo.
+            Amante de las buenas practicas y del software de calidad.
           </h2>
           <Image
             alt='Alexander Saavedra'
             height={700}
             width={700}
             src='/avatar.jpg'
-            className='rounded-full object-cover mt-8 md:mt-0'
+            className='rounded-full object-cover'
           />
         </div>
         <Skills />

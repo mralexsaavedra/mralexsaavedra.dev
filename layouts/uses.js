@@ -11,7 +11,7 @@ export default function UsesLayout ({ children }) {
           Uses
         </h1>
         <p className='text-gray-700 dark:text-gray-300 mt-2 mb-8'>
-          Aquí te comparto el hardware y algunas herramientas que utilizo en mi día a día.
+          Aquí te comparto algunas herramientas y el hardware que utilizo en mi día a día.
         </p>
         <div className='prose dark:prose-dark w-full'>{children}</div>
       </article>
