@@ -14,8 +14,8 @@ export default function Home () {
         <div className='flex flex-col md:flex-row items-center rounded-xl mt-4 mb-16'>
           <h2 className='text-gray-600 dark:text-gray-400 text-lg p-0 md:pr-4 mb-11 md:mb-0'>
             Soy Software Engineer y llevo 3+ años trabajando como Frontend Developer
-            y espezializado en el ecosistema de JavaScript.
-            Amante de las buenas practicas y del software de calidad.
+            y especializado en el ecosistema de JavaScript.
+            Amante de las buenas prácticas y del software de calidad.
           </h2>
           <Image
             alt='Alexander Saavedra'
