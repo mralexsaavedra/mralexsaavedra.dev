@@ -23,7 +23,7 @@ $ yarn
 $ yarn dev
 ```
 
-Create a `.env.local` file similar to [`.env.example`](https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/master/.env.example).
+Create a `.env.local` file similar to [`.env.example`](https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/main/.env.example).
 
 ## Built Using
 
