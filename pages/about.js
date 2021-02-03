@@ -48,7 +48,7 @@ export default function About () {
           <p>
             👉🏽&nbsp; Si quieres saber más sobre mí, aquí te dejo mi&nbsp;
             <a
-              href='/alexander-resume-2020.pdf'
+              href='/alexander-resume-2021.pdf'
               target='_blank'
               rel='noopener noreferrer'
             >

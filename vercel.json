@@ -14,12 +14,8 @@
   ],
   "redirects": [
     {
-      "source": "/AlexanderSaavedra.pdf",
-      "destination": "/alexander-resume-2020.pdf"
-    },
-    {
-      "source": "/projects",
-      "destination": "/about"
+      "source": "/cv",
+      "destination": "/alexander-resume-2021.pdf"
     },
     {
       "source": "/twitter",
@@ -32,6 +28,10 @@
     {
       "source": "/github",
       "destination": "https://github.com/mralexsaavedra"
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://instagram.com/mralexsaavedra"
     }
   ]
 }
