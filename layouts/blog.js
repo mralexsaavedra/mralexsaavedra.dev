@@ -29,7 +29,7 @@ export default function BlogLayout ({ children, frontMatter }) {
               alt='Alexander Saavedra'
               height={24}
               width={24}
-              src='/static/images/avatar.jpg'
+              src='/static/images/avatar.png'
               className='rounded-full'
             />
             <p className='text-sm text-gray-700 dark:text-gray-300 ml-2'>
