@@ -52,7 +52,10 @@ export default function Blog ({ posts }) {
             />
           </svg>
         </div>
-        {!filteredBlogPosts.length && 'No se encontró ningún artículo.'}
+        {!filteredBlogPosts.length &&
+          <p className='text-gray-600 dark:text-gray-400 mb-4'>
+            No se encontró ningún artículo.
+          </p>}
         {filteredBlogPosts.map((frontMatter) => (
           <BlogPost key={frontMatter.title} {...frontMatter} />
         ))}
