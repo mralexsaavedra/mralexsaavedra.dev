@@ -30,6 +30,7 @@ export default function Container (props) {
         <meta name='robots' content='follow, index' />
         <meta content={meta.description} name='description' />
         <meta property='og:url' content={`https://mralexsaavedra.dev${router.asPath}`} />
+        <link rel='canonical' href={`https://mralexsaavedra.dev${router.asPath}`} />
         <meta property='og:type' content={meta.type} />
         <meta property='og:site_name' content='Alexander Saavedra' />
         <meta property='og:description' content={meta.description} />
