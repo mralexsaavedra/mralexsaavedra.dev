@@ -5,7 +5,7 @@ export default function About () {
     <Container title='Sobre mí - Alexander Saavedra'>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
         <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
-          🙋🏽‍♂️ Sobre mí
+          💁🏽‍♂️ Sobre mí
         </h1>
         <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
