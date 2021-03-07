@@ -1,5 +1,3 @@
-const fetch = require('isomorphic-fetch')
-
 export default async (_, res) => {
   const colorsResponse = await fetch(
     'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json'

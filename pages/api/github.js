@@ -1,5 +1,3 @@
-const fetch = require('isomorphic-fetch')
-
 export default async (_, res) => {
   const userReposResponse = await fetch(
     'https://gh-pinned-repos-5l2i19um3.vercel.app/?username=mralexsaavedra'

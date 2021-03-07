@@ -69,6 +69,11 @@
       "./node_modules/standard/eslintrc.json"
     ]
   },
+  "standard": {
+    "globals": [
+      "fetch"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
