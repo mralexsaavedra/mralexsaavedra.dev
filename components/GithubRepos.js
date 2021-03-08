@@ -9,8 +9,8 @@ const GithubRepos = ({ title, summary, slug, readingTime }) => {
   const { data: dataColors } = useSWR('/api/colors', fetcher)
   const { data: dataRepos } = useSWR('/api/github', fetcher)
 
-  const repos = dataRepos?.repos
   const colors = dataColors?.colors
+  const repos = dataRepos?.repos
 
   return (
     <>
