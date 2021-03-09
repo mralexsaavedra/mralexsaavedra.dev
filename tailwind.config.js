@@ -5,6 +5,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        'twitter-blue': '#1DA1F2'
+      },
       fill: theme => ({
         dark: theme('colors.white')
       }),

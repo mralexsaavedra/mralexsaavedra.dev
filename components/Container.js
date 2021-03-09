@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import Share from './Share'
 
 export default function Container (props) {
   const { children, ...customMeta } = props
@@ -45,6 +46,7 @@ export default function Container (props) {
         {children}
         <Footer />
       </main>
+      <Share />
     </div>
   )
 }
