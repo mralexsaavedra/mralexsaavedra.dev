@@ -27,11 +27,11 @@ const GithubRepos = ({ title, summary, slug, readingTime }) => {
             >
               <GithubReposItem
                 repository={repo}
-                bgColor={repo.language ? colors[repo.language].color : '#ffffff'}
+                bgColor={colors && repo.language ? colors[repo.language].color : '#D1D5DB'}
               />
             </div>
             )
-          : [...Array(6)].map((e, i) =>
+          : [...Array(6)].map((_, i) =>
             <div
               key={i}
               className='w-full md:w-1/2 lg:w-1/3 md:pr-4 pb-4'
