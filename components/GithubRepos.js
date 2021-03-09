@@ -27,7 +27,7 @@ const GithubRepos = ({ title, summary, slug, readingTime }) => {
             >
               <GithubReposItem
                 repository={repo}
-                bgColor={colors && repo.language ? colors[repo.language].color : '#D1D5DB'}
+                bgColor={colors && repo.language ? colors[repo.language].color : '#F1E05A'}
               />
             </div>
             )
