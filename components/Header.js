@@ -49,7 +49,7 @@ export default function Header () {
             <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">Blog</a>
           </NextLink> */}
         <NextLink href='/about'>
-          <a className='p-1 sm:p-4 text-gray-900 dark:text-gray-100'>Sobre mí</a>
+          <a className='p-4 sm:p-4 text-gray-900 dark:text-gray-100'>Sobre mí</a>
         </NextLink>
         <NextLink href='/'>
           <a className='p-1 sm:p-4 text-gray-900 dark:text-gray-100'>Inicio</a>
