@@ -16,7 +16,11 @@
     "build": "next build",
     "dev": "next",
     "start": "next start",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "generate-rss": "node scripts/generate-rss.js"
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.22",
