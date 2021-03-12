@@ -79,6 +79,13 @@ export default function Footer () {
         <Link href='/uses'>
           <a className='text-sm text-gray-500 hover:text-gray-600'>/uses</a>
         </Link>
+        <a
+          href='/alexander-resume-2021.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-sm text-gray-500 hover:text-gray-600'
+        >/resume
+        </a>
       </div>
     </footer>
   )
