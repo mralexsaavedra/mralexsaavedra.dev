@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const githubUrl = 'https://github.com/mralexsaavedra/mralexsaavedra.dev'
+const githubUrl = 'https://github.com/mralexsaavedra/mralexsaavedra.dev/discussions'
 
 const params = new URLSearchParams({
   url: 'https://mralexsaavedra.dev',
@@ -23,7 +23,7 @@ const Share = () => (
         width={20}
         src='/logos/github_dark.png'
       />
-      <span className='ml-2 hidden md:block'>Star</span>
+      <span className='ml-2 hidden md:block'>Feedback</span>
     </a>
     <a
       href={twitterUrl}
