@@ -15,8 +15,8 @@ const ExternalLink = ({ href, children }) => (
 export default function Skills () {
   const { theme } = useTheme()
 
-  const height = 80
-  const width = 80
+  const height = 90
+  const width = 90
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function Skills () {
         🛠 Skill tecnológicos y herramientas
       </h3>
 
-      <div className='grid grid-cols-4 md:grid-cols-6 grid-flow-row gap-4 mb-16'>
+      <div className='w-full grid grid-cols-3 md:grid-cols-4 grid-flow-row gap-y-8 gap-x-10 mb-16'>
         <ExternalLink href='https://developer.mozilla.org/es/docs/Web/HTML'>
           <Image
             alt='HTML logo'
