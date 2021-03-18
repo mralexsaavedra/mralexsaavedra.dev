@@ -47,7 +47,6 @@
     "tailwindcss": "2.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/jit": "^0.0.0-3cf38849c",
     "babel-eslint": "10.1.0",
     "globby": "11.0.2",
     "husky": "^5.1.3",
