@@ -22,7 +22,7 @@ export default function Home () {
             alt='Alexander Saavedra'
             height={700}
             width={700}
-            src='/static/images/avatar.png'
+            src='/static/images/avatar.jpg'
             className='rounded-full object-cover'
           />
         </div>
