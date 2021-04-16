@@ -21,7 +21,7 @@ export default function Skills () {
   return (
     <>
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-12 mt-14 text-black dark:text-white'>
-        🛠 Skill tecnológicos y herramientas
+        Skill tecnológicos y herramientas
       </h3>
 
       <div className='w-full grid grid-cols-3 md:grid-cols-4 grid-flow-row gap-y-8 gap-x-10 mb-16'>

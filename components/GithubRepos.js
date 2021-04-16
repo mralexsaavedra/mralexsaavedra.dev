@@ -15,7 +15,7 @@ const GithubRepos = ({ title, summary, slug, readingTime }) => {
   return (
     <>
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-8 text-black dark:text-white'>
-        🐙 Repositorios de GitHub
+        Repositorios de GitHub
       </h3>
 
       <div className='flex flex-wrap md:-mr-6'>

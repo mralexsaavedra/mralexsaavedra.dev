@@ -126,7 +126,7 @@ export default function Timeline () {
   return (
     <>
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-8 mt-4 text-black dark:text-white'>
-        ⏳ Timeline
+        Timeline
       </h3>
       <Year>2020</Year>
       <ul>
