@@ -4,7 +4,7 @@ import NextLink from 'next/link'
 
 export default function Header () {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), [])
@@ -18,7 +18,7 @@ export default function Header () {
         aria-label='Toggle Dark Mode'
         type='button'
         className='bg-gray-200 dark:bg-gray-800 rounded p-3 h-10 w-10'
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       >
         {mounted && (
           <svg
@@ -28,7 +28,7 @@ export default function Header () {
             stroke='currentColor'
             className='h-4 w-4 text-gray-800 dark:text-gray-200'
           >
-            {theme === 'dark'
+            {resolvedTheme === 'dark'
               ? <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
