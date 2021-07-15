@@ -10,14 +10,14 @@ export default function Header () {
   useEffect(() => setMounted(true), [])
 
   return (
-    <nav className='sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60'>
-      <a href='#skip' className='sr-only focus:not-sr-only'>
+    <nav className='flex items-center justify-between w-full max-w-4xl p-8 mx-auto my-0 text-gray-900 bg-white sticky-nav md:my-8 dark:bg-black bg-opacity-60 dark:text-gray-100'>
+      <a href='#skip' className='skip-nav'>
         Ir al contenido
       </a>
       <button
         aria-label='Toggle Dark Mode'
         type='button'
-        className='bg-gray-200 dark:bg-gray-800 rounded p-3 h-10 w-10'
+        className='w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-800'
         onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       >
         {mounted && (
@@ -26,7 +26,7 @@ export default function Header () {
             viewBox='0 0 24 24'
             fill='currentColor'
             stroke='currentColor'
-            className='h-4 w-4 text-gray-800 dark:text-gray-200'
+            className='w-4 h-4 text-gray-800 dark:text-gray-200'
           >
             {resolvedTheme === 'dark'
               ? <path
@@ -46,13 +46,13 @@ export default function Header () {
       </button>
       <div>
         {/* <NextLink href="/blog">
-            <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">Blog</a>
+            <a className="p-1 text-gray-900 sm:p-4 dark:text-gray-100">Blog</a>
           </NextLink> */}
         <NextLink href='/about'>
-          <a className='p-2 md:p-4 text-gray-900 dark:text-gray-100'>Sobre mí</a>
+          <a className='p-1 text-gray-900 sm:p-4 dark:text-gray-100'>Sobre mí</a>
         </NextLink>
         <NextLink href='/'>
-          <a className='p-2 md:p-4 text-gray-900 dark:text-gray-100'>Inicio</a>
+          <a className='p-1 text-gray-900 sm:p-4 dark:text-gray-100'>Inicio</a>
         </NextLink>
       </div>
     </nav>
