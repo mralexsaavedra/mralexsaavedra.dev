@@ -62,29 +62,9 @@
     "unified": "9.2.1",
     "unist-util-visit": "2.0.3"
   },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "./node_modules/standard/eslintrc.json"
-    ]
-  },
   "standard": {
     "globals": [
       "fetch"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "standard --fix"
   }
 }
