@@ -1,12 +1,8 @@
 module.exports = {
   future: {
-    webpack5: true,
     strictPostcssConfiguration: true
   },
   reactStrictMode: true,
-  experimental: {
-    turboMode: true
-  },
   images: {
     domains: [
       'pbs.twimg.com' // Twitter Profile Picture
