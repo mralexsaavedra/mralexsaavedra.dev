@@ -30,7 +30,7 @@ const GithubRepos = ({ title, summary, slug, readingTime }) => {
                 bgColor={colors && repo.language ? colors[repo.language].color : '#F1E05A'}
               />
             </div>
-            )
+          )
           : [...Array(6)].map((_, i) =>
             <div
               key={i}
