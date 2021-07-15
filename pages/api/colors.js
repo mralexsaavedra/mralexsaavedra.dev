@@ -1,4 +1,4 @@
-export default async (_, res) => {
+export default async function handler (_, res) {
   const colorsResponse = await fetch(
     'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json'
   )
