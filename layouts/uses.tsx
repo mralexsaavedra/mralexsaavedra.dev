@@ -1,6 +1,6 @@
-import Container from '@/components/Container'
+import Container from 'components/Container'
 
-export default function UsesLayout ({ children }) {
+export default function UsesLayout({ children }) {
   return (
     <Container
       title='Uses – Alexander Saavedra'

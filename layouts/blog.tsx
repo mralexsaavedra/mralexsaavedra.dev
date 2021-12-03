@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { parseISO, format } from 'date-fns'
 
-import Container from '@/components/Container'
+import Container from 'components/Container'
 
 const editUrl = (slug) =>
   `https://github.com/mralexsaavedra/mralexsaavedra.dev/edit/main/data/blog/${slug}.mdx`
@@ -10,7 +10,7 @@ const discussUrl = (slug) =>
     `https://mralexsaavedra.dev/blog/${slug}`
   )}`
 
-export default function BlogLayout ({ children, frontMatter }) {
+export default function BlogLayout({ children, frontMatter }) {
   return (
     <Container
       title={`${frontMatter.title} – Alexander Saavedra`}

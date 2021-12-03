@@ -1,4 +1,9 @@
-export default async function handler (_, res) {
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const userReposResponse = await fetch(
     'https://gh-pinned-repos-5l2i19um3.vercel.app/?username=mralexsaavedra'
   )

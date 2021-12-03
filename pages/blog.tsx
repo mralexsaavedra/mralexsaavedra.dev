@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-import Container from '@/components/Container'
-import BlogPost from '@/components/BlogPost'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import BlogPost from 'components/BlogPost'
+import Container from 'components/Container'
+import { getAllFilesFrontMatter } from 'lib/mdx'
 
-export default function Blog ({ posts }) {
+export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts
     .sort(
@@ -52,10 +52,11 @@ export default function Blog ({ posts }) {
             />
           </svg>
         </div>
-        {!filteredBlogPosts.length &&
+        {!filteredBlogPosts.length && (
           <p className='text-gray-600 dark:text-gray-400 mb-4'>
             No se encontró ningún artículo.
-          </p>}
+          </p>
+        )}
         {filteredBlogPosts.map((frontMatter) => (
           <BlogPost key={frontMatter.title} {...frontMatter} />
         ))}
@@ -64,7 +65,7 @@ export default function Blog ({ posts }) {
   )
 }
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
 
   return { props: { posts } }

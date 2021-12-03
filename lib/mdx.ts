@@ -10,17 +10,17 @@ import rehypeCodeTitles from 'rehype-code-titles'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrism from 'rehype-prism-plus'
 
-export async function getFiles (type) {
+export async function getFiles(type) {
   return readdirSync(join(process.cwd(), 'data', type))
 }
 
-export async function getFileBySlug (type, slug) {
+export async function getFileBySlug(type, slug?) {
   const source = slug
     ? readFileSync(join(process.cwd(), 'data', type, `${slug}.mdx`), 'utf8')
     : readFileSync(join(process.cwd(), 'data', `${type}.mdx`), 'utf8')
 
   const { code, frontmatter } = await bundleMDX(source, {
-    xdmOptions (options) {
+    xdmOptions(options) {
       options.remarkPlugins = [...(options?.remarkPlugins ?? []), remarkGfm]
       options.rehypePlugins = [
         ...(options?.rehypePlugins ?? []),
@@ -35,7 +35,7 @@ export async function getFileBySlug (type, slug) {
             }
           }
         ]
-      ]
+      ] as any
       return options
     }
   })
@@ -55,7 +55,7 @@ export async function getFileBySlug (type, slug) {
   }
 }
 
-export async function getAllFilesFrontMatter (type) {
+export async function getAllFilesFrontMatter(type) {
   const files = readdirSync(join(process.cwd(), 'data', type))
 
   return files.reduce((allPosts, postSlug) => {

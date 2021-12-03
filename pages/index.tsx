@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-import Container from '@/components/Container'
-import GithubRepos from '@/components/GithubRepos'
-import Skills from '@/components/Skills'
-import Timeline from '@/components/Timeline'
+import Container from 'components/Container'
+import GithubRepos from 'components/GithubRepos'
+import Skills from 'components/Skills'
+import Timeline from 'components/Timeline'
 
-export default function Home () {
+export default function Home() {
   return (
     <Container>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>

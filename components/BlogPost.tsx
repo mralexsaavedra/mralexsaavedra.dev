@@ -1,6 +1,13 @@
 import Link from 'next/link'
+import useSWR from 'swr'
 
-const BlogPost = ({ title, summary, slug, readingTime }) => {
+import fetcher from 'lib/fetcher'
+import { IViews } from 'lib/types'
+
+export default function BlogPost({ title, summary, slug }) {
+  const { data } = useSWR<IViews>(`/api/views/${slug}`, fetcher)
+  const views = data?.total
+
   return (
     <Link href={`/blog/${slug}`}>
       <a className='w-full'>
@@ -10,7 +17,7 @@ const BlogPost = ({ title, summary, slug, readingTime }) => {
               {title}
             </h4>
             <p className='text-gray-500 text-left md:text-right w-32 mb-4 md:mb-0'>
-              ⏱ {readingTime.text}
+              {`${views ? new Number(views).toLocaleString() : '–––'} views`}
             </p>
           </div>
           <p className='text-gray-600 dark:text-gray-400'>{summary}</p>
@@ -19,5 +26,3 @@ const BlogPost = ({ title, summary, slug, readingTime }) => {
     </Link>
   )
 }
-
-export default BlogPost

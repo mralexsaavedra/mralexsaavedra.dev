@@ -15,7 +15,7 @@ const Year = ({ children }) => {
   )
 }
 
-const Step = ({ title, children }) => {
+const Step = (props) => {
   return (
     <li className='mb-4 ml-2'>
       <div className='flex items-center mb-2 text-green-700 dark:text-green-300'>
@@ -32,9 +32,11 @@ const Step = ({ title, children }) => {
             <path d='M22 4L12 14.01l-3-3' />
           </g>
         </svg>
-        <p className='font-medium text-gray-900 dark:text-gray-100'>{title}</p>
+        <p className="font-medium text-gray-900 dark:text-gray-100">
+          {props.title}
+        </p>
       </div>
-      <p className='text-gray-700 dark:text-gray-400 ml-6'>{children}</p>
+      <p className="text-gray-700 dark:text-gray-400 ml-6">{props.children}</p>
     </li>
   )
 }
@@ -120,7 +122,7 @@ const FullTimeline = () => (
   </>
 )
 
-export default function Timeline () {
+export default function Timeline() {
   const [isShowingFullTimeline, showFullTimeline] = useState(false)
 
   return (
@@ -166,10 +168,10 @@ export default function Timeline () {
       {isShowingFullTimeline
         ? <FullTimeline />
         : <button
-            type='button'
-            className='flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-gray-900 dark:text-gray-100'
-            onClick={() => showFullTimeline(true)}
-          >
+          type='button'
+          className='flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-gray-900 dark:text-gray-100'
+          onClick={() => showFullTimeline(true)}
+        >
           Ver más
           <svg
             className='h-4 w-4 ml-1'

@@ -1,11 +1,11 @@
 import useSWR from 'swr'
 
-import GithubReposItem from '@/components/GithubReposItem'
-import GithubReposItemSkeleton from '@/components/GithubReposItemSkeleton'
+import GithubReposItem from 'components/GithubReposItem'
+import GithubReposItemSkeleton from 'components/GithubReposItemSkeleton'
 
-import fetcher from '@/lib/fetcher'
+import fetcher from 'lib/fetcher'
 
-const GithubRepos = ({ title, summary, slug, readingTime }) => {
+export default function GithubRepos() {
   const { data: dataColors } = useSWR('/api/colors', fetcher)
   const { data: dataRepos } = useSWR('/api/github', fetcher)
 
@@ -43,5 +43,3 @@ const GithubRepos = ({ title, summary, slug, readingTime }) => {
     </>
   )
 }
-
-export default GithubRepos

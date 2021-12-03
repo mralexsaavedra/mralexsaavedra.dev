@@ -6,4 +6,3 @@ node_modules
 public/sitemap.xml
 public/feed.xml
 .vercel
-.husky

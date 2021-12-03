@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import Share from './Share'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
+import Share from 'components/Share'
 
 export default function Container (props) {
   const { children, ...customMeta } = props

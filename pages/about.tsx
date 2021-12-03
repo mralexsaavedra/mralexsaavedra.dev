@@ -1,6 +1,6 @@
-import Container from '@/components/Container'
+import Container from 'components/Container'
 
-export default function About () {
+export default function About() {
   return (
     <Container title='Sobre mí - Alexander Saavedra'>
       <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
