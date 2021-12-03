@@ -4,11 +4,11 @@ import GithubReposItem from 'components/GithubReposItem'
 import GithubReposItemSkeleton from 'components/GithubReposItemSkeleton'
 
 import fetcher from 'lib/fetcher'
-import { IColors, IGitHubRepos } from 'lib/types'
+import { Colors, GitHub } from 'lib/types'
 
 export default function GithubRepos() {
-  const { data: dataColors } = useSWR<IColors>('/api/colors', fetcher)
-  const { data: dataRepos } = useSWR<IGitHubRepos>('/api/github', fetcher)
+  const { data: dataColors } = useSWR<Colors>('/api/colors', fetcher)
+  const { data: dataRepos } = useSWR<GitHub>('/api/github', fetcher)
 
   const colors = dataColors?.colors
   const repos = dataRepos?.repos
