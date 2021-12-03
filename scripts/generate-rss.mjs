@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 
 async function generate () {
   const feed = new RSS({
-    title: 'Lee Robinson',
+    title: 'Alexander Saavedra',
     site_url: 'https://mralexsaavedra.dev',
     feed_url: 'https://mralexsaavedra.dev/feed.xml'
   })
