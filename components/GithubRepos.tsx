@@ -4,10 +4,11 @@ import GithubReposItem from 'components/GithubReposItem'
 import GithubReposItemSkeleton from 'components/GithubReposItemSkeleton'
 
 import fetcher from 'lib/fetcher'
+import { IColors, IGitHubRepos } from 'lib/types'
 
 export default function GithubRepos() {
-  const { data: dataColors } = useSWR('/api/colors', fetcher)
-  const { data: dataRepos } = useSWR('/api/github', fetcher)
+  const { data: dataColors } = useSWR<IColors>('/api/colors', fetcher)
+  const { data: dataRepos } = useSWR<IGitHubRepos>('/api/github', fetcher)
 
   const colors = dataColors?.colors
   const repos = dataRepos?.repos
@@ -19,26 +20,26 @@ export default function GithubRepos() {
       </h3>
 
       <div className='flex flex-wrap md:-mr-6'>
-        {repos && repos.length > 0
-          ? repos.map(repo =>
-            <div
-              key={repo.repo}
-              className='w-full md:w-1/2 lg:w-1/3 md:pr-4 pb-4'
-            >
-              <GithubReposItem
-                repository={repo}
-                bgColor={colors && repo.language ? colors[repo.language].color : '#F1E05A'}
-              />
-            </div>
-          )
-          : [...Array(6)].map((_, i) =>
-            <div
-              key={i}
-              className='w-full md:w-1/2 lg:w-1/3 md:pr-4 pb-4'
-            >
-              <GithubReposItemSkeleton />
-            </div>
-            )}
+        {
+          repos && repos.length > 0
+            ? repos.map(repo =>
+              <div
+                key={repo.repo}
+                className='w-full md:w-1/2 lg:w-1/3 md:pr-4 pb-4'
+              >
+                <GithubReposItem
+                  repository={repo}
+                  bgColor={colors && repo.language ? colors[repo.language].color : '#F1E05A'}
+                />
+              </div>
+            )
+            : [...Array(6)].map((_, i) =>
+              <div
+                key={i}
+                className='w-full md:w-1/2 lg:w-1/3 md:pr-4 pb-4'
+              >
+                <GithubReposItemSkeleton />
+              </div>)}
       </div>
     </>
   )

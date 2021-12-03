@@ -18,6 +18,17 @@ export interface IViews {
   total: number;
 }
 
+export interface IColors {
+  colors: number;
+}
+
+export interface IGitHubRepos {
+  repos: {
+    repo: string;
+    language: string;
+  }[]
+}
+
 export interface ISong {
   songUrl: string;
   artist: string;
