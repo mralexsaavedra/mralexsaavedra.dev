@@ -34,4 +34,8 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
+**LAST UPDATE:** *Commits on Aug 16, 2021* - [Switch to mdx-bundler.](https://github.com/leerob/leerob.io/commit/241f834ee27d5dd5b8bd35d8252bf1d6d375408e)
+
+---
+
 **Special thanks to [Lee Robinson](https://leerob.io/) for the Open Source template.**
