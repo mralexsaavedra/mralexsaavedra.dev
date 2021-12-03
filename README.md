@@ -9,8 +9,16 @@
 - LinkedIn 📝 : https://linkedin.com/in/mralexsaavedra
 - Twitter 🐦 : https://twitter.com/mralexsaavedra
 
+## Built Using
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Content**: [MDX](https://github.com/mdx-js/mdx)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+
 ## Overview
 
+- `pages/api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) powering [`/dashboard`](https://leerob.io/dashboard), newsletter subscription, and post views.
 - `pages/blog/*` - Static pre-rendered blog pages using [MDX](https://github.com/mdx-js/mdx).
 - `pages/*` - All other static pages.
 
@@ -24,13 +32,6 @@ $ yarn dev
 ```
 
 Create a `.env.local` file similar to [`.env.example`](https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/main/.env.example).
-
-## Built Using
-
-- [Next.js](https://nextjs.org/)
-- [Vercel](https://vercel.com)
-- [MDX](https://github.com/mdx-js/mdx)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 ---
 
