@@ -35,7 +35,7 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
-**LAST UPDATE:** *Commits on Sep 10, 2021* - [Convert to TypeScript.](https://github.com/leerob/leerob.io/commit/f23948b4fd4d9ee9aa435d24effd5f7a377c3947)
+**LAST UPDATE:** *Commits on Oct 3, 2021* - [Change Interfaces to Types.](https://github.com/leerob/leerob.io/commit/ea39018373503d79bdb99f7d072e8ed936f9cf24)
 
 ---
 
