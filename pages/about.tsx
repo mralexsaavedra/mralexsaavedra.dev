@@ -4,11 +4,11 @@ import Timeline from 'components/Timeline'
 export default function About() {
   return (
     <Container title='Sobre mí - Alexander Saavedra'>
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+      <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
+        <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
           Sobre mí
         </h1>
-        <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
+        <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
             Hey, ¿qué tal? Mi nombre es Alexander. Nací en el 95 en&nbsp;
             <a
@@ -18,7 +18,7 @@ export default function About() {
             >
               Barakaldo (Bizkaia)
             </a>
-            📍. Estudié Ingeniería Informática en la&nbsp;
+            . Estudié Ingeniería Informática en la&nbsp;
             <a
               href='https://www.ehu.eus/es/'
               target='_blank'
@@ -26,10 +26,10 @@ export default function About() {
             >
               UPV
             </a>
-            &nbsp;y actualmente trabajo como desarrollador software frontend 👨🏽‍💻.
+            &nbsp;y actualmente trabajo como desarrollador software frontend.
           </p>
           <p>
-            Tengo 3+ años de experiencia trabajando como desarrollador Full Stack aunque
+            Tengo 4+ años de experiencia trabajando como desarrollador Full Stack aunque
             siempre más orientado al Front-end.
           </p>
           <p>
@@ -44,10 +44,10 @@ export default function About() {
             &nbsp;donde nos dedicábamos a realizar eventos, organizar charlas y compartir conociminentos.
           </p>
           <p>
-            Siempre intento estar actualizado y seguir formándome, aunque siendo sincero, no es tarea fácil con todas las novedades que salen 😅.
+            Siempre intento estar actualizado y seguir formándome, aunque siendo sincero, no es tarea fácil con todas las novedades que salen.
           </p>
           <p>
-            👉🏽&nbsp; Si quieres saber más sobre mí, aquí te dejo mi&nbsp;
+            Si quieres saber más sobre mí, aquí te dejo mi&nbsp;
             <a
               href='/alexander-resume-2021.pdf'
               target='_blank'
@@ -57,19 +57,14 @@ export default function About() {
             </a>
           </p>
           <p>
-            En un futuro me gustaría compatir todo mi conocimiento impartiendo mentoría 👨🏽‍🏫, charlas, etc.
+            En un futuro me gustaría compatir todo mi conocimiento impartiendo mentoría, charlas, etc.
           </p>
           <p>
-            Mi vida no es sólo la programación. También me encanta viajar ✈, descubrir lugares nuevos 🌍, la música 🎧, el deporte 🏃🏽‍♂️, el surf 🏄🏽‍♂️, los videojuegos 👾 y mucho más.
+            Mi vida no es sólo la programación. También me encanta viajar, descubrir lugares nuevos, la música, el deporte, el surf, los videojuegos y mucho más.
           </p>
         </div>
+
         <Timeline />
-        <iframe
-          height='280'
-          src='https://www.google.com/maps/d/embed?mid=1guVv_clnlvYFCMEFZDt1DIKlAuMAI5pi'
-          title='Descubriendo mundo 🌍'
-          width='100%'
-        />
       </div>
     </Container>
   )

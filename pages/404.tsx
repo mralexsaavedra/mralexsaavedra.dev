@@ -14,7 +14,7 @@ export default function NotFound() {
           Puede que hayas escrito algo mal. ¿Puedes comprobar la URL?
         </p>
         <Link href='/'>
-          <a className="p-1 sm:p-4 w-64 font-bold mx-auto bg-gray-200 dark:bg-gray-800 text-center rounded-md text-black dark:text-white">
+          <a className='p-1 sm:p-4 w-64 font-bold mx-auto bg-gray-200 dark:bg-gray-800 text-center rounded-md text-black dark:text-white'>
             Volver a Inicio
           </a>
         </Link>

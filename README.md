@@ -18,9 +18,15 @@
 
 ## Overview
 
-- `pages/api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) powering [`/dashboard`](https://leerob.io/dashboard), newsletter subscription, and post views.
-- `pages/blog/*` - Static pre-rendered blog pages using [MDX](https://github.com/mdx-js/mdx).
+- `data/*` - MDX data that is used for blogs, newsletters, and code snippets.
+- `layouts/*` - The different page layouts each MDX category (blog, newsletter, snippets) uses.
+- `lib/*` - Short for "library", a collection of helpful utilities or code for external services.
+- `pages/api/*` - [API routes](https://nextjs.org/docs/api-routes/introduction) powering [`/dashboard`](https://leerob.io/dashboard), newsletter subscription, guestbook, and post views.
+- `pages/blog/*` - Static pre-rendered blog pages using MDX.
 - `pages/*` - All other static pages.
+- `public/*` - Static assets including fonts and images.
+- `scripts/*` - Two useful scripts to generate an RSS feed and a sitemap.
+- `styles/*` - A small amount of global styles. I'm mostly using vanilla Tailwind CSS.
 
 ## Running Locally
 
@@ -35,7 +41,7 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
-**LAST UPDATE:** *Commits on Oct 3, 2021* - [Change Interfaces to Types.](https://github.com/leerob/leerob.io/commit/ea39018373503d79bdb99f7d072e8ed936f9cf24)
+**LAST UPDATE:** *Commits on Dec 9, 2021* - [Update dependencies.](https://github.com/leerob/leerob.io/commit/804526051fe6fff266441a0e6a2c456da467e36c)
 
 ---
 

@@ -5,11 +5,11 @@ export default function Document(props) {
     <Html lang='en'>
       <Head>
         <link
-          rel="preload"
-          href="/fonts/ibm-plex-sans-var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
+          rel='preload'
+          href='/fonts/ibm-plex-sans-var.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
         />
         <link href='/static/favicons/favicon.ico' rel='shortcut icon' />
         <link href='/static/favicons/site.webmanifest' rel='manifest' />
@@ -47,7 +47,7 @@ export default function Document(props) {
           name='google-site-verification'
         />
       </Head>
-      <body className="bg-white dark:bg-black text-white dark:text-black">
+      <body className='bg-white dark:bg-black text-white dark:text-black'>
         <Main />
         <NextScript />
       </body>

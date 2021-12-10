@@ -35,8 +35,8 @@ export default function MobileMenu() {
     <>
       <button
         className={cn(styles.burger, 'visible md:hidden')}
-        aria-label="Toggle menu"
-        type="button"
+        aria-label='Toggle menu'
+        type='button'
         onClick={toggleMenu}
       >
         <MenuIcon data-hide={isMenuOpen} />
@@ -51,35 +51,35 @@ export default function MobileMenu() {
           )}
         >
           <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            className='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
             style={{ transitionDelay: '150ms' }}
           >
-            <Link href="/">
-              <a className="flex w-auto pb-4">Home</a>
+            <Link href='/'>
+              <a className='flex w-auto pb-4'>Home</a>
             </Link>
           </li>
           <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            className='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
             style={{ transitionDelay: '175ms' }}
           >
-            <Link href="/about">
-              <a className="flex w-auto pb-4">Sobre mí</a>
+            <Link href='/about'>
+              <a className='flex w-auto pb-4'>Sobre mí</a>
             </Link>
           </li>
           {/* <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            className='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/blog">
-              <a className="flex w-auto pb-4">Blog</a>
+            <Link href='/blog'>
+              <a className='flex w-auto pb-4'>Blog</a>
             </Link>
           </li> */}
           <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            className='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
             style={{ transitionDelay: '350ms' }}
           >
-            <Link href="/uses">
-              <a className="flex w-auto pb-4">Uses</a>
+            <Link href='/uses'>
+              <a className='flex w-auto pb-4'>Uses</a>
             </Link>
           </li>
         </ul>
@@ -91,26 +91,26 @@ export default function MobileMenu() {
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
+      className='h-5 w-5 absolute text-gray-900 dark:text-gray-100'
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
       {...props}
     >
       <path
-        d="M2.5 7.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d='M2.5 7.5H17.5'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
       <path
-        d="M2.5 12.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d='M2.5 12.5H17.5'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   )
@@ -119,20 +119,20 @@ function MenuIcon(props: JSX.IntrinsicElements['svg']) {
 function CrossIcon(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-      shapeRendering="geometricPrecision"
+      className='h-5 w-5 absolute text-gray-900 dark:text-gray-100'
+      viewBox='0 0 24 24'
+      width='24'
+      height='24'
+      stroke='currentColor'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      fill='none'
+      shapeRendering='geometricPrecision'
       {...props}
     >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
+      <path d='M18 6L6 18' />
+      <path d='M6 6l12 12' />
     </svg>
   )
 }

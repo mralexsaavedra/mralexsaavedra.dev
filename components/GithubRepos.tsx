@@ -15,7 +15,7 @@ export default function GithubRepos() {
 
   return (
     <>
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
+      <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white'>
         Repositorios de GitHub
       </h3>
 

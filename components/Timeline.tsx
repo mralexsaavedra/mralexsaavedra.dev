@@ -32,11 +32,11 @@ const Step = (props) => {
             <path d='M22 4L12 14.01l-3-3' />
           </g>
         </svg>
-        <p className="font-medium text-gray-900 dark:text-gray-100">
+        <p className='font-medium text-gray-900 dark:text-gray-100'>
           {props.title}
         </p>
       </div>
-      <p className="text-gray-700 dark:text-gray-400 ml-6">{props.children}</p>
+      <p className='text-gray-700 dark:text-gray-400 ml-6'>{props.children}</p>
     </li>
   )
 }
