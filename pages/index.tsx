@@ -27,7 +27,7 @@ export default function Home() {
               height={176}
               width={176}
               src='/static/images/avatar.jpg'
-              className='rounded-full filter grayscale'
+              className='rounded-full object-cover'
             />
           </div>
         </div>
