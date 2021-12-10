@@ -12,7 +12,7 @@ const ExternalLink = ({ href, children }) => (
   </a>
 )
 
-export default function Skills () {
+export default function Skills() {
   const { theme } = useTheme()
 
   const height = 90
@@ -20,7 +20,7 @@ export default function Skills () {
 
   return (
     <>
-      <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-12 mt-14 text-black dark:text-white'>
+      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
         Skill tecnológicos y herramientas
       </h3>
 

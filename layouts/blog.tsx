@@ -38,7 +38,7 @@ export default function BlogLayout({ children, frontMatter }) {
               {format(parseISO(frontMatter.publishedAt), 'dd MMMM, yyyy')}
             </p>
           </div>
-          <p className='text-sm text-gray-500 min-w-32 mt-2 md:mt-0'>
+          <p className="text-sm text-gray-600 dark:text-gray-400 min-w-32 mt-2 md:mt-0">
             {frontMatter.readingTime.text}
           </p>
         </div>

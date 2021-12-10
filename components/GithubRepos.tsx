@@ -15,7 +15,7 @@ export default function GithubRepos() {
 
   return (
     <>
-      <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-8 text-black dark:text-white'>
+      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
         Repositorios de GitHub
       </h3>
 
@@ -25,7 +25,7 @@ export default function GithubRepos() {
             ? repos.map(repo =>
               <div
                 key={repo.repo}
-                className='w-full md:w-1/2 lg:w-1/3 md:pr-4 pb-4'
+                className='w-full sm:w-1/2 lg:w-1/3 sm:pr-4 pb-4'
               >
                 <GithubReposItem
                   repository={repo}

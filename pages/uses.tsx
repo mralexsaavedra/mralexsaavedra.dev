@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 
-import { getFileBySlug } from 'lib/mdx'
+import UsesLayout from 'layouts/uses'
 
 import components from 'components/MDXComponents'
 
-import UsesLayout from 'layouts/uses'
+import { getFileBySlug } from 'lib/mdx'
 
 export default function Uses({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code])

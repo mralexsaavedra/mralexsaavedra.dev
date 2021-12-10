@@ -1,13 +1,14 @@
 import Container from 'components/Container'
+import Timeline from 'components/Timeline'
 
 export default function About() {
   return (
     <Container title='Sobre mí - Alexander Saavedra'>
-      <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
-        <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'>
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           Sobre mí
         </h1>
-        <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
+        <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
           <p>
             Hey, ¿qué tal? Mi nombre es Alexander. Nací en el 95 en&nbsp;
             <a
@@ -62,9 +63,7 @@ export default function About() {
             Mi vida no es sólo la programación. También me encanta viajar ✈, descubrir lugares nuevos 🌍, la música 🎧, el deporte 🏃🏽‍♂️, el surf 🏄🏽‍♂️, los videojuegos 👾 y mucho más.
           </p>
         </div>
-        <h3 className='mb-4 text-gray-600 dark:text-gray-400'>
-          Aquí os dejo un mapa de todos los lugares en los que he estado 👇🏽
-        </h3>
+        <Timeline />
         <iframe
           height='280'
           src='https://www.google.com/maps/d/embed?mid=1guVv_clnlvYFCMEFZDt1DIKlAuMAI5pi'
