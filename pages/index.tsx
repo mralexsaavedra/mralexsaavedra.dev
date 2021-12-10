@@ -14,13 +14,11 @@ export default function Home() {
               Alexander Saavedra
             </h1>
             <h2 className='text-gray-700 dark:text-gray-200 mb-4'>
-              Software Engineer en{' '}
-              <span className='font-semibold'>Kira</span>
+              Software Frontend Engineer
             </h2>
             <p className='text-gray-600 dark:text-gray-400 mb-16'>
-              Con más de 4 años de experiencia trabajando como Frontend Developer
-              y especializado en el ecosistema de JavaScript.
-              Amante de las buenas prácticas y del software de calidad.
+              Especializado en el ecosistema de JavaScript y amante
+              de las buenas prácticas y del software de calidad.
             </p>
           </div>
           <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
