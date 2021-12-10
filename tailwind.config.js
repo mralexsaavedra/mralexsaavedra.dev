@@ -42,6 +42,9 @@ module.exports = {
             'h2,h3,h4': {
               'scroll-margin-top': spacing[32]
             },
+            thead: {
+              borderBottomColor: theme('colors.gray.200')
+            },
             code: { color: theme('colors.pink.500') },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false
@@ -78,7 +81,8 @@ module.exports = {
             },
             strong: { color: theme('colors.gray.100') },
             thead: {
-              color: theme('colors.gray.100')
+              color: theme('colors.gray.100'),
+              borderBottomColor: theme('colors.gray.600')
             },
             tbody: {
               tr: {
