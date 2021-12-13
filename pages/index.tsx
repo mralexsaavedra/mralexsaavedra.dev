@@ -17,7 +17,7 @@ export default function Home() {
               Software Frontend Engineer
             </h2>
             <p className='text-gray-600 dark:text-gray-400 mb-16'>
-              Especializado en el ecosistema de JavaScript y amante
+              Especializado en el ecosistema de JavaScript, amante
               de las buenas prácticas y del software de calidad.
             </p>
           </div>

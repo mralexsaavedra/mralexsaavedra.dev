@@ -14,7 +14,7 @@ async function generate () {
   allBlogs.map((post) => {
     feed.item({
       title: post.title,
-      url: `https://leerob.io/blog/${post.slug}`,
+      url: `https://mralexsaavedra.dev/blog/${post.slug}`,
       date: post.publishedAt,
       description: post.summary
     })
