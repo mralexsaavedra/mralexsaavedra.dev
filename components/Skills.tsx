@@ -1,132 +1,139 @@
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
+import cn from 'classnames'
 
-const ExternalLink = ({ href, children }) => (
+import CSS from 'components/Icons/CSS'
+import Cypress from 'components/Icons/Cypress'
+import Figma from 'components/Icons/Figma'
+import Git from 'components/Icons/Git'
+import GraphQL from 'components/Icons/GraphQL'
+import HTML from 'components/Icons/Html'
+import JavaScript from 'components/Icons/JavaScript'
+import Jest from 'components/Icons/Jest'
+import NextJS from 'components/Icons/NextJS'
+import Node from 'components/Icons/Node'
+import React from 'components/Icons/React'
+import StyledComponents from 'components/Icons/StyledComponents'
+import Tailwind from 'components/Icons/Tailwind'
+import TypeScript from 'components/Icons/TypeScript'
+import VSCode from 'components/Icons/VSCode'
+
+const Card = ({ title, gradient, children }) => (
   <a
-    className='text-sm text-gray-500 hover:text-gray-600 transition'
-    target='_blank'
-    rel='noopener noreferrer'
-    href={href}
+    className={cn(
+      'transform hover:scale-[1.01] transition-all',
+      'rounded-xl w-full bg-gradient-to-r p-1',
+      gradient
+    )}
   >
-    {children}
+    <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
+      <div className="flex flex-col md:flex-row justify-between">
+        <h4 className="text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full text-gray-900 dark:text-gray-100 tracking-tight">
+          {title}
+        </h4>
+      </div>
+      <div className="flex items-center gap-6">
+        {children}
+      </div>
+    </div>
   </a>
 )
 
+const WIDTH = 50
+const HEIGHT = 50
+
 export default function Skills() {
-  const { theme } = useTheme()
-
-  const height = 90
-  const width = 90
-
   return (
     <>
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white'>
-        Skill tecnológicos y herramientas
+        Skills
       </h3>
 
-      <div className='w-full grid grid-cols-3 md:grid-cols-4 grid-flow-row gap-y-8 gap-x-10 mb-16'>
-        <ExternalLink href='https://developer.mozilla.org/es/docs/Web/HTML'>
-          <Image
-            alt='HTML logo'
-            height={height}
-            width={width}
-            src='/logos/html.png'
+      <div className='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-10'>
+        <Card
+          title="Frontend development"
+          gradient="from-[#D8B4FE] to-[#818CF8]"
+        >
+          <HTML
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://developer.mozilla.org/es/docs/Web/CSS'>
-          <Image
-            alt='CSS logo'
-            height={height}
-            width={width}
-            src='/logos/css.png'
-            className='object-contain'
+          <CSS
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://developer.mozilla.org/es/docs/Web/JavaScript'>
-          <Image
-            alt='JavaScript logo'
-            height={height}
-            width={width}
-            src='/logos/js.png'
+          <JavaScript
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://git-scm.com/'>
-          <Image
-            alt='Git logo'
-            height={height}
-            width={width}
-            src='/logos/git.png'
+          <TypeScript
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://reactjs.org/'>
-          <Image
-            alt='React logo'
-            height={height}
-            width={width}
-            src='/logos/react.png'
-            className='object-cover'
+        </Card>
+        <Card
+          title="Librerias y frameworks"
+          gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
+        >
+          <React
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://nextjs.org/'>
-          <Image
-            alt='Next.js logo'
-            height={height}
-            width={width}
-            src={theme === 'light' ? '/logos/nextjs.png' : '/logos/nextjs_light.png'}
-            className='object-contain'
+          <NextJS
+            width={WIDTH}
+            height={HEIGHT}
+            className='fill-black dark:fill-white'
           />
-        </ExternalLink>
-        <ExternalLink href='https://graphql.org/'>
-          <Image
-            alt='GraphQL logo'
-            height={height}
-            width={width}
-            src='/logos/graphql.png'
+          <Node
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://jestjs.io/'>
-          <Image
-            alt='Jest logo'
-            height={height}
-            width={width}
-            src='/logos/jest.png'
-            className='object-contain'
+        </Card>
+        <Card
+          title="Testing"
+          gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
+        >
+          <Jest
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://webpack.js.org'>
-          <Image
-            alt='Webpack logo'
-            height={height}
-            width={width}
-            src='/logos/webpack.png'
-            className='object-contain'
+          <Cypress
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://nodejs.org/'>
-          <Image
-            alt='Node.js logo'
-            height={height}
-            width={width}
-            src='/logos/nodejs.png'
-            className='object-contain'
+        </Card>
+        <Card
+          title="CSS frameworks"
+          gradient="from-[#4B6CB7] to-[#182848]"
+        >
+          <Tailwind
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://github.com/'>
-          <Image
-            alt='GitHub logo'
-            height={height}
-            width={width}
-            src={theme === 'light' ? '/logos/github_dark.png' : '/logos/github_light.png'}
+          <StyledComponents
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
-        <ExternalLink href='https://code.visualstudio.com/'>
-          <Image
-            alt='Visual Studio Code logo'
-            height={height}
-            width={width}
-            src='/logos/vscode.png'
+        </Card>
+        <Card
+          title="Otros"
+          gradient="from-[#7950f2] to-[#F783AC]"
+        >
+          <Git
+            width={WIDTH}
+            height={HEIGHT}
           />
-        </ExternalLink>
+          <GraphQL
+            width={WIDTH}
+            height={HEIGHT}
+          />
+          <VSCode
+            width={WIDTH}
+            height={HEIGHT}
+          />
+          <Figma
+            width={40}
+            height={40}
+          />
+        </Card>
       </div>
     </>
   )

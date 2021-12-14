@@ -1,8 +1,12 @@
 import Image from 'next/image'
 
 import Container from 'components/Container'
+import ExternalLink from 'components/ExternalLink'
+import GitHub from 'components/Icons/GitHub'
 import GithubRepos from 'components/GithubRepos'
 import Skills from 'components/Skills'
+import Twitter from 'components/Icons/Twitter'
+import LinkedIn from 'components/Icons/LinkedIn'
 
 export default function Home() {
   return (
@@ -14,18 +18,44 @@ export default function Home() {
               Alexander Saavedra
             </h1>
             <h2 className='text-gray-700 dark:text-gray-200 mb-4'>
-              Software Frontend Engineer
+              Software Frontend Engineer en {' '}
+              <ExternalLink href='https://www.kirawellness.io/'>
+                <span className="font-semibold dark:text-white">Kira</span>
+              </ExternalLink>
             </h2>
-            <p className='text-gray-600 dark:text-gray-400 mb-16'>
-              Especializado en el ecosistema de JavaScript, amante
+            <p className='text-gray-600 dark:text-gray-400 mb-5'>
+              Especializado en el ecosistema de JavaScript, especialmente en React y React Native. Amante
               de las buenas prácticas y del software de calidad.
             </p>
+            <div className='flex gap-5 mb-16'>
+              <ExternalLink href='https://github.com/mralexsaavedra'>
+                <GitHub
+                  width={30}
+                  height={30}
+                  className='fill-black dark:fill-white'
+                />
+              </ExternalLink>
+              <ExternalLink href='https://twitter.com/mralexsaavedra'>
+                <Twitter
+                  width={30}
+                  height={30}
+                  className='fill-black dark:fill-white'
+                />
+              </ExternalLink>
+              <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
+                <LinkedIn
+                  width={30}
+                  height={30}
+                  className='fill-black dark:fill-white'
+                />
+              </ExternalLink>
+            </div>
           </div>
-          <div className='w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto'>
+          <div className='w-[80px] sm:w-[300px] relative mb-8 sm:mb-0 mr-auto'>
             <Image
               alt='Alexander Saavedra'
-              height={176}
-              width={176}
+              height={300}
+              width={300}
               src='/static/images/avatar.jpg'
               className='rounded-full object-cover'
             />
@@ -34,6 +64,6 @@ export default function Home() {
         <GithubRepos />
         <Skills />
       </div>
-    </Container>
+    </Container >
   )
 }

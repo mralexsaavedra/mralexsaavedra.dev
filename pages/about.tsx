@@ -10,7 +10,7 @@ export default function About() {
         </h1>
         <div className='mb-8 prose leading-6 text-gray-600 dark:text-gray-400'>
           <p>
-            Hey, ¿qué tal? Mi nombre es Alexander. Nací en el 95 en&nbsp;
+            Hey, ¿qué tal? Mi nombre es Alexander Saavedra. Nací en 1995 en&nbsp;
             <a
               href='https://goo.gl/maps/LZH8njFKknKsagzF7'
               target='_blank'
@@ -26,11 +26,18 @@ export default function About() {
             >
               UPV
             </a>
-            &nbsp;y actualmente trabajo como desarrollador software frontend.
+            &nbsp;y actualmente trabajo como desarrollador frontend en la startup&nbsp;
+            <a
+              href='https://www.kirawellness.io/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Kira
+            </a>
+            .
           </p>
           <p>
-            Tengo 4+ años de experiencia trabajando como desarrollador Full Stack aunque
-            siempre más orientado al Front-end.
+            Tengo 4+ años de experiencia trabajando como desarrollador frontend en diferentes empresas.
           </p>
           <p>
             Además, durante un año fuí uno de lo co-organizadores de&nbsp;
@@ -57,10 +64,10 @@ export default function About() {
             </a>
           </p>
           <p>
-            En un futuro me gustaría compatir todo mi conocimiento impartiendo mentoría, charlas, etc.
+            Me encanta compatir todo mi conocimiento con la comunidad y aprender de otras personas que también lo hacen.
           </p>
           <p>
-            Mi vida no es sólo la programación. También me encanta viajar, descubrir lugares nuevos, la música, el deporte, el surf, los videojuegos y mucho más.
+            Mi vida no es sólo la programación. También me encanta viajar, descubrir lugares nuevos con mi furgoneta, la música, el deporte, los comics y mucho más.
           </p>
         </div>
 
