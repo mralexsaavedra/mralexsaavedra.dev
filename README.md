@@ -41,7 +41,7 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
-**LAST UPDATE:** *Commits on Dec 9, 2021* - [Update dependencies.](https://github.com/leerob/leerob.io/commit/804526051fe6fff266441a0e6a2c456da467e36c)
+**LAST UPDATE:** *Commits on Dec 13, 2021* - [Remove broken link.](https://github.com/leerob/leerob.io/commit/cc4ce448ad0e832c51d4578119d8cd94abfbff68)
 
 ---
 
