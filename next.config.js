@@ -8,7 +8,8 @@ module.exports = withContentlayer()({
   reactStrictMode: true,
   images: {
     domains: [
-      'pbs.twimg.com' // Twitter Profile Picture
+      'pbs.twimg.com', // Twitter Profile Picture,
+      'media-exp1.licdn.com' // LinkedIn Profile Picture
     ]
   },
   webpack: (config, { dev, isServer }) => {

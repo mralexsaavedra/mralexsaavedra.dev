@@ -1,12 +1,13 @@
 import Image from 'next/image'
 
 import Container from 'components/Container'
+import Experiences from 'components/Experiences'
 import ExternalLink from 'components/ExternalLink'
 import GitHub from 'components/Icons/GitHub'
 import GithubRepos from 'components/GithubRepos'
+import LinkedIn from 'components/Icons/LinkedIn'
 import Skills from 'components/Skills'
 import Twitter from 'components/Icons/Twitter'
-import LinkedIn from 'components/Icons/LinkedIn'
 
 export default function Home() {
   return (
@@ -61,8 +62,10 @@ export default function Home() {
             />
           </div>
         </div>
+
         <GithubRepos />
         <Skills />
+        <Experiences />
       </div>
     </Container >
   )
