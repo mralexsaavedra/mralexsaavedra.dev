@@ -6,8 +6,7 @@ const EXPERIENCES = [
     title: 'Software Front-end Developer',
     company: 'Kira Health',
     companyUrl: 'https://www.kirawellness.io/',
-    fromDate: 'Nov 2020',
-    toDate: 'actualidad',
+    date: 'Nov 2020 - actualidad',
     where: 'Bilbao, Pais Vasco, España'
   },
   {
@@ -15,8 +14,7 @@ const EXPERIENCES = [
     title: 'Full Stack Developer',
     company: 'S&M Services',
     companyUrl: 'https://sm-services.es/',
-    fromDate: 'Oct 2018',
-    toDate: 'Nov 2019',
+    date: 'Oct 2018 - Nov 2019',
     where: 'Bilbao, Pais Vasco, España'
   },
   {
@@ -24,8 +22,7 @@ const EXPERIENCES = [
     title: 'Full Stack Developer',
     company: 'Inycom',
     companyUrl: 'https://www.inycom.es/',
-    fromDate: 'Sept 2017',
-    toDate: 'Sept 2018',
+    date: 'Sept 2017 - Sept 2018',
     where: 'Parque Tecnológico de Zamudio, Pais Vasco, España'
   },
   {
@@ -33,8 +30,7 @@ const EXPERIENCES = [
     title: 'Full Stack Developer (prácticas)',
     company: 'Shackleton Innovation',
     companyUrl: 'https://www.inycom.es/',
-    fromDate: 'Feb 2017',
-    toDate: 'Ago 2017',
+    date: 'Feb 2017 - Ago 2017',
     where: 'Bilbao, Pais Vasco, España'
   }
 ]
@@ -45,8 +41,7 @@ const EDUCATION = [
     title: 'Co-Organizer',
     company: 'Google Developer Group Bilbao',
     companyUrl: 'https://www.linkedin.com/company/gdgbilbao',
-    fromDate: 'Ene 2019',
-    toDate: 'Nov 2019',
+    date: 'Ene 2019 - Nov 2019',
     where: 'Bilbao, Pais Vasco, España'
   },
   {
@@ -54,8 +49,7 @@ const EDUCATION = [
     title: 'Máster en Animación',
     company: 'Lightbox Academy',
     companyUrl: 'https://lboxacademy.es/',
-    fromDate: 'Oct 2019',
-    toDate: 'Ago 2020',
+    date: 'Oct 2019 - Ago 2020',
     where: 'Madrid, España'
   },
   {
@@ -63,14 +57,13 @@ const EDUCATION = [
     title: 'Ingeniería informática',
     company: 'UPV/EHU',
     companyUrl: 'https://www.ehu.eus/es/',
-    fromDate: 'Sept 2013',
-    toDate: 'Ene 2018',
+    date: 'Sept 2013 - Ene 2018',
     where: 'Bilbao, Pais Vasco, España'
   }
 ]
 
-const Card = ({ logo, title, company, companyUrl, fromDate, toDate, where }) => (
-  <article className='flex flex-row flex-wrap text-gray-900 dark:text-gray-100'>
+const Card = ({ logo, title, company, companyUrl, date, where }) => (
+  <article className='flex flex-row flex-wrap items-center md:items-start text-gray-900 dark:text-gray-100'>
     <figure className='w-1/4 pr-4'>
       <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="block">
         <Image
@@ -91,7 +84,7 @@ const Card = ({ logo, title, company, companyUrl, fromDate, toDate, where }) => 
         {company}
       </a>
       <span className="text-sm pb-1 text-gray-500 dark:text-gray-300">
-        {fromDate} - {toDate}
+        {date}
       </span>
       <span className="text-sm">{where}</span>
     </header>
@@ -100,22 +93,21 @@ const Card = ({ logo, title, company, companyUrl, fromDate, toDate, where }) => 
 
 const List = ({ title, list }) => (
   <div>
-    <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white'>
+    <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-8 text-black dark:text-white'>
       {title}
     </h3>
 
-    <div className='w-full flex flex-col gap-y-10'>
+    <div className='grid md:grid-rows-4 gap-y-8 md:gap-y-4 h-full'>
       {
-        list.map(({ logo, title, company, companyUrl, fromDate, toDate, where }, index) => (
+        list.map((experience, index) => (
           <Card
             key={index}
-            logo={logo}
-            title={title}
-            company={company}
-            companyUrl={companyUrl}
-            fromDate={fromDate}
-            toDate={toDate}
-            where={where}
+            logo={experience.logo}
+            title={experience.title}
+            company={experience.company}
+            companyUrl={experience.companyUrl}
+            date={experience.date}
+            where={experience.where}
           />
         ))
       }
@@ -125,11 +117,12 @@ const List = ({ title, list }) => (
 
 export default function Experiences() {
   return (
-    <div className='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-6 mt-16'>
+    <div className='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-7 mt-16 pb-8 md:pb-16'>
       <List
         title='Experiencia'
         list={EXPERIENCES}
       />
+
       <List
         title='Educación y logros'
         list={EDUCATION}
