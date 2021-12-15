@@ -36,12 +36,25 @@ export default function GithubRepos() {
 
       <div className='flex justify-end w-full'>
         <a
-          className='rounded bg-gradient-to-r from-fuchsia-700 to-purple-800 font-medium text-white py-1 px-2 text-md'
+          className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:ring-gray-500"
           target='_blank'
           rel='noopener noreferrer'
           href='https://github.com/mralexsaavedra?tab=repositories'
         >
           Ver más
+          <svg
+            className="overflow-visible ml-3 text-gray-300 group-hover:text-gray-400"
+            width="3"
+            height="6"
+            viewBox="0 0 3 6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M0 0L3 3L0 6"></path>
+          </svg>
         </a>
       </div>
     </div>
