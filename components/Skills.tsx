@@ -16,6 +16,34 @@ import Tailwind from 'components/Icons/Tailwind'
 import TypeScript from 'components/Icons/TypeScript'
 import VSCode from 'components/Icons/VSCode'
 
+const SKILLS = [
+  {
+    title: 'Frontend development',
+    icons: [HTML, CSS, JavaScript, TypeScript],
+    gradient: 'from-[#D8B4FE] to-[#818CF8]'
+  },
+  {
+    title: 'Librerias y frameworks',
+    icons: [React, NextJS, Node],
+    gradient: 'from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]'
+  },
+  {
+    title: 'Testing',
+    icons: [Jest, Cypress],
+    gradient: 'from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]'
+  },
+  {
+    title: 'CSS Framworks',
+    icons: [Tailwind, StyledComponents],
+    gradient: 'from-[#4B6CB7] to-[#182848]'
+  },
+  {
+    title: 'Otros',
+    icons: [Git, GraphQL, VSCode, Figma],
+    gradient: 'from-[#7950f2] to-[#F783AC]'
+  }
+]
+
 const Card = ({ title, gradient, children }) => (
   <a
     className={cn(
@@ -37,9 +65,6 @@ const Card = ({ title, gradient, children }) => (
   </a>
 )
 
-const WIDTH = 50
-const HEIGHT = 50
-
 export default function Skills() {
   return (
     <>
@@ -48,92 +73,28 @@ export default function Skills() {
       </h3>
 
       <div className='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-10'>
-        <Card
-          title="Frontend development"
-          gradient="from-[#D8B4FE] to-[#818CF8]"
-        >
-          <HTML
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <CSS
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <JavaScript
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <TypeScript
-            width={WIDTH}
-            height={HEIGHT}
-          />
-        </Card>
-        <Card
-          title="Librerias y frameworks"
-          gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
-        >
-          <React
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <NextJS
-            width={WIDTH}
-            height={HEIGHT}
-            className='fill-black dark:fill-white'
-          />
-          <Node
-            width={WIDTH}
-            height={HEIGHT}
-          />
-        </Card>
-        <Card
-          title="Testing"
-          gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
-        >
-          <Jest
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <Cypress
-            width={WIDTH}
-            height={HEIGHT}
-          />
-        </Card>
-        <Card
-          title="CSS frameworks"
-          gradient="from-[#4B6CB7] to-[#182848]"
-        >
-          <Tailwind
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <StyledComponents
-            width={WIDTH}
-            height={HEIGHT}
-          />
-        </Card>
-        <Card
-          title="Otros"
-          gradient="from-[#7950f2] to-[#F783AC]"
-        >
-          <Git
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <GraphQL
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <VSCode
-            width={WIDTH}
-            height={HEIGHT}
-          />
-          <Figma
-            width={40}
-            height={40}
-          />
-        </Card>
+        {
+          SKILLS.map(({ title, gradient, icons }, index) => (
+            <Card
+              key={index}
+              title={title}
+              gradient={gradient}
+            >
+              {
+                icons.map((icon, index) => {
+                  const Icon = icon
+                  return (
+                    <Icon
+                      key={index}
+                      width={50}
+                      height={50}
+                    />
+                  )
+                })
+              }
+            </Card>
+          ))
+        }
       </div>
     </>
   )
