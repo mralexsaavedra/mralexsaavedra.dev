@@ -15,7 +15,7 @@ export default function GithubRepos() {
   const repos = dataRepos?.repos
 
   return (
-    <>
+    <div>
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white'>
         Repositorios de GitHub
       </h3>
@@ -44,6 +44,6 @@ export default function GithubRepos() {
           Ver más
         </a>
       </div>
-    </>
+    </div>
   )
 }

@@ -79,7 +79,7 @@ export default function MobileMenu() {
             style={{ transitionDelay: '350ms' }}
           >
             <Link href='/uses'>
-              <a className='flex w-auto pb-4'>Uses</a>
+              <a className='flex w-auto pb-4'>Usos</a>
             </Link>
           </li>
         </ul>
