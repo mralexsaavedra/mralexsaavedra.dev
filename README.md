@@ -41,7 +41,7 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
-**LAST UPDATE:** *Commits on Dec 13, 2021* - [Remove broken link.](https://github.com/leerob/leerob.io/commit/cc4ce448ad0e832c51d4578119d8cd94abfbff68)
+**LAST UPDATE:** *Commits on Dec 21, 2021* - [Sort blog posts in getStaticProps](https://github.com/leerob/leerob.io/commit/4207a37f0bb82cdbc17fcc778112ccb30bc0aaf2)
 
 ---
 
