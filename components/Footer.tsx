@@ -28,16 +28,25 @@ export default function Footer() {
               Usos
             </a>
           </Link>
+          <Link href='/cv'>
+            <a
+              href='/alexander-resume-2022.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-gray-500 hover:text-gray-600 transition'>
+              CV
+            </a>
+          </Link>
         </div>
         <div className='flex flex-col space-y-4'>
+          <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
+            LinkedIn
+          </ExternalLink>
           <ExternalLink href='https://github.com/mralexsaavedra'>
             GitHub
           </ExternalLink>
           <ExternalLink href='https://twitter.com/mralexsaavedra'>
             Twitter
-          </ExternalLink>
-          <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
-            LinkedIn
           </ExternalLink>
         </div>
         <div className='flex flex-col space-y-4'>

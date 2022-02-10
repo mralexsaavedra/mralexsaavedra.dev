@@ -5,7 +5,6 @@ import GithubReposItemSkeleton from 'components/GithubReposItemSkeleton'
 
 import fetcher from 'lib/fetcher'
 import { Colors, GitHub } from 'lib/types'
-import ExternalLink from './ExternalLink'
 
 export default function GithubRepos() {
   const { data: dataColors } = useSWR<Colors>('/api/colors', fetcher)

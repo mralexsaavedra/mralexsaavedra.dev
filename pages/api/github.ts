@@ -5,7 +5,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const userReposResponse = await fetch(
-    'https://gh-pinned-repos-5l2i19um3.vercel.app/?username=mralexsaavedra'
+    'https://gh-pinned-repos.egoist.sh/?username=mralexsaavedra'
   )
 
   const repos = await userReposResponse.json()

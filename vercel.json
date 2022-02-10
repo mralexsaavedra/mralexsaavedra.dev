@@ -1,6 +1,6 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/fonts/ibm-plex-sans-var.woff2",
@@ -24,7 +24,7 @@
   "redirects": [
     {
       "source": "/cv",
-      "destination": "/alexander-resume-2021.pdf"
+      "destination": "/alexander-resume-2022.pdf"
     },
     {
       "source": "/twitter",
