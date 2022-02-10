@@ -41,7 +41,7 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
-**LAST UPDATE:** *Commits on Dec 21, 2021* - [Sort blog posts in getStaticProps](https://github.com/leerob/leerob.io/commit/4207a37f0bb82cdbc17fcc778112ccb30bc0aaf2)
+**LAST UPDATE:** *Commits on Feb 4, 2022* - [Add schema to vercel.json.](https://github.com/leerob/leerob.io/commit/0b79a412f33cdaf80353000d06fa3c97c2ab98ba)
 
 ---
 
