@@ -2,11 +2,19 @@ import Image from 'next/image'
 
 const EXPERIENCES = [
   {
+    logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQEMdZpL8uK2Hw/company-logo_200_200/0/1634813471348?e=1654732800&v=beta&t=o53o0Eb_-SjTricFOnyuc63l-NkLHCsaX9oxgcEZZSk',
+    title: 'Front-end Engineer',
+    company: 'Lookiero',
+    companyUrl: 'https://www.kirawellness.io/',
+    date: 'Mar 2022 - actualidad',
+    where: 'Bilbao, Pais Vasco, España'
+  },
+  {
     logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQHV-VPds0I4BQ/company-logo_100_100/0/1615380698749?e=1647475200&v=beta&t=7wb1PiJHb248eqyZHdWkYbhrptc85gKV7WWDG8ZwhNg',
     title: 'Software Front-end Developer',
     company: 'Kira Health',
     companyUrl: 'https://www.kirawellness.io/',
-    date: 'Nov 2020 - actualidad',
+    date: 'Nov 2020 - Feb 2022',
     where: 'Bilbao, Pais Vasco, España'
   },
   {
@@ -97,7 +105,7 @@ const List = ({ title, list }) => (
       {title}
     </h3>
 
-    <div className='grid md:grid-rows-4 gap-y-8 md:gap-y-4 h-full'>
+    <div className='grid md:grid-rows-5 gap-y-8 md:gap-y-4 h-full'>
       {
         list.map((experience, index) => (
           <Card

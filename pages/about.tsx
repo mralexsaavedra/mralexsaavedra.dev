@@ -26,18 +26,18 @@ export default function About() {
             >
               UPV
             </a>
-            &nbsp;y actualmente trabajo como desarrollador frontend en la startup&nbsp;
+            &nbsp;y actualmente trabajo como desarrollador front-end en&nbsp;
             <a
-              href='https://www.kirawellness.io/'
+              href='https://lookiero.es/'
               target='_blank'
               rel='noopener noreferrer'
             >
-              Kira
+              Lookiero
             </a>
             .
           </p>
           <p>
-            Tengo 4+ años de experiencia trabajando como desarrollador frontend en diferentes empresas.
+            Tengo 5+ años de experiencia trabajando como desarrollador en diferentes empresas.
           </p>
           <p>
             Además, durante un año fuí uno de lo co-organizadores de&nbsp;

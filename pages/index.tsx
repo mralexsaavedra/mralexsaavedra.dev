@@ -19,13 +19,13 @@ export default function Home() {
               Alexander Saavedra
             </h1>
             <h2 className='text-gray-700 dark:text-gray-200 mb-4'>
-              Software Frontend Engineer en {' '}
-              <ExternalLink href='https://www.kirawellness.io/'>
-                <span className="font-semibold dark:text-white">Kira</span>
+              Front-end Engineer en {' '}
+              <ExternalLink href='https://lookiero.es/'>
+                <span className="font-semibold dark:text-white">Lookiero</span>
               </ExternalLink>
             </h2>
             <p className='text-gray-600 dark:text-gray-400 mb-5'>
-              Especializado en el ecosistema de JavaScript, especialmente en React y React Native. Amante
+              Especializado en el ecosistema de JavaScript. Amante
               de las buenas prácticas y del software de calidad.
             </p>
             <div className='flex gap-5 mb-16'>

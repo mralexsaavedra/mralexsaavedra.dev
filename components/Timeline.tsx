@@ -129,6 +129,12 @@ export default function Timeline() {
       <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-8 mt-4 text-black dark:text-white'>
         Timeline
       </h3>
+      <Year>2022</Year>
+      <ul>
+        <Step title='Comienzo en Lookiero como Front-end Engineer' />
+        <Step title='La etapa en Kira acaba' />
+      </ul>
+      <Divider />
       <Year>2021</Year>
       <ul>
         <Step title='La etapa covid aún no ha acabado...' />
