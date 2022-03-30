@@ -10,7 +10,7 @@ const EXPERIENCES = [
     where: 'Bilbao, Pais Vasco, España'
   },
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQHV-VPds0I4BQ/company-logo_100_100/0/1615380698749?e=1647475200&v=beta&t=7wb1PiJHb248eqyZHdWkYbhrptc85gKV7WWDG8ZwhNg',
+    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQHV-VPds0I4BQ/company-logo_100_100/0/1615380698749?e=1656547200&v=beta&t=Nb_eOKPeJT-bgUCcy8HxTz80THxq760fDml_n-nro5Q',
     title: 'Software Front-end Developer',
     company: 'Kira Health',
     companyUrl: 'https://www.kirawellness.io/',
@@ -18,7 +18,7 @@ const EXPERIENCES = [
     where: 'Bilbao, Pais Vasco, España'
   },
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C560BAQEAZIAHF5B3Tg/company-logo_100_100/0/1519878754705?e=1647475200&v=beta&t=PQIySxZl2128MMhQLvnPJfbmA4ZSXqBNzoqMS4m0O18',
+    logo: 'https://media-exp1.licdn.com/dms/image/C560BAQGiV8Uni4qtAA/company-logo_100_100/0/1582718888776?e=1656547200&v=beta&t=O-TqTUTMsOQ11RWxietbx6GZxs4s7rAN9lcl_ulkKJM',
     title: 'Full Stack Developer',
     company: 'S&M Services',
     companyUrl: 'https://sm-services.es/',
@@ -26,7 +26,7 @@ const EXPERIENCES = [
     where: 'Bilbao, Pais Vasco, España'
   },
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQFNz9P_KDeLtg/company-logo_100_100/0/1637153443460?e=1647475200&v=beta&t=AyM0PQN0RYZx8YBi3gm0BCjj7t4T9m6svFaUWjR-sw4',
+    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQFNz9P_KDeLtg/company-logo_100_100/0/1637153443460?e=1656547200&v=beta&t=MIFMA_0BqzHOuPCX8-0XcN9vhIwgfB1ZMtPE3Pn5b6E',
     title: 'Full Stack Developer',
     company: 'Inycom',
     companyUrl: 'https://www.inycom.es/',
@@ -34,7 +34,7 @@ const EXPERIENCES = [
     where: 'Parque Tecnológico de Zamudio, Pais Vasco, España'
   },
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C560BAQGR1mesP5JyVQ/company-logo_100_100/0/1553860023148?e=1647475200&v=beta&t=qVkvceQclTQFxTko8XKg9dn1KcmGJTDFzw-zb85Nt_8',
+    logo: 'https://media-exp1.licdn.com/dms/image/C560BAQGR1mesP5JyVQ/company-logo_100_100/0/1553860023148?e=1656547200&v=beta&t=UyzBm2gKsaiH39XJ93bX7HlMt7bSaiBTJINZ3vrKt94',
     title: 'Full Stack Developer (prácticas)',
     company: 'Shackleton Innovation',
     companyUrl: 'https://www.inycom.es/',
@@ -45,7 +45,7 @@ const EXPERIENCES = [
 
 const EDUCATION = [
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEZBBi7aznAZA/company-logo_100_100/0/1519861144705?e=1647475200&v=beta&t=9WBz5vWYMzFMh2rWan38mDhiXf21d6QR9YxVR_biRcc',
+    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEZBBi7aznAZA/company-logo_200_200/0/1519861144705?e=1656547200&v=beta&t=_IBfrT1yUM0Hc_-Eb9bBXPzqQKjO5IjQ3IQve7xZ6Xw',
     title: 'Co-Organizer',
     company: 'Google Developer Group Bilbao',
     companyUrl: 'https://www.linkedin.com/company/gdgbilbao',
@@ -53,7 +53,7 @@ const EDUCATION = [
     where: 'Bilbao, Pais Vasco, España'
   },
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQHQyqUzwkLcuQ/company-logo_100_100/0/1535111334225?e=1647475200&v=beta&t=26yi-0j_ehWUjwbsn58hCJaRSHzPXM0dRHGs8mNoo8g',
+    logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQHQyqUzwkLcuQ/company-logo_100_100/0/1535111334225?e=1656547200&v=beta&t=H6-hutJJ6D7X09zAp6cXchf2OHyY9GZolO3qYDPBOH8',
     title: 'Máster en Animación',
     company: 'Lightbox Academy',
     companyUrl: 'https://lboxacademy.es/',
@@ -61,7 +61,7 @@ const EDUCATION = [
     where: 'Madrid, España'
   },
   {
-    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQFssX1T0eXiUA/company-logo_100_100/0/1638172401370?e=1647475200&v=beta&t=0dBNDEdVqREVqVm5lXV-s7aARzRMBihKCZ434D9Vik8',
+    logo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQHC9kAahv7kPw/company-logo_100_100/0/1647242802686?e=1656547200&v=beta&t=jOrBKDz8Iq9y2aeTtiIldtuLxLBzYBmk6vdRo0qrHpk',
     title: 'Ingeniería informática',
     company: 'UPV/EHU',
     companyUrl: 'https://www.ehu.eus/es/',
