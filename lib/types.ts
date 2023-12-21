@@ -1,10 +1,29 @@
-export type Colors = {
-  colors: number;
+interface GitHubPinnedRepo {
+  id: string
+  name: string
+  description: string
+  url: string
+  homepageUrl: string
+  languages: {
+    nodes: {
+      name: string
+      color: string
+    }[]
+  }
+  forkCount: number
+  stargazerCount: number
 }
 
-export type GitHub = {
-  repos: {
-    repo: string;
-    language: string;
-  }[]
+interface GitHubPinnedRepos {
+  viewer: {
+    pinnedItems: {
+      nodes: GitHubPinnedRepo[]
+    }
+  }
 }
+
+interface GitHub {
+  repos: GitHubPinnedRepo[]
+}
+
+export type { GitHub, GitHubPinnedRepos, GitHubPinnedRepo }

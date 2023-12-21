@@ -33,7 +33,7 @@ const SKILLS = [
     gradient: 'from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]'
   },
   {
-    title: 'CSS Framworks',
+    title: 'CSS Frameworks',
     icons: [Tailwind, StyledComponents],
     gradient: 'from-[#4B6CB7] to-[#182848]'
   },
@@ -58,9 +58,7 @@ const Card = ({ title, gradient, children }) => (
           {title}
         </h4>
       </div>
-      <div className="flex items-center gap-6">
-        {children}
-      </div>
+      <div className="flex items-center gap-6">{children}</div>
     </div>
   </a>
 )
@@ -68,33 +66,19 @@ const Card = ({ title, gradient, children }) => (
 export default function Skills() {
   return (
     <>
-      <h3 className='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white'>
+      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
         Skills
       </h3>
 
-      <div className='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-10'>
-        {
-          SKILLS.map(({ title, gradient, icons }, index) => (
-            <Card
-              key={index}
-              title={title}
-              gradient={gradient}
-            >
-              {
-                icons.map((icon, index) => {
-                  const Icon = icon
-                  return (
-                    <Icon
-                      key={index}
-                      width={50}
-                      height={50}
-                    />
-                  )
-                })
-              }
-            </Card>
-          ))
-        }
+      <div className="w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-10">
+        {SKILLS.map(({ title, gradient, icons }, index) => (
+          <Card key={index} title={title} gradient={gradient}>
+            {icons.map((icon, index) => {
+              const Icon = icon
+              return <Icon key={index} width={50} height={50} />
+            })}
+          </Card>
+        ))}
       </div>
     </>
   )
