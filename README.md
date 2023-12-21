@@ -25,7 +25,6 @@
 - `pages/blog/*` - Static pre-rendered blog pages using MDX.
 - `pages/*` - All other static pages.
 - `public/*` - Static assets including fonts and images.
-- `scripts/*` - Two useful scripts to generate an RSS feed and a sitemap.
 - `styles/*` - A small amount of global styles. I'm mostly using vanilla Tailwind CSS.
 
 ## Running Locally
@@ -41,7 +40,7 @@ Create a `.env.local` file similar to [`.env.example`](https://github.com/mralex
 
 ---
 
-**LAST UPDATE:** *Commits on Feb 4, 2022* - [Add schema to vercel.json.](https://github.com/leerob/leerob.io/commit/0b79a412f33cdaf80353000d06fa3c97c2ab98ba)
+**LAST UPDATE:** _Commits on Feb 4, 2022_ - [Add schema to vercel.json.](https://github.com/leerob/leerob.io/commit/0b79a412f33cdaf80353000d06fa3c97c2ab98ba)
 
 ---
 
