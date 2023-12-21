@@ -67,11 +67,5 @@
   },
   "resolutions": {
     "preact": "10.5.15"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none"
   }
 }
