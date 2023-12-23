@@ -5,6 +5,7 @@ interface Language {
 }
 
 interface Props {
+  readonly name: string
   readonly url: string
   readonly description: string
   readonly language: Language
@@ -12,7 +13,8 @@ interface Props {
   readonly forkCount: number
 }
 
-const { url, description, language, stargazerCount, forkCount } = Astro.props
+const { name, url, description, language, stargazerCount, forkCount } =
+  Astro.props
 ---
 
 <div class='border h-full rounded p-4 flex flex-col'>
