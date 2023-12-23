@@ -1,0 +1,128 @@
+---
+import { gql, GraphQLClient } from 'graphql-request'
+import GithubReposItem from './GithubReposItem.astro'
+import GithubReposItemSkeleton from './GithubReposItemSkeleton.astro'
+const githubAccessToken = import.meta.env.GITHUB_ACCESS_TOKEN
+
+interface GitHubPinnedRepo {
+  id: string
+  name: string
+  description: string
+  url: string
+  homepageUrl: string
+  languages: {
+    nodes: {
+      name: string
+      color: string
+    }[]
+  }
+  forkCount: number
+  stargazerCount: number
+}
+
+interface GitHubPinnedRepos {
+  viewer: {
+    pinnedItems: {
+      nodes: GitHubPinnedRepo[]
+    }
+  }
+}
+
+const GITHUB_API_URL = 'https://api.github.com/graphql'
+
+const GET_PINNED_REPOS = gql`
+  query {
+    viewer {
+      pinnedItems(first: 6, types: REPOSITORY) {
+        nodes {
+          ... on Repository {
+            id
+            name
+            description
+            url
+            homepageUrl
+            languages(first: 3) {
+              nodes {
+                name
+                color
+              }
+            }
+            forkCount
+            stargazerCount
+          }
+        }
+      }
+    }
+  }
+`
+
+const graphQLClient = new GraphQLClient(GITHUB_API_URL, {
+  headers: {
+    authorization: `Bearer ${githubAccessToken}`
+  }
+})
+
+const data = await graphQLClient.request<GitHubPinnedRepos>(
+  GET_PINNED_REPOS,
+  {}
+)
+const repos: GitHubPinnedRepo[] = data.viewer.pinnedItems.nodes
+---
+
+<div>
+  <h3
+    class='font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white'
+  >
+    Repositorios de GitHub
+  </h3>
+
+  <div class='w-full flex flex-col md:grid grid-cols-2 gap-4 mb-5'>
+    {
+      repos && repos.length > 0
+        ? repos.map(
+            ({
+              description,
+              forkCount,
+              languages,
+              name,
+              stargazerCount,
+              url
+            }) => (
+              <GithubReposItem
+                url={url}
+                forkCount={forkCount}
+                description={description}
+                name={name}
+                stargazerCount={stargazerCount}
+                language={languages.nodes[0]}
+              />
+            )
+          )
+        : [...Array(6)].map(() => <GithubReposItemSkeleton />)
+    }
+  </div>
+
+  <div class='flex justify-end w-full'>
+    <a
+      class='group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 focus:ring-gray-500'
+      target='_blank'
+      rel='noopener noreferrer'
+      href='https://github.com/mralexsaavedra?tab=repositories'
+    >
+      Ver más
+      <svg
+        class='overflow-visible ml-3 text-gray-300 group-hover:text-gray-400'
+        width='3'
+        height='6'
+        viewBox='0 0 3 6'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <path d='M0 0L3 3L0 6'></path>
+      </svg>
+    </a>
+  </div>
+</div>
