@@ -1,0 +1,63 @@
+---
+import Cypress from '../icons/Cypress.astro'
+import Figma from '../icons/Figma.astro'
+import Git from '../icons/Git.astro'
+import GraphQL from '../icons/GraphQL.astro'
+import JavaScript from '../icons/JavaScript.astro'
+import Jest from '../icons/Jest.astro'
+import NextJS from '../icons/NextJS.astro'
+import Node from '../icons/Node.astro'
+import React from '../icons/React.astro'
+import StyledComponents from '../icons/StyledComponents.astro'
+import Tailwind from '../icons/Tailwind.astro'
+import TypeScript from '../icons/TypeScript.astro'
+import VSCode from '../icons/VSCode.astro'
+import Card from './Card.astro'
+import CSS from '../icons/CSS.astro'
+import HTML from '../icons/HTML.astro'
+
+const SKILLS = [
+  {
+    title: 'Frontend development',
+    icons: [HTML, CSS, JavaScript, TypeScript],
+    gradient: 'from-[#D8B4FE] to-[#818CF8]'
+  },
+  {
+    title: 'Librerias y frameworks',
+    icons: [React, NextJS, Node],
+    gradient: 'from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]'
+  },
+  {
+    title: 'Testing',
+    icons: [Jest, Cypress],
+    gradient: 'from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]'
+  },
+  {
+    title: 'CSS Frameworks',
+    icons: [Tailwind, StyledComponents],
+    gradient: 'from-[#4B6CB7] to-[#182848]'
+  },
+  {
+    title: 'Otros',
+    icons: [Git, GraphQL, VSCode, Figma],
+    gradient: 'from-[#7950f2] to-[#F783AC]'
+  }
+]
+---
+
+<h3
+  class='font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white'
+>
+  Skills
+</h3>
+<div class='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-10'>
+  {
+    SKILLS.map(({ title, gradient, icons }, index) => (
+      <Card title={title} gradient={gradient}>
+        {icons.map((Icon) => (
+          <Icon width={50} height={50} />
+        ))}
+      </Card>
+    ))
+  }
+</div>
