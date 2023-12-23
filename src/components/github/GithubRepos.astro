@@ -1,7 +1,7 @@
 ---
 import { gql, GraphQLClient } from 'graphql-request'
-import GithubReposItem from './GithubReposItem.astro'
-import GithubReposItemSkeleton from './GithubReposItemSkeleton.astro'
+import Card from './card/Card.astro'
+import Skeleton from './card/Skeleton.astro'
 const githubAccessToken = import.meta.env.GITHUB_ACCESS_TOKEN
 
 interface GitHubPinnedRepo {
@@ -30,7 +30,7 @@ interface GitHubPinnedRepos {
 
 const GITHUB_API_URL = 'https://api.github.com/graphql'
 
-const GET_PINNED_REPOS = gql`
+const GITHUB_PINNED_REPOS = gql`
   query {
     viewer {
       pinnedItems(first: 6, types: REPOSITORY) {
@@ -63,7 +63,7 @@ const graphQLClient = new GraphQLClient(GITHUB_API_URL, {
 })
 
 const data = await graphQLClient.request<GitHubPinnedRepos>(
-  GET_PINNED_REPOS,
+  GITHUB_PINNED_REPOS,
   {}
 )
 const repos: GitHubPinnedRepo[] = data.viewer.pinnedItems.nodes
@@ -88,7 +88,7 @@ const repos: GitHubPinnedRepo[] = data.viewer.pinnedItems.nodes
               stargazerCount,
               url
             }) => (
-              <GithubReposItem
+              <Card
                 url={url}
                 forkCount={forkCount}
                 description={description}
@@ -98,7 +98,7 @@ const repos: GitHubPinnedRepo[] = data.viewer.pinnedItems.nodes
               />
             )
           )
-        : [...Array(6)].map(() => <GithubReposItemSkeleton />)
+        : [...Array(6)].map(() => <Skeleton />)
     }
   </div>
 
