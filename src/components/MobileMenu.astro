@@ -8,13 +8,18 @@ import Cross from './icons/Cross.astro'
   aria-label='Toggle menu'
   type='button'
   data-toggle-menu
+  transition:persist
 >
   <Menu data-menu-icon />
   <Cross data-cross-icon data-hide='true' />
 </button>
 <ul
-  class:list={['menu', 'flex flex-col absolute bg-gray-100 dark:bg-gray-900']}
+  class:list={[
+    'menu',
+    'flex flex-col absolute bg-gray-100 dark:bg-gray-900 visible md:hidden'
+  ]}
   data-menu
+  transition:persist
 >
   <li
     class='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
@@ -37,26 +42,23 @@ import Cross from './icons/Cross.astro'
 </ul>
 
 <script>
-  document
-    .querySelector('[data-toggle-menu]')
-    ?.addEventListener('click', () => {
-      document.body.classList.toggle('overflow-hidden')
+  const button = document.querySelector('[data-toggle-menu]')
+  const menu = document.querySelector('[data-menu]')
+  const menuIcon = document.querySelector('[data-menu-icon]')
+  const crossIcon = document.querySelector('[data-cross-icon]')
 
-      const menu = document.querySelector('[data-menu]')
+  const toggleMenu = () => {
+    document.body.classList.toggle('overflow-hidden')
+    menu?.classList.toggle('menuRendered')
 
-      if (menu) {
-        menu.classList.toggle('menuRendered')
-        const menuRendered = menu.classList.contains('menuRendered')
+    const menuRendered = menu?.classList.contains('menuRendered')
 
-        document
-          .querySelector('[data-menu-icon]')
-          ?.setAttribute('data-hide', menuRendered ? 'true' : 'false')
+    menuIcon?.setAttribute('data-hide', menuRendered ? 'true' : 'false')
+    crossIcon?.setAttribute('data-hide', menuRendered ? 'false' : 'true')
+  }
 
-        document
-          .querySelector('[data-cross-icon]')
-          ?.setAttribute('data-hide', menuRendered ? 'false' : 'true')
-      }
-    })
+  button?.addEventListener('click', toggleMenu)
+  menu?.addEventListener('click', toggleMenu)
 </script>
 
 <style>
