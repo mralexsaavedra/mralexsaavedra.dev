@@ -20,7 +20,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "prettier --write  \"**/*.{json,css,js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,jsx,ts,tsx,astro}\""
+    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,astro}\"",
+    "format": "prettier --write  \"**/*.{json,css,js,jsx,ts,tsx,md,mdx,astro}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.3.3",
