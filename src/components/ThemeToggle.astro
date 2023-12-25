@@ -1,4 +1,4 @@
-<div class='flex justify-end items-center'>
+<div class='flex justify-end items-center' transition:persist>
   <label class:list={['theme-switch', 'inline-block relative']} for='checkbox'>
     <input type='checkbox' id='checkbox' class='hidden' />
     <div class='slider'>
@@ -153,4 +153,9 @@
   }
 
   themeToggle.addEventListener('change', handleOnSwitchTheme, false)
+
+  document.addEventListener('astro:after-swap', () => {
+    if (localStorage.getItem('theme') === 'dark')
+      document.documentElement.classList.toggle('dark', true)
+  })
 </script>
