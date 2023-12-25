@@ -1,0 +1,135 @@
+---
+import Menu from './icons/Menu.astro'
+import Cross from './icons/Cross.astro'
+---
+
+<button
+  class:list={['burger', 'visible md:hidden']}
+  aria-label='Toggle menu'
+  type='button'
+  data-toggle-menu
+>
+  <Menu data-menu-icon />
+  <Cross data-cross-icon data-hide='true' />
+</button>
+<ul
+  class:list={['menu', 'flex flex-col absolute bg-gray-100 dark:bg-gray-900']}
+  data-menu
+>
+  <li
+    class='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
+    style={{ transitionDelay: '150ms' }}
+  >
+    <a href='/' class='flex w-auto pb-4'> Inicio</a>
+  </li>
+  <li
+    class='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
+    style={{ transitionDelay: '175ms' }}
+  >
+    <a href='/about' class='flex w-auto pb-4'> Sobre mí</a>
+  </li>
+  <li
+    class='border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold'
+    style={{ transitionDelay: '350ms' }}
+  >
+    <a href='/uses' class='flex w-auto pb-4'> Usos</a>
+  </li>
+</ul>
+
+<script>
+  document
+    .querySelector('[data-toggle-menu]')
+    ?.addEventListener('click', () => {
+      document.body.classList.toggle('overflow-hidden')
+
+      const menu = document.querySelector('[data-menu]')
+
+      if (menu) {
+        menu.classList.toggle('menuRendered')
+        const menuRendered = menu.classList.contains('menuRendered')
+
+        document
+          .querySelector('[data-menu-icon]')
+          ?.setAttribute('data-hide', menuRendered ? 'true' : 'false')
+
+        document
+          .querySelector('[data-cross-icon]')
+          ?.setAttribute('data-hide', menuRendered ? 'false' : 'true')
+      }
+    })
+</script>
+
+<style>
+  .burger {
+    transition: opacity 300ms ease;
+    border: 0;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+
+  .burger svg {
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease;
+  }
+
+  .burger svg[data-hide='true'] {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .menu {
+    padding: 0 28px 0 4px;
+    margin: 0;
+    padding-top: 24px;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 0;
+    left: 0;
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease;
+  }
+
+  .menu li {
+    transform: translateX(-16px);
+    opacity: 0;
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease,
+      width 300ms ease,
+      border-color 300ms ease;
+    width: 0px;
+    white-space: nowrap;
+  }
+
+  .menuRendered {
+    opacity: 1;
+  }
+
+  .menuRendered li {
+    @apply border-gray-200 dark:border-gray-600 w-full;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu > * + * {
+    margin-top: 24px;
+  }
+
+  @keyframes grow {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 24px;
+    }
+  }
+</style>
