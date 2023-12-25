@@ -1,3 +1,5 @@
+/** @jsxImportSource react */
+
 import { useState, type ReactNode, type FC } from 'react'
 
 const Divider: FC = () => (

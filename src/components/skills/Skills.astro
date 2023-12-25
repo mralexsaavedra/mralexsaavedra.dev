@@ -52,7 +52,7 @@ const SKILLS = [
 </h3>
 <div class='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-10'>
   {
-    SKILLS.map(({ title, gradient, icons }, index) => (
+    SKILLS.map(({ title, gradient, icons }) => (
       <Card title={title} gradient={gradient}>
         {icons.map((Icon) => (
           <Icon width={50} height={50} />
