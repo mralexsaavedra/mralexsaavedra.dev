@@ -1,0 +1,52 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+interface Props {
+  readonly logo: ImageMetadata
+  readonly title: string
+  readonly company: string
+  readonly companyUrl: string
+  readonly date: string
+  readonly where: string
+}
+
+const { logo, title, company, companyUrl, date, where } = Astro.props
+---
+
+<article
+  class='flex flex-row flex-wrap items-center md:items-start text-gray-900 dark:text-gray-100'
+>
+  <figure class='w-1/4 pr-4'>
+    <a
+      href={companyUrl}
+      target='_blank'
+      rel='noopener noreferrer'
+      class='block'
+    >
+      <Image
+        height={112}
+        width={112}
+        alt={`${company} logo`}
+        title={`${company} logo`}
+        src={logo}
+        class='w-full md:w-28'
+      />
+    </a>
+  </figure>
+  <header class='w-3/4 flex flex-col items-start'>
+    <h3 class='text-lg mb-2'>{title}</h3>
+    <a
+      href={companyUrl}
+      target='_blank'
+      rel='noopener noreferrer'
+      class='font-medium text-sm pb-1'
+    >
+      {company}
+    </a>
+    <span class='text-sm pb-1 text-gray-500 dark:text-gray-300'>
+      {date}
+    </span>
+    <span class='text-sm'>{where}</span>
+  </header>
+</article>

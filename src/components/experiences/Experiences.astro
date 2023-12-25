@@ -1,0 +1,90 @@
+---
+import type { Experience } from './experience'
+import List from './List.astro'
+import Lookiero from '../../assets/companies/lookiero.jpeg'
+import Kirahealth from '../../assets/companies/kirahealth.jpeg'
+import SmServices from '../../assets/companies/smservices.jpeg'
+import Inycom from '../../assets/companies/inycom.jpeg'
+import Shackleton from '../../assets/companies/shackleton.jpeg'
+import GDGBilbao from '../../assets/education/gdg_bilbao.jpeg'
+import Lightbox from '../../assets/education/lightbox.jpeg'
+import Ehu from '../../assets/education/ehu.jpeg'
+
+const EXPERIENCES: Experience[] = [
+  {
+    logo: Lookiero,
+    title: 'Front-end Engineer',
+    company: 'Lookiero',
+    companyUrl: 'https://www.lookiero.es/',
+    date: 'Mar 2022 - actualidad',
+    where: 'Bilbao, Pais Vasco, España'
+  },
+  {
+    logo: Kirahealth,
+    title: 'Software Front-end Developer',
+    company: 'Kira Health',
+    companyUrl: 'https://www.kirawellness.io/',
+    date: 'Nov 2020 - Feb 2022',
+    where: 'Bilbao, Pais Vasco, España'
+  },
+  {
+    logo: SmServices,
+    title: 'Full Stack Developer',
+    company: 'S&M Services',
+    companyUrl: 'https://sm-services.es/',
+    date: 'Oct 2018 - Nov 2019',
+    where: 'Bilbao, Pais Vasco, España'
+  },
+  {
+    logo: Inycom,
+    title: 'Full Stack Developer',
+    company: 'Inycom',
+    companyUrl: 'https://www.inycom.es/',
+    date: 'Sept 2017 - Sept 2018',
+    where: 'Parque Tecnológico de Zamudio, Pais Vasco, España'
+  },
+  {
+    logo: Shackleton,
+    title: 'Full Stack Developer (prácticas)',
+    company: 'Shackleton Innovation',
+    companyUrl: 'http://shkways.com',
+    date: 'Feb 2017 - Ago 2017',
+    where: 'Bilbao, Pais Vasco, España'
+  }
+]
+
+const EDUCATION: Experience[] = [
+  {
+    logo: GDGBilbao,
+    title: 'Co-Organizer',
+    company: 'Google Developer Group Bilbao',
+    companyUrl: 'https://www.linkedin.com/company/gdgbilbao',
+    date: 'Ene 2019 - Nov 2019',
+    where: 'Bilbao, Pais Vasco, España'
+  },
+  {
+    logo: Lightbox,
+    title: 'Máster en Animación',
+    company: 'Lightbox Academy',
+    companyUrl: 'https://lboxacademy.es/',
+    date: 'Oct 2019 - Ago 2020',
+    where: 'Madrid, España'
+  },
+  {
+    logo: Ehu,
+    title: 'Ingeniería informática',
+    company: 'UPV/EHU',
+    companyUrl: 'https://www.ehu.eus/es/',
+    date: 'Sept 2013 - Ene 2018',
+    where: 'Bilbao, Pais Vasco, España'
+  }
+]
+---
+
+<div
+  class='w-full flex flex-col md:grid grid-cols-2 gap-y-8 gap-x-7 mt-16 pb-8 md:pb-16'
+>
+  <List title='Experiencia' data={EXPERIENCES} />
+
+  <List title='Educación y logros' data={EDUCATION} />
+</div>
