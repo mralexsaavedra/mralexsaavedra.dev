@@ -1,7 +1,7 @@
 ---
 import MobileMenu from './MobileMenu.astro'
 import NavLink from './NavLink.astro'
-import ThemeToggle from './ThemeToggle'
+import ThemeToggle from './ThemeToggle.astro'
 ---
 
 <div class='flex flex-col justify-center px-8'>
@@ -10,10 +10,10 @@ import ThemeToggle from './ThemeToggle'
   >
     <a href='#skip' class='skip-nav'> Ir al contenido</a>
     <div class='ml-[-0.60rem]'>
-      <MobileMenu />
+      <!-- <MobileMenu /> -->
       <NavLink to='/' label='Inicio' />
       <NavLink to='/about' label='Sobre mí' />
     </div>
-    <ThemeToggle client:only />
+    <ThemeToggle />
   </nav>
 </div>
