@@ -1,5 +1,6 @@
 ---
 import ExternalLink from './ExternalLink.astro'
+import NavLink from './NavLink.astro'
 
 const params = new URLSearchParams({
   url: 'https://mralexsaavedra.dev',
@@ -17,12 +18,9 @@ const twitterUrl = `https://twitter.com/share?${params}`
     class='w-full max-w-2xl grid grid-cols-2 gap-4 pb-16 sm:grid-cols-3 font-mono text-sm'
   >
     <div class='flex flex-col space-y-4'>
-      <a href='/'>Inicio</a>
-      <a href='#about'>Sobre mí</a>
-      <a href='#experience'>Experiencia</a>
-      <a href='#education'>Educación</a>
-      <a href='#skills'>Skills</a>
-      <a href='#projects'>Proyectos</a>
+      <NavLink
+        class='text-secondary-foreground hover:text-muted-foreground transition'
+      />
     </div>
     <div class='flex flex-col space-y-4'>
       <ExternalLink href='mailto:mralexsaavedra@gmail.com'>
