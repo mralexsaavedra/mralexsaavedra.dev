@@ -12,29 +12,21 @@ const twitterUrl = `https://twitter.com/share?${params}`
 <footer
   class='flex flex-col justify-center items-start max-w-2xl mx-auto w-full mb-8'
 >
-  <hr class='w-full border-1 border-gray-200 dark:border-gray-800 mb-8' />
-  <div class='w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3'>
+  <hr class='w-full border-1 mb-8' />
+  <div
+    class='w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3 font-mono text-sm'
+  >
     <div class='flex flex-col space-y-4'>
-      <a href='/' class='text-gray-500 hover:text-gray-600 transition'>Inicio</a
-      >
-      <a href='/about' class='text-gray-500 hover:text-gray-600 transition'>
-        Sobre mí</a
-      >
-      <a href='/uses' class='text-gray-500 hover:text-gray-600 transition'>
-        Usos</a
-      >
-      <a
-        href='/alexander-resume-2022.pdf'
-        target='_blank'
-        rel='noopener noreferrer'
-        class='text-gray-500 hover:text-gray-600 transition'
-      >
-        CV
-      </a>
+      <a href='/'>Inicio</a>
+      <a href='#about'>Sobre mí</a>
+      <a href='#experience'>Experiencia</a>
+      <a href='#education'>Educación</a>
+      <a href='#skills'>Skills</a>
+      <a href='#projects'>Proyectos</a>
     </div>
     <div class='flex flex-col space-y-4'>
-      <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
-        LinkedIn
+      <ExternalLink href='mailto:mralexsaavedra@gmail.com'>
+        Contáctame
       </ExternalLink>
       <ExternalLink href='https://github.com/mralexsaavedra'>
         GitHub
@@ -42,11 +34,12 @@ const twitterUrl = `https://twitter.com/share?${params}`
       <ExternalLink href='https://twitter.com/mralexsaavedra'>
         Twitter
       </ExternalLink>
+      <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
+        LinkedIn
+      </ExternalLink>
     </div>
     <div class='flex flex-col space-y-4'>
-      <ExternalLink href='mailto:mralexsaavedra@gmail.com'>
-        Contáctame
-      </ExternalLink>
+      <a href='/uses'>Usos</a>
       <ExternalLink
         href='https://github.com/mralexsaavedra/mralexsaavedra.dev/discussions'
       >
