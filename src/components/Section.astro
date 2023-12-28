@@ -1,0 +1,14 @@
+---
+interface Props {
+  readonly id?: string
+  readonly title?: string
+  readonly class?: string
+}
+
+const { class: className, title, id } = Astro.props
+---
+
+<section class:list={['flex min-h-0 flex-col gap-y-3', className]} id={id}>
+  <h2 class='text-xl font-bold'>{title}</h2>
+  <slot />
+</section>
