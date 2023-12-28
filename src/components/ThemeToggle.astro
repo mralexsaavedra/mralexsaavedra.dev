@@ -1,69 +1,36 @@
+---
+import MoonIcon from './icons/Moon.astro'
+import SunIcon from './icons/Sun.astro'
+---
+
 <div class='flex justify-end items-center' transition:persist>
-  <label class:list={['theme-switch', 'inline-block relative']} for='checkbox'>
+  <label class='inline-block relative h-[34px] w-[60px]' for='checkbox'>
     <input type='checkbox' id='checkbox' class='hidden' />
-    <div class='slider'>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='16'
-        height='16'
-        viewBox='0 0 24 24'
-        fill='#FCD53F'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='feather feather-sun'
-      >
-        <circle cx='12' cy='12' r='5'></circle>
-        <line x1='12' y1='1' x2='12' y2='3'></line>
-        <line x1='12' y1='21' x2='12' y2='23'></line>
-        <line x1='4.22' y1='4.22' x2='5.64' y2='5.64'></line>
-        <line x1='18.36' y1='18.36' x2='19.78' y2='19.78'></line>
-        <line x1='1' y1='12' x2='3' y2='12'></line>
-        <line x1='21' y1='12' x2='23' y2='12'></line>
-        <line x1='4.22' y1='19.78' x2='5.64' y2='18.36'></line>
-        <line x1='18.36' y1='5.64' x2='19.78' y2='4.22'></line>
-      </svg>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='16'
-        height='16'
-        viewBox='0 0 24 24'
-        fill='#FCD53F'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='feather feather-moon'
-      >
-        <path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'></path>
-      </svg>
+    <div
+      class='slider bg-gray-200 absolute bottom-0 left-0 right-0 top-0 cursor-pointer rounded-full transition'
+    >
+      <SunIcon
+        class:list={[
+          'feather-sun',
+          'absolute pointer-events-none text-black transition',
+          'opacity-1 right-[10px] bottom-[9px] translate-x-[0px]'
+        ]}
+      />
+      <MoonIcon
+        class:list={[
+          'feather-moon',
+          'absolute pointer-events-none text-black transition',
+          'opacity-0 left-[9px] bottom-[9px] translate-x-[4px]'
+        ]}
+      />
     </div>
   </label>
 </div>
 
 <style>
   :root {
-    --slider-bg: #dddddd;
     --slider-bg-before: #fff;
     --slider-input-bg: #8758ff;
-  }
-
-  .theme-switch {
-    height: 34px;
-    width: 60px;
-  }
-
-  .slider {
-    background-color: var(--slider-bg);
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: 0.4s;
-    border-radius: 34px;
   }
 
   .slider:before {
@@ -84,29 +51,6 @@
 
   input:checked + .slider:before {
     transform: translateX(26px);
-  }
-
-  .slider svg {
-    color: #222;
-    position: absolute;
-    transition:
-      opacity 0.2s ease 0s,
-      transform 0.35s ease 0s;
-    pointer-events: none;
-  }
-
-  .feather-moon {
-    opacity: 0;
-    left: 9px;
-    bottom: 9px;
-    transform: translateX(4px);
-  }
-
-  .feather-sun {
-    opacity: 1;
-    right: 10px;
-    bottom: 9px;
-    transform: translateX(0px);
   }
 
   input:checked + .slider .feather-moon {
@@ -131,9 +75,7 @@
     return 'light'
   })()
 
-  const themeToggle = document.querySelector(
-    '.theme-switch input[type="checkbox"]'
-  )
+  const themeToggle = document.querySelector('input[type="checkbox"]')
 
   if (theme === 'light') {
     document.documentElement.classList.remove('dark')
