@@ -27,7 +27,3 @@ $ npm run dev
 ```
 
 Create a `.env.local` file similar to [`.env.example`](https://github.com/mralexsaavedra/mralexsaavedra.dev/blob/main/.env.example).
-
----
-
-**Special thanks to [Lee Robinson](https://leerob.io/) for the Open Source template.**
