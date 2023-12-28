@@ -1,0 +1,61 @@
+---
+import Card from './Card.astro'
+import ExternalLink from './ExternalLink.astro'
+import Section from './Section.astro'
+
+interface Education {
+  readonly degree: string
+  readonly school: string
+  readonly link: string
+  readonly start: string
+  readonly end: string
+}
+
+const EDUCATION: Education[] = [
+  {
+    degree: 'Co-Organizer',
+    school: 'Google Developer Group Bilbao',
+    link: 'https://www.linkedin.com/company/gdgbilbao',
+    start: 'Ene 2019',
+    end: 'Nov 2019'
+  },
+  {
+    degree: 'Máster en Animación',
+    school: 'Lightbox Academy',
+    link: 'https://lboxacademy.es/',
+    start: 'Oct 2019',
+    end: 'Ago 2020'
+  },
+  {
+    degree: 'Ingeniería informática',
+    school: 'UPV/EHU',
+    link: 'https://www.ehu.eus/es/',
+    start: 'Sept 2013',
+    end: 'Ene 2018'
+  }
+]
+---
+
+<Section title='Educación' id='education'>
+  {
+    EDUCATION.map(({ school, start, end, degree, link }) => (
+      <Card>
+        <div
+          class='flex items-center justify-between gap-x-2 text-base'
+          slot='header'
+        >
+          <h3 class='font-semibold leading-none'>
+            <ExternalLink href={link}>{school}</ExternalLink>
+          </h3>
+          <div class='text-sm tabular-nums text-muted-foreground'>
+            {start} - {end}
+          </div>
+        </div>
+
+        <span slot='title' class='font-mono text-sm leading-none'>
+          {degree}
+        </span>
+      </Card>
+    ))
+  }
+</Section>
