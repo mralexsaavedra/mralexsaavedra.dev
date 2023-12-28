@@ -1,70 +1,75 @@
 ---
 import { Image } from 'astro:assets'
-import Skills from '../components/skills/Skills.astro'
+import Skills from '../components/Skills.astro'
 import Layout from '../layouts/Layout.astro'
-import Experiences from '../components/experiences/Experiences.astro'
 import ExternalLink from '../components/ExternalLink.astro'
-import GitHub from '../components/icons/GitHub.astro'
-import Twitter from '../components/icons/Twitter.astro'
-import LinkedIn from '../components/icons/LinkedIn.astro'
+import GitHubIcon from '../components/icons/GitHub.astro'
+import TwitterIcon from '../components/icons/Twitter.astro'
+import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import MailIcon from '../components/icons/Mail.astro'
 import Avatar from '../assets/avatar.jpg'
 import GithubRepos from '../components/github/GithubRepos.astro'
+import Section from '../components/Section.astro'
+import Education from '../components/Education.astro'
+import Experience from '../components/Experience.astro'
 ---
 
 <Layout>
-  <div
-    class='flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16'
-  >
-    <div class='flex flex-col-reverse sm:flex-row items-start'>
-      <div class='flex flex-col pr-8'>
-        <h1
-          class='font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white'
-        >
-          Alexander Saavedra
-        </h1>
-        <h2 class='text-gray-700 dark:text-gray-200 mb-4'>
-          Front-end Engineer en {' '}
-          <ExternalLink href='https://lookiero.es/'>
-            <span class='font-semibold dark:text-white'>Lookiero</span>
-          </ExternalLink>
-        </h2>
-        <p class='text-gray-600 dark:text-gray-400 mb-5'>
-          Especializado en el ecosistema de JavaScript. Amante de las buenas
-          prácticas y del software de calidad.
-        </p>
-        <div class='flex gap-5 mb-16'>
-          <ExternalLink href='https://github.com/mralexsaavedra'>
-            <GitHub width={30} height={30} class='fill-black dark:fill-white' />
-          </ExternalLink>
-          <ExternalLink href='https://twitter.com/mralexsaavedra'>
-            <Twitter
-              width={30}
-              height={30}
-              class='fill-black dark:fill-white'
-            />
-          </ExternalLink>
-          <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
-            <LinkedIn
-              width={30}
-              height={30}
-              class='fill-black dark:fill-white'
-            />
-          </ExternalLink>
-        </div>
-      </div>
-      <div class='w-[80px] sm:w-[300px] relative mb-8 sm:mb-0 mr-auto'>
-        <Image
-          alt='Alexander Saavedra'
-          height={300}
-          width={300}
-          src={Avatar}
-          class='rounded-full object-cover'
-        />
+  <section class='flex items-center justify-between'>
+    <div class='flex-1 space-y-1.5'>
+      <h1 class='text-2xl font-bold'>Alexander Saavedra</h1>
+      <p class='max-w-md text-pretty font-mono text-sm text-muted-foreground'>
+        Front-end Engineer en
+        <ExternalLink href='https://lookiero.es/'>
+          <span class='font-semibold'>Lookiero</span>
+        </ExternalLink>
+      </p>
+      <div
+        class='flex items-center gap-x-2 pt-1 font-mono text-sm text-muted-foreground print:hidden'
+      >
+        <ExternalLink href='mailto:mralexsaavedra@gmail.com'>
+          <MailIcon class='size-5' />
+        </ExternalLink>
+        <ExternalLink href='https://github.com/mralexsaavedra'>
+          <GitHubIcon class='size-5' />
+        </ExternalLink>
+        <ExternalLink href='https://twitter.com/mralexsaavedra'>
+          <TwitterIcon class='size-5' />
+        </ExternalLink>
+        <ExternalLink href='https://www.linkedin.com/in/mralexsaavedra'>
+          <LinkedInIcon class='size-5' />
+        </ExternalLink>
       </div>
     </div>
 
+    <span class='relative flex shrink-0 overflow-hidden rounded-xl size-28'>
+      <Image
+        alt='Alexander Saavedra'
+        src={Avatar}
+        class='aspect-square size-full object-contain'
+      />
+    </span>
+  </section>
+
+  <Section title='Sobre mí' id='about'>
+    <p class='text-pretty font-mono text-sm text-muted-foreground'>
+      Especializado en el ecosistema de JavaScript. Amante de las buenas
+      prácticas y del software de calidad.
+    </p>
+  </Section>
+
+  <Experience />
+  <Education />
+  <Skills />
+  <Section title='Proyectos' id='projects'>
     <GithubRepos />
-    <Skills />
-    <Experiences />
-  </div>
+    <div class='flex justify-end px-2'>
+      <ExternalLink
+        href='https://github.com/mralexsaavedra?tab=repositories'
+        class='font-mono text-sm underline'
+      >
+        Ver más
+      </ExternalLink>
+    </div>
+  </Section>
 </Layout>
