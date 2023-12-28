@@ -1,0 +1,27 @@
+---
+type Variant = 'primary' | 'secondary'
+
+const BADGE_VARIANTS: Record<Variant, string> = {
+  primary:
+    'border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60',
+  secondary:
+    'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60'
+}
+
+interface Props {
+  readonly variant?: Variant
+  readonly class?: string
+}
+
+const { variant = 'primary', class: className } = Astro.props
+---
+
+<div
+  class:list={[
+    'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap',
+    BADGE_VARIANTS[variant],
+    className
+  ]}
+>
+  <slot />
+</div>
