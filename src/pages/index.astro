@@ -7,7 +7,7 @@ import GitHubIcon from '../components/icons/GitHub.astro'
 import TwitterIcon from '../components/icons/Twitter.astro'
 import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import MailIcon from '../components/icons/Mail.astro'
-import Avatar from '../assets/avatar.jpg'
+import Avatar from '../assets/avatar.png'
 import GithubRepos from '../components/github/GithubRepos.astro'
 import Section from '../components/Section.astro'
 import Education from '../components/Education.astro'
@@ -25,7 +25,7 @@ import Experience from '../components/Experience.astro'
         </ExternalLink>
       </p>
       <div
-        class='flex items-center gap-x-2 pt-1 font-mono text-sm text-muted-foreground print:hidden'
+        class='flex items-center gap-x-2 pt-1 font-mono text-sm text-muted-foreground'
       >
         <ExternalLink href='mailto:mralexsaavedra@gmail.com'>
           <MailIcon class='size-5' />
@@ -42,11 +42,13 @@ import Experience from '../components/Experience.astro'
       </div>
     </div>
 
-    <span class='relative flex shrink-0 overflow-hidden rounded-xl size-28'>
+    <span
+      class='relative flex shrink-0 overflow-hidden rounded-3xl size-28 bg-slate-600'
+    >
       <Image
         alt='Alexander Saavedra'
         src={Avatar}
-        class='aspect-square size-full object-contain'
+        class='aspect-square size-full object-cover'
       />
     </span>
   </section>
