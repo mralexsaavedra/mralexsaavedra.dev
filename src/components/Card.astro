@@ -1,0 +1,9 @@
+<div class='rounded-lg bg-card text-card-foreground'>
+  <div class='flex flex-col space-y-1.5'>
+    <slot name='header' />
+    <h4 class='font-mono text-sm leading-none'><slot name='title' /></h4>
+  </div>
+  <div class='text-pretty font-mono text-sm text-muted-foreground'>
+    <slot />
+  </div>
+</div>

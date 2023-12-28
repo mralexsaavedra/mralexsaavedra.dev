@@ -6,16 +6,21 @@ import Layout from './Layout.astro'
   <article
     class='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full'
   >
-    <h2
-      class='text-base font-semibold tracking-wide uppercase text-gray-700 dark:text-gray-300'
-    >
-      Mis /Uses
-    </h2>
+    <h2 class='text-base font-semibold tracking-wide uppercase'>Mis /Uses</h2>
     <h3
-      class='text-3xl sm:text-4xl font-extrabold leading-8 tracking-tight text-black dark:text-white mt-2 mb-8'
+      class='text-3xl sm:text-4xl font-extrabold leading-8 tracking-tight mt-2 mb-8'
     >
       Mi espacio de trabajo
     </h3>
-    <div class='prose dark:prose-dark w-full'><slot /></div>
+    <div
+      class:list={[
+        'w-full',
+        'prose dark:prose-invert',
+        'prose-p:text-pretty prose-p:font-mono prose-p:text-sm prose-p:text-muted-foreground',
+        'prose-li:font-mono prose-li:text-muted-foreground prose-li:text-md'
+      ]}
+    >
+      <slot />
+    </div>
   </article>
 </Layout>

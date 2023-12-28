@@ -1,0 +1,110 @@
+---
+import Badge from './Badge.astro'
+import Card from './Card.astro'
+import ExternalLink from './ExternalLink.astro'
+import Section from './Section.astro'
+
+interface Experience {
+  readonly title: string
+  readonly company: string
+  readonly description: string
+  readonly link: string
+  readonly start: string
+  readonly end: string
+  readonly badges: string[]
+}
+
+const EXPERIENCE: Experience[] = [
+  {
+    title: 'Front-end Engineer',
+    company: 'Lookiero',
+    link: 'https://www.lookiero.es/',
+    start: '2022',
+    end: '2024',
+    description: '',
+    badges: ['Remoto']
+  },
+  {
+    title: 'Software Front-end Developer',
+    company: 'Kira Health',
+    link: 'https://www.kirawellness.io/',
+    start: '2020',
+    end: '2022',
+    description: '',
+    badges: []
+  },
+  {
+    title: 'Co-Organizer',
+    company: 'Google Developer Group Bilbao',
+    link: 'https://www.linkedin.com/company/gdgbilbao',
+    start: '2019',
+    end: '2019',
+    description: '',
+    badges: []
+  },
+  {
+    title: 'Full Stack Developer',
+    company: 'S&M Services',
+    link: 'https://sm-services.es/',
+    start: '2018',
+    end: '2019',
+    description: '',
+    badges: []
+  },
+  {
+    title: 'Full Stack Developer',
+    company: 'Inycom',
+    link: 'https://www.inycom.es/',
+    start: '2017',
+    end: '2018',
+    description: '',
+    badges: []
+  },
+  {
+    title: 'Full Stack Developer',
+    company: 'Shackleton',
+    link: 'http://shkways.com',
+    start: '2017',
+    end: '2017',
+    description: '',
+    badges: ['Prácticas']
+  }
+]
+---
+
+<Section title='Experiencia laboral' id='experience'>
+  {
+    EXPERIENCE.map(
+      ({ badges, company, description, end, link, start, title }) => (
+        <Card>
+          <div
+            slot='header'
+            class='flex items-center justify-between gap-x-2 text-base'
+          >
+            <h3 class='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
+              <ExternalLink href={link}>{company}</ExternalLink>
+
+              <span class='inline-flex gap-x-1'>
+                {badges.map((badge) => (
+                  <Badge variant='secondary' class='align-middle text-xs'>
+                    {badge}
+                  </Badge>
+                ))}
+              </span>
+            </h3>
+
+            <div class='text-sm tabular-nums text-muted-foreground font-mono'>
+              {start} - {end}
+            </div>
+          </div>
+
+          <span slot='title' class='font-mono text-sm leading-none'>
+            {title}
+          </span>
+
+          <p class='mt-2 text-xs'>{description}</p>
+        </Card>
+      )
+    )
+  }
+</Section>
