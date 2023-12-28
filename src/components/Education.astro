@@ -13,25 +13,18 @@ interface Education {
 
 const EDUCATION: Education[] = [
   {
-    degree: 'Co-Organizer',
-    school: 'Google Developer Group Bilbao',
-    link: 'https://www.linkedin.com/company/gdgbilbao',
-    start: 'Ene 2019',
-    end: 'Nov 2019'
-  },
-  {
     degree: 'Máster en Animación',
     school: 'Lightbox Academy',
     link: 'https://lboxacademy.es/',
-    start: 'Oct 2019',
-    end: 'Ago 2020'
+    start: '2019',
+    end: '2020'
   },
   {
     degree: 'Ingeniería informática',
     school: 'UPV/EHU',
     link: 'https://www.ehu.eus/es/',
-    start: 'Sept 2013',
-    end: 'Ene 2018'
+    start: '2013',
+    end: '2018'
   }
 ]
 ---
@@ -47,7 +40,7 @@ const EDUCATION: Education[] = [
           <h3 class='font-semibold leading-none'>
             <ExternalLink href={link}>{school}</ExternalLink>
           </h3>
-          <div class='text-sm tabular-nums text-muted-foreground'>
+          <div class='text-sm tabular-nums text-muted-foreground font-mono'>
             {start} - {end}
           </div>
         </div>
