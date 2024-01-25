@@ -13,6 +13,8 @@ import CSSIcon from './icons/CSS.astro'
 import HTMLIcon from './icons/HTML.astro'
 import Section from './Section.astro'
 import Badge from './Badge.astro'
+import AstroIcon from './icons/AstroIcon.astro'
+import ExpoIcon from './icons/Expo.astro'
 
 interface Skill {
   readonly title: string
@@ -63,7 +65,12 @@ const SKILLS: Skill[] = [
   {
     title: 'Cypress',
     icon: CypressIcon
-  }
+  },
+  {
+    title: 'Astro',
+    icon: AstroIcon
+  },
+  { title: 'Expo', icon: ExpoIcon }
 ]
 ---
 
