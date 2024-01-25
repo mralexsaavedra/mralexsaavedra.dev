@@ -41,7 +41,7 @@ const { class: className } = Astro.props
 
 {
   navLinks.map(({ to, label }) => (
-    <a href={to} class:list={['font-mono text-sm', className]}>
+    <a href={to} class:list={['font-mono text-md md:text-sm', className]}>
       {label}
     </a>
   ))
