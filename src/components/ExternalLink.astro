@@ -2,9 +2,10 @@
 interface Props {
   readonly href: string
   readonly class?: string
+  readonly label?: string
 }
 
-const { href, class: className } = Astro.props
+const { href, class: className, label } = Astro.props
 ---
 
 <a
@@ -15,6 +16,7 @@ const { href, class: className } = Astro.props
   target='_blank'
   rel='noopener noreferrer'
   href={href}
+  aria-label={label}
 >
   <slot />
 </a>
