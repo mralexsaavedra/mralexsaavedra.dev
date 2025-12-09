@@ -1,76 +1,22 @@
 ---
-import type { AstroComponentInstance } from 'astro/runtime/server/index.js'
-import CypressIcon from './icons/Cypress.astro'
-import GraphQLIcon from './icons/GraphQL.astro'
-import JavaScriptIcon from './icons/JavaScript.astro'
-import JestIcon from './icons/Jest.astro'
-import NextJsIcon from './icons/NextJS.astro'
-import NodeIcon from './icons/Node.astro'
-import ReactIcon from './icons/React.astro'
-import TailwindIcon from './icons/Tailwind.astro'
-import TypeScriptIcon from './icons/TypeScript.astro'
-import CSSIcon from './icons/CSS.astro'
-import HTMLIcon from './icons/HTML.astro'
-
-import Badge from './Badge.astro'
-import AstroIcon from './icons/AstroIcon.astro'
-import ExpoIcon from './icons/Expo.astro'
-
 interface Skill {
   readonly title: string
-  readonly icon: (props: astroHTML.JSX.SVGAttributes) => AstroComponentInstance
 }
 
 const SKILLS: Skill[] = [
-  {
-    title: 'HTML',
-    icon: HTMLIcon
-  },
-  {
-    title: 'CSS',
-    icon: CSSIcon
-  },
-  {
-    title: 'JavaScript',
-    icon: JavaScriptIcon
-  },
-  {
-    title: 'TypeScript',
-    icon: TypeScriptIcon
-  },
-  {
-    title: 'React',
-    icon: ReactIcon
-  },
-  {
-    title: 'Next.js',
-    icon: NextJsIcon
-  },
-  {
-    title: 'Node',
-    icon: NodeIcon
-  },
-  {
-    title: 'Tailwind',
-    icon: TailwindIcon
-  },
-  {
-    title: 'GraphQL',
-    icon: GraphQLIcon
-  },
-  {
-    title: 'Jest',
-    icon: JestIcon
-  },
-  {
-    title: 'Cypress',
-    icon: CypressIcon
-  },
-  {
-    title: 'Astro',
-    icon: AstroIcon
-  },
-  { title: 'Expo', icon: ExpoIcon }
+  { title: 'HTML' },
+  { title: 'CSS' },
+  { title: 'JavaScript' },
+  { title: 'TypeScript' },
+  { title: 'React' },
+  { title: 'Next.js' },
+  { title: 'Node' },
+  { title: 'Tailwind' },
+  { title: 'GraphQL' },
+  { title: 'Jest' },
+  { title: 'Cypress' },
+  { title: 'Astro' },
+  { title: 'Expo' }
 ]
 ---
 
