@@ -62,11 +62,42 @@ const graphQLClient = new GraphQLClient(GITHUB_API_URL, {
   }
 })
 
-const data = await graphQLClient.request<GitHubPinnedRepos>(
-  GITHUB_PINNED_REPOS,
-  {}
-)
-const repos: GitHubPinnedRepo[] = data.viewer.pinnedItems.nodes
+let repos: GitHubPinnedRepo[] = []
+
+try {
+  if (githubAccessToken) {
+    const data = await graphQLClient.request<GitHubPinnedRepos>(
+      GITHUB_PINNED_REPOS,
+      {}
+    )
+    repos = data.viewer.pinnedItems.nodes
+  }
+} catch (error) {
+  console.error('Failed to fetch GitHub repos:', error)
+  // Fallback data for development/preview without valid token
+  repos = [
+    {
+      id: '1',
+      name: 'portfolio-v2',
+      description: 'Mi sitio web personal construido con Astro y Tailwind CSS.',
+      url: 'https://github.com/mralexsaavedra/mralexsaavedra.dev',
+      homepageUrl: 'https://mralexsaavedra.dev',
+      languages: { nodes: [{ name: 'TypeScript', color: '#3178c6' }] },
+      forkCount: 2,
+      stargazerCount: 15
+    },
+    {
+      id: '2',
+      name: 'react-component-lib',
+      description: 'Una biblioteca de componentes minimalista para React.',
+      url: '#',
+      homepageUrl: '',
+      languages: { nodes: [{ name: 'TypeScript', color: '#3178c6' }] },
+      forkCount: 5,
+      stargazerCount: 42
+    }
+  ]
+}
 ---
 
 <div class='w-full flex flex-col md:grid grid-cols-2 gap-4'>
