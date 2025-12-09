@@ -2,7 +2,6 @@
 import Badge from './Badge.astro'
 import Card from './Card.astro'
 import ExternalLink from './ExternalLink.astro'
-import Section from './Section.astro'
 
 interface Experience {
   readonly title: string
@@ -72,39 +71,37 @@ const EXPERIENCE: Experience[] = [
 ]
 ---
 
-<Section title='Experiencia laboral' id='experience'>
-  {
-    EXPERIENCE.map(
-      ({ badges, company, description, end, link, start, title }) => (
-        <Card>
-          <div
-            slot='header'
-            class='flex items-center justify-between gap-x-2 text-base'
-          >
-            <h3 class='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
-              <ExternalLink href={link}>{company}</ExternalLink>
+{
+  EXPERIENCE.map(
+    ({ badges, company, description, end, link, start, title }) => (
+      <Card>
+        <div
+          slot='header'
+          class='flex items-center justify-between gap-x-2 text-base'
+        >
+          <h3 class='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
+            <ExternalLink href={link}>{company}</ExternalLink>
 
-              <span class='inline-flex gap-x-1'>
-                {badges.map((badge) => (
-                  <Badge variant='secondary' class='align-middle text-xs'>
-                    {badge}
-                  </Badge>
-                ))}
-              </span>
-            </h3>
+            <span class='inline-flex gap-x-1'>
+              {badges.map((badge) => (
+                <Badge variant='secondary' class='align-middle text-xs'>
+                  {badge}
+                </Badge>
+              ))}
+            </span>
+          </h3>
 
-            <div class='text-sm tabular-nums text-muted-foreground font-mono'>
-              {start} - {end}
-            </div>
+          <div class='text-sm tabular-nums text-muted-foreground font-mono'>
+            {start} - {end}
           </div>
+        </div>
 
-          <span slot='title' class='font-mono text-sm leading-none'>
-            {title}
-          </span>
+        <span slot='title' class='font-mono text-sm leading-none'>
+          {title}
+        </span>
 
-          <p class='mt-2 text-xs'>{description}</p>
-        </Card>
-      )
+        <p class='mt-2 text-xs'>{description}</p>
+      </Card>
     )
-  }
-</Section>
+  )
+}

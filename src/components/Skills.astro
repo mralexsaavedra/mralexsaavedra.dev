@@ -11,7 +11,7 @@ import TailwindIcon from './icons/Tailwind.astro'
 import TypeScriptIcon from './icons/TypeScript.astro'
 import CSSIcon from './icons/CSS.astro'
 import HTMLIcon from './icons/HTML.astro'
-import Section from './Section.astro'
+
 import Badge from './Badge.astro'
 import AstroIcon from './icons/AstroIcon.astro'
 import ExpoIcon from './icons/Expo.astro'
@@ -74,15 +74,13 @@ const SKILLS: Skill[] = [
 ]
 ---
 
-<Section title='Skills' id='skills'>
-  <div class='flex flex-wrap gap-1'>
-    {
-      SKILLS.map(({ title, icon: Icon }) => (
-        <Badge>
-          <Icon class='!mr-1 size-6' />
-          {title}
-        </Badge>
-      ))
-    }
-  </div>
-</Section>
+<div class='flex flex-wrap gap-1'>
+  {
+    SKILLS.map(({ title, icon: Icon }) => (
+      <Badge>
+        <Icon class='!mr-1 size-6' />
+        {title}
+      </Badge>
+    ))
+  }
+</div>
