@@ -29,13 +29,13 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/react": "^4.4.2",
-    "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.16.4",
     "react": "^19.2.1",
     "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
+    "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/typography": "^0.5.19",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
