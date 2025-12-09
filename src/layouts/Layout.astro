@@ -11,8 +11,8 @@ interface Props {
 }
 
 const {
-  title = 'Alexander Saavedra – Software Frontend Engineer.',
-  description = 'Front-end developer, JavaScript lover.',
+  title = 'Alexander Saavedra – Senior Software Engineer',
+  description = 'Software Engineer based in Barakaldo, Bizkaia. Specialized in React, TypeScript, and Scalable Architecture.',
   image = '/banner.png',
   type = 'website',
   date
@@ -20,7 +20,7 @@ const {
 ---
 
 <!doctype html>
-<html lang='en' class='scroll-py-5 scroll-smooth'>
+<html lang='es' class='scroll-py-5 scroll-smooth'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
@@ -43,6 +43,28 @@ const {
     <link
       href='https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap'
       rel='stylesheet'
+    />
+    <script
+      type='application/ld+json'
+      is:inline
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Alexander Saavedra',
+        url: 'https://mralexsaavedra.dev',
+        image: 'https://mralexsaavedra.dev/banner.png',
+        sameAs: [
+          'https://twitter.com/mralexsaavedra',
+          'https://github.com/mralexsaavedra',
+          'https://www.linkedin.com/in/mralexsaavedra'
+        ],
+        jobTitle: 'Senior Software Frontend Engineer',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Lookiero',
+          url: 'https://lookiero.es'
+        }
+      })}
     />
     {date && <meta property='article:published_time' content={date} />}
     <ClientRouter />
