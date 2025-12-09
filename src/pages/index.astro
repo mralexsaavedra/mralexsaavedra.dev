@@ -15,12 +15,18 @@ import ExternalLink from '../components/ExternalLink.astro'
         class='space-y-4 text-lg leading-relaxed text-muted-foreground sm:text-xl'
       >
         <p>
-          Soy Ingeniero de Software con base en <span class='text-foreground'
-            >Barakaldo, Bizkaia</span
-          >. Actualmente desarrollo mi carrera en <span class='text-foreground'
-            >Lookiero</span
-          >, donde tras casi cuatro años, sigo obsesionado con elevar el
-          estándar de la ingeniería frontend.
+          Soy Ingeniero de Software con base en <ExternalLink
+            href='https://www.google.com/maps/place/Barakaldo,+Bizkaia'
+            class='text-foreground hover:underline'
+          >
+            Barakaldo, Bizkaia
+          </ExternalLink>. Actualmente desarrollo mi carrera en <ExternalLink
+            href='https://lookiero.es'
+            class='text-foreground hover:underline'
+          >
+            Lookiero
+          </ExternalLink>, donde tras casi cuatro años, sigo obsesionado con
+          elevar el estándar de la ingeniería frontend.
         </p>
         <p>
           Más allá de <span class='text-foreground'>React</span> y <span
@@ -50,11 +56,11 @@ import ExternalLink from '../components/ExternalLink.astro'
         LinkedIn
       </ExternalLink>
       <ExternalLink
-        href='https://twitter.com/mralexsaavedra'
-        label='Twitter'
+        href='https://x.com/mralexsaavedra'
+        label='X'
         class='font-medium text-muted-foreground transition-colors hover:text-foreground'
       >
-        Twitter
+        X
       </ExternalLink>
     </footer>
   </div>
