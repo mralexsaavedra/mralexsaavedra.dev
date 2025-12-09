@@ -23,8 +23,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,astro}\"",
-    "format": "prettier --write  \"**/*.{json,css,js,jsx,ts,tsx,md,mdx,astro}\""
+    "lint": "eslint --fix \"src/**/*.{ts,astro}\"",
+    "format": "prettier --write \"**/*.{json,css,js,ts,md,mdx,astro}\""
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
