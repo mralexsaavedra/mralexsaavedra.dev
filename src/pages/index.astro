@@ -48,6 +48,46 @@ import ExternalLink from '../components/ExternalLink.astro'
       </div>
     </header>
 
+    <div class='space-y-6'>
+      <h2 class='text-sm font-medium text-muted-foreground'>
+        Proyectos personales
+      </h2>
+      <div class='grid gap-6 sm:grid-cols-2'>
+        <div class='space-y-1'>
+          <ExternalLink
+            href='https://github.com/mralexsaavedra/spotiarr'
+            class='font-medium text-foreground hover:underline'
+          >
+            spotiarr
+          </ExternalLink>
+          <p class='text-muted-foreground'>
+            Automatización musical inspirada en Lidarr. Desarrollado aplicando
+            principios de <span class='text-foreground'>DDD</span> y <span
+              class='text-foreground'>Clean Architecture</span
+            >.
+          </p>
+        </div>
+
+        <div class='space-y-1'>
+          <ExternalLink
+            href='https://github.com/mralexsaavedra/spotdl-bot'
+            class='font-medium text-foreground hover:underline'
+          >
+            spotdl-bot
+          </ExternalLink>
+          <p class='text-muted-foreground'>
+            Bot de Telegram para descargar música de Spotify. Escrito en Python
+            y mencionado en el podcast <ExternalLink
+              href='https://www.desdeelreloj.com/e1145/'
+              class='text-foreground hover:underline'
+            >
+              Desde el Reloj
+            </ExternalLink>.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <footer class='flex items-center gap-6 pt-4'>
       <ExternalLink
         href='https://github.com/mralexsaavedra'
