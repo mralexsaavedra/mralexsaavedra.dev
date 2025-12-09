@@ -12,66 +12,64 @@ import Skills from '../components/Skills.astro'
 ---
 
 <Layout>
-  <section class='max-w-2xl mx-auto space-y-8 pt-6 sm:pt-12'>
-    <div class='space-y-4'>
+  <div
+    class='flex flex-col justify-center min-h-[60vh] gap-12 max-w-2xl mx-auto'
+  >
+    <header class='space-y-6'>
       <h1 class='text-4xl sm:text-5xl font-bold tracking-tight text-foreground'>
-        Hola, soy Alex Saavedra.
+        Alex Saavedra
       </h1>
-      <p class='text-lg sm:text-xl text-muted-foreground leading-relaxed'>
-        Ingeniero de Software especializado en crear experiencias web
-        excepcionales. Me apasiona el <span class='text-foreground font-medium'
-          >minimalismo</span
-        >, la <span class='text-foreground font-medium'>performance</span> y el <span
-          class='text-foreground font-medium'
-          >diseño centrado en el usuario</span
-        >. Actualmente construyo interfaces en <ExternalLink
-          href='https://lookiero.es/'
-        >
-          <span
-            class='font-medium text-foreground underline decoration-border hover:decoration-foreground transition-all duration-300'
-            >Lookiero</span
-          >
-        </ExternalLink>.
-      </p>
+      <div
+        class='space-y-4 text-lg sm:text-xl text-muted-foreground leading-relaxed'
+      >
+        <p>
+          Ingeniero de Software Senior enfocado en la <span
+            class='text-foreground font-medium'>experiencia de usuario</span
+          > y el <span class='text-foreground font-medium'
+            >minimalismo digital</span
+          >.
+        </p>
+        <p>
+          He liderado el desarrollo frontend en empresas como <span
+            class='text-foreground'>Lookiero</span
+          > y <span class='text-foreground'>Kira Health</span>, creando
+          interfaces escalables y accesibles. Mi enfoque combina la precisión
+          técnica con un diseño limpio.
+        </p>
+      </div>
+    </header>
+
+    <div class='space-y-2'>
+      <h2
+        class='text-sm font-semibold uppercase tracking-wider text-muted-foreground'
+      >
+        Toolkit
+      </h2>
+      <Skills />
     </div>
 
-    <div class='flex items-center gap-4 text-muted-foreground'>
-      <ExternalLink
-        href='mailto:mralexsaavedra@gmail.com'
-        label='Envíame un correo'
-        class='hover:text-foreground transition-colors'
-      >
-        <MailIcon class='size-5' />
-      </ExternalLink>
+    <footer class='flex items-center gap-6 pt-4'>
       <ExternalLink
         href='https://github.com/mralexsaavedra'
         label='GitHub'
-        class='hover:text-foreground transition-colors'
+        class='text-muted-foreground hover:text-foreground transition-colors font-medium'
       >
-        <GitHubIcon class='size-5' />
-      </ExternalLink>
-      <ExternalLink
-        href='https://twitter.com/mralexsaavedra'
-        label='Twitter'
-        class='hover:text-foreground transition-colors'
-      >
-        <TwitterIcon class='size-5' />
+        GitHub
       </ExternalLink>
       <ExternalLink
         href='https://www.linkedin.com/in/mralexsaavedra'
         label='LinkedIn'
-        class='hover:text-foreground transition-colors'
+        class='text-muted-foreground hover:text-foreground transition-colors font-medium'
       >
-        <LinkedInIcon class='size-5' />
+        LinkedIn
       </ExternalLink>
-    </div>
-  </section>
-
-  <Section title='Experiencia' id='experience' class='space-y-4 pt-4'>
-    <Experience />
-  </Section>
-
-  <Section title='Stack' id='stack' class='space-y-4 pt-4'>
-    <Skills />
-  </Section>
+      <ExternalLink
+        href='https://twitter.com/mralexsaavedra'
+        label='Twitter'
+        class='text-muted-foreground hover:text-foreground transition-colors font-medium'
+      >
+        Twitter
+      </ExternalLink>
+    </footer>
+  </div>
 </Layout>

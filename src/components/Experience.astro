@@ -72,36 +72,32 @@ const EXPERIENCE: Experience[] = [
 ---
 
 {
-  EXPERIENCE.map(
-    ({ badges, company, description, end, link, start, title }) => (
-      <Card>
-        <div
-          slot='header'
-          class='flex items-center justify-between gap-x-2 text-base'
-        >
-          <h3 class='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
-            <ExternalLink href={link}>{company}</ExternalLink>
-
-            <span class='inline-flex gap-x-1'>
-              {badges.map((badge) => (
-                <Badge variant='secondary' class='align-middle text-xs'>
-                  {badge}
-                </Badge>
-              ))}
-            </span>
-          </h3>
-
-          <div class='text-sm tabular-nums text-muted-foreground font-mono'>
-            {start} - {end}
+  EXPERIENCE.map(({ company, description, end, link, start, title }) => (
+    <div class='group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 hover:opacity-100 opacity-80'>
+      <header class='z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:col-span-2'>
+        {start} — {end}
+      </header>
+      <div class='z-10 sm:col-span-6'>
+        <h3 class='font-medium leading-snug text-foreground'>
+          <div>
+            <a
+              class='inline-flex items-baseline font-medium leading-tight text-foreground hover:text-primary focus-visible:text-primary group/link text-base'
+              href={link}
+              target='_blank'
+              rel='noreferrer'
+              aria-label={`${title} at ${company}`}
+            >
+              <span class='absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block' />
+              <span>
+                {title} · <span class='inline-block'>{company}</span>
+              </span>
+            </a>
           </div>
-        </div>
-
-        <span slot='title' class='font-mono text-sm leading-none'>
-          {title}
-        </span>
-
-        <p class='mt-2 text-xs'>{description}</p>
-      </Card>
-    )
-  )
+        </h3>
+        <p class='mt-2 text-sm leading-normal text-muted-foreground'>
+          {description}
+        </p>
+      </div>
+    </div>
+  ))
 }

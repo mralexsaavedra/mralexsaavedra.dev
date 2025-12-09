@@ -74,13 +74,12 @@ const SKILLS: Skill[] = [
 ]
 ---
 
-<div class='flex flex-wrap gap-1'>
+<ul class='flex flex-wrap gap-2'>
   {
-    SKILLS.map(({ title, icon: Icon }) => (
-      <Badge>
-        <Icon class='!mr-1 size-6' />
+    SKILLS.map(({ title }) => (
+      <li class='text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-default'>
         {title}
-      </Badge>
+      </li>
     ))
   }
-</div>
+</ul>
