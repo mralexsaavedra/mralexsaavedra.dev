@@ -20,7 +20,7 @@ const {
 ---
 
 <!doctype html>
-<html lang='en' class='scroll-smooth scroll-py-5'>
+<html lang='en' class='scroll-py-5 scroll-smooth'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
@@ -47,8 +47,8 @@ const {
     {date && <meta property='article:published_time' content={date} />}
     <ClientRouter />
   </head>
-  <body class='container w-full max-w-2xl px-4 font-outfit'>
-    <main class='py-6 md:py-12 space-y-8'>
+  <body class='font-outfit container w-full max-w-2xl px-4'>
+    <main class='space-y-8 py-6 md:py-12'>
       <slot />
     </main>
   </body>
