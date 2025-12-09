@@ -5,7 +5,7 @@ import GitHubIcon from '../components/icons/GitHub.astro'
 import TwitterIcon from '../components/icons/Twitter.astro'
 import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import MailIcon from '../components/icons/Mail.astro'
-import GithubRepos from '../components/github/GithubRepos.astro'
+
 import Section from '../components/Section.astro'
 import Experience from '../components/Experience.astro'
 import Skills from '../components/Skills.astro'
@@ -69,18 +69,6 @@ import Skills from '../components/Skills.astro'
 
   <Section title='Experiencia' id='experience' class='space-y-4 pt-4'>
     <Experience />
-  </Section>
-
-  <Section title='Proyectos Destacados' id='projects' class='space-y-4 pt-4'>
-    <GithubRepos />
-    <div class='flex justify-start'>
-      <ExternalLink
-        href='https://github.com/mralexsaavedra?tab=repositories'
-        class='text-sm text-muted-foreground hover:text-foreground underline decoration-dotted transition-colors'
-      >
-        Ver todos los proyectos &rarr;
-      </ExternalLink>
-    </div>
   </Section>
 
   <Section title='Stack' id='stack' class='space-y-4 pt-4'>
