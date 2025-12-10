@@ -36,6 +36,10 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         }
       },
+      fontFamily: {
+        sans: ['IBM Plex Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'ui-monospace', 'monospace']
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
