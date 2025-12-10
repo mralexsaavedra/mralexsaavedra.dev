@@ -1,4 +1,4 @@
-# mralexsaavedra.dev
+# mralexsaavedra.com
 
 My personal website. Minimalist, dark mode only, and performance-focused.
 
@@ -12,8 +12,8 @@ My personal website. Minimalist, dark mode only, and performance-focused.
 
 ```bash
 # Clone the project
-git clone https://github.com/mralexsaavedra/mralexsaavedra.dev.git
-cd mralexsaavedra.dev
+git clone https://github.com/mralexsaavedra/mralexsaavedra.com.git
+cd mralexsaavedra.com
 
 # Install dependencies
 pnpm install

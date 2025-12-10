@@ -1,5 +1,5 @@
 {
-  "name": "mralexsaavedra",
+  "name": "mralexsaavedra.com",
   "description": "My personal website.",
   "type": "module",
   "version": "1.0.0",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mralexsaavedra/mralexsaavedra.git"
+    "url": "git+https://github.com/mralexsaavedra/mralexsaavedra.com.git"
   },
   "engines": {
     "node": ">=24"
