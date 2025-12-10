@@ -9,7 +9,9 @@ import ExternalLink from '../components/ExternalLink.astro'
     class='mx-auto flex min-h-[60vh] max-w-2xl flex-col justify-center gap-12'
   >
     <header class='space-y-6'>
-      <h1 class='text-4xl font-bold tracking-tight text-foreground sm:text-5xl'>
+      <h1
+        class='font-mono text-4xl font-bold tracking-tight text-foreground sm:text-5xl'
+      >
         Alexander Saavedra
       </h1>
       <div
@@ -18,30 +20,33 @@ import ExternalLink from '../components/ExternalLink.astro'
         <p>
           Ingeniero de Software con base en <ExternalLink
             href='https://www.google.com/maps/place/Barakaldo,+Bizkaia'
-            class='text-foreground hover:underline'
+            class='font-mono text-[0.9em] text-foreground hover:underline'
           >
             Barakaldo, Bizkaia
           </ExternalLink>. Actualmente trabajo en <ExternalLink
             href='https://lookiero.es'
-            class='text-foreground hover:underline'
+            class='font-mono text-[0.9em] text-foreground hover:underline'
           >
             Lookiero
           </ExternalLink>, donde llevo casi cuatro años centrado en crear
           software de alta calidad.
         </p>
         <p>
-          Trabajo con <span class='text-foreground'>React</span> y <span
-            class='text-foreground'>TypeScript</span
-          >, aplicando principios de <span class='text-foreground'
+          Trabajo con <span class='font-mono text-[0.9em] text-foreground'
+            >React</span
+          > y <span class='font-mono text-[0.9em] text-foreground'
+            >TypeScript</span
+          >, aplicando principios de <span
+            class='font-mono text-[0.9em] text-foreground'
             >Clean Architecture</span
-          > y <span class='text-foreground'>DDD</span> al frontend para construir
-          sistemas escalables y mantenibles a largo plazo.
+          > y <span class='font-mono text-[0.9em] text-foreground'>DDD</span> al frontend
+          para construir sistemas escalables y mantenibles a largo plazo.
         </p>
         <p>
           También disfruto impulsando la comunidad tech local. Anteriormente
           co-organicé el <ExternalLink
             href='https://www.meetup.com/es-es/gdg-bilbao/'
-            class='text-foreground hover:underline'
+            class='font-mono text-[0.9em] text-foreground hover:underline'
           >
             GDG Bilbao
           </ExternalLink>.
@@ -59,8 +64,10 @@ import ExternalLink from '../components/ExternalLink.astro'
           href='https://github.com/mralexsaavedra/spotiarr'
         >
           Automatización musical inspirada en Lidarr. Desarrollado aplicando
-          principios de <span class='text-foreground'>DDD</span> y <span
-            class='text-foreground'>Clean Architecture</span
+          principios de <span class='font-mono text-[0.9em] text-foreground'
+            >DDD</span
+          > y <span class='font-mono text-[0.9em] text-foreground'
+            >Clean Architecture</span
           >.
         </ProjectItem>
 
@@ -71,7 +78,7 @@ import ExternalLink from '../components/ExternalLink.astro'
           Bot de Telegram para descargar música de Spotify. Escrito en Python y
           mencionado en el podcast <ExternalLink
             href='https://www.desdeelreloj.com/e1145/'
-            class='text-foreground hover:underline'
+            class='font-mono text-[0.9em] text-foreground hover:underline'
           >
             Desde el Reloj
           </ExternalLink>.
@@ -83,21 +90,21 @@ import ExternalLink from '../components/ExternalLink.astro'
       <ExternalLink
         href='https://github.com/mralexsaavedra'
         label='GitHub'
-        class='font-medium text-muted-foreground transition-colors hover:text-foreground'
+        class='font-mono text-[0.9em] font-medium text-muted-foreground transition-colors hover:text-foreground'
       >
         GitHub
       </ExternalLink>
       <ExternalLink
         href='https://www.linkedin.com/in/mralexsaavedra'
         label='LinkedIn'
-        class='font-medium text-muted-foreground transition-colors hover:text-foreground'
+        class='font-mono text-[0.9em] font-medium text-muted-foreground transition-colors hover:text-foreground'
       >
         LinkedIn
       </ExternalLink>
       <ExternalLink
         href='https://x.com/mralexsaavedra'
         label='X'
-        class='font-medium text-muted-foreground transition-colors hover:text-foreground'
+        class='font-mono text-[0.9em] font-medium text-muted-foreground transition-colors hover:text-foreground'
       >
         X
       </ExternalLink>

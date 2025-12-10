@@ -10,7 +10,10 @@ const { title, href } = Astro.props
 ---
 
 <div class='space-y-1'>
-  <ExternalLink href={href} class='font-medium text-foreground hover:underline'>
+  <ExternalLink
+    href={href}
+    class='font-mono text-[0.9em] font-medium text-foreground hover:underline'
+  >
     {title}
   </ExternalLink>
   <p class='text-muted-foreground'>
