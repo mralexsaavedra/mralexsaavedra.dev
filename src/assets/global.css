@@ -47,6 +47,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .font-mono {
+    word-spacing: -0.15em;
+  }
+}
+
 @layer base {
   :root {
     --background: 240 10% 3.9%;
