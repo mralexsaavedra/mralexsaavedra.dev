@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ProjectItem from '../components/ProjectItem.astro'
 import ExternalLink from '../components/ExternalLink.astro'
 ---
 
@@ -53,38 +54,28 @@ import ExternalLink from '../components/ExternalLink.astro'
         Proyectos personales
       </h2>
       <div class='grid gap-6 sm:grid-cols-2'>
-        <div class='space-y-1'>
-          <ExternalLink
-            href='https://github.com/mralexsaavedra/spotiarr'
-            class='font-medium text-foreground hover:underline'
-          >
-            spotiarr
-          </ExternalLink>
-          <p class='text-muted-foreground'>
-            Automatización musical inspirada en Lidarr. Desarrollado aplicando
-            principios de <span class='text-foreground'>DDD</span> y <span
-              class='text-foreground'>Clean Architecture</span
-            >.
-          </p>
-        </div>
+        <ProjectItem
+          title='spotiarr'
+          href='https://github.com/mralexsaavedra/spotiarr'
+        >
+          Automatización musical inspirada en Lidarr. Desarrollado aplicando
+          principios de <span class='text-foreground'>DDD</span> y <span
+            class='text-foreground'>Clean Architecture</span
+          >.
+        </ProjectItem>
 
-        <div class='space-y-1'>
-          <ExternalLink
-            href='https://github.com/mralexsaavedra/spotdl-bot'
-            class='font-medium text-foreground hover:underline'
+        <ProjectItem
+          title='spotdl-bot'
+          href='https://github.com/mralexsaavedra/spotdl-bot'
+        >
+          Bot de Telegram para descargar música de Spotify. Escrito en Python y
+          mencionado en el podcast <ExternalLink
+            href='https://www.desdeelreloj.com/e1145/'
+            class='text-foreground hover:underline'
           >
-            spotdl-bot
-          </ExternalLink>
-          <p class='text-muted-foreground'>
-            Bot de Telegram para descargar música de Spotify. Escrito en Python
-            y mencionado en el podcast <ExternalLink
-              href='https://www.desdeelreloj.com/e1145/'
-              class='text-foreground hover:underline'
-            >
-              Desde el Reloj
-            </ExternalLink>.
-          </p>
-        </div>
+            Desde el Reloj
+          </ExternalLink>.
+        </ProjectItem>
       </div>
     </div>
 

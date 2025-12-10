@@ -1,0 +1,19 @@
+---
+import ExternalLink from './ExternalLink.astro'
+
+interface Props {
+  readonly title: string
+  readonly href: string
+}
+
+const { title, href } = Astro.props
+---
+
+<div class='space-y-1'>
+  <ExternalLink href={href} class='font-medium text-foreground hover:underline'>
+    {title}
+  </ExternalLink>
+  <p class='text-muted-foreground'>
+    <slot />
+  </p>
+</div>
