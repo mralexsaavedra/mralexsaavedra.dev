@@ -3,19 +3,21 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='404 – Alexander Saavedra'>
-  <div class='mx-auto mb-16 flex max-w-2xl flex-col items-start justify-center'>
-    <h1 class='mb-4 text-3xl font-bold tracking-tight md:text-5xl'>
-      451 – No disponible
+  <div
+    class='mx-auto flex min-h-[60vh] max-w-2xl flex-col items-center justify-center gap-6 text-center'
+  >
+    <h1 class='text-4xl font-bold tracking-tight text-foreground sm:text-5xl'>
+      404
     </h1>
-    <p class='mb-8 text-muted-foreground'>
-      Parece que has escontrado algo que solía existir o escribiste algo
-      incorrecto. Puede que hayas escrito algo mal. ¿Puedes comprobar la URL?
+    <p class='text-lg text-muted-foreground'>
+      Parece que esta página no existe (o ha sido eliminada por minimalismo
+      extremo).
     </p>
     <a
       href='/'
-      class='mx-auto w-64 rounded-md bg-gray-200/80 p-1 text-center font-bold hover:bg-gray-200 dark:bg-gray-800/80 dark:hover:bg-gray-800 sm:p-4'
+      class='font-medium text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:decoration-foreground'
     >
-      Volver a Inicio
+      Volver al inicio
     </a>
   </div>
 </Layout>

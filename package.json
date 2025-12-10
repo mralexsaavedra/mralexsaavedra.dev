@@ -27,6 +27,7 @@
     "format": "prettier --write \"**/*.{json,css,js,ts,md,mdx,astro}\""
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.16.4"
   },
