@@ -49,6 +49,7 @@
 
 @layer components {
   .font-mono {
+    font-size: 0.9em;
     word-spacing: -0.15em;
   }
 }
